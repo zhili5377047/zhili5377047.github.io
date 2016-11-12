@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Hello World | Single_intro</title>
+  <title>一、对象的深复制 | Single_intro</title>
   <meta name="description" content="个人技术博客" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -44,22 +44,48 @@
 <main class="content" role="main">
   <article class="post">
     <span class="post-meta">
-      <time datetime="2016-11-12T02:45:52.000Z" itemprop="datePublished">
+      <time datetime="2016-11-12T02:50:02.000Z" itemprop="datePublished">
           2016-11-12
       </time>
     
 </span>
-    <h1 class="post-title">Hello World</h1>
+    <h1 class="post-title">一、对象的深复制</h1>
     <section class="post-content">
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+      <hr>
+<pre><code>//对象的声明
+var person={
+    name:&quot;shafee&quot;,
+    age:20,
+    tel:[13800,10086],
+    say:function(){
+        console.log(this.age);
+    }
+}
+var p = {
+    gender:&quot;male&quot;
+}
+function deepClone(oldObj,newObj){
+    var newObj=newObj||{};//如果传入newObj具使用该对象，否则就是用空对象
+    for(var i in oldObj){//遍历原有对象属性和方法
+        if(oldObj.hasOwnProperty(i)){    //判断对象本身是否有该属性
+            //只拷贝原有对象的自有属性
+            if(typeof oldObj[i]===&quot;object&quot;){
+                var c= (oldObj[i].constructor==Array?[]:{});
+                //使用递归
+                newObj[i] = deepClone(oldObj[i],c)
+            }else{
+                newObj[i] =oldObj[i];//浅复制
+            }
+
+        }
+    }
+    return newObj;//返回一个新的oldObj所有属性跟方法的对象
+
+
+}
+var p1 = deepClone(person,p);//拓展p对象，并拥有person的属性跟方法
+var p2 = deepClone(person);//复制person对象
+</code></pre><hr>
 
     </section>
     <footer class="post-footer">
@@ -69,18 +95,18 @@
 </section>
       <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=https://zhili5377047.github.io/2016/11/12/hello-world/" target="_blank">
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=https://zhili5377047.github.io/2016/11/12/clone2/" target="_blank">
         <span class="hidden">weibo</span>
     </a>
-    <a class="icon-twitter" href="http://twitter.com/share?url=https://zhili5377047.github.io/2016/11/12/hello-world/"
+    <a class="icon-twitter" href="http://twitter.com/share?url=https://zhili5377047.github.io/2016/11/12/clone2/"
        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://zhili5377047.github.io/2016/11/12/hello-world/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://zhili5377047.github.io/2016/11/12/clone2/"
        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=https://zhili5377047.github.io/2016/11/12/hello-world/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=https://zhili5377047.github.io/2016/11/12/clone2/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
@@ -90,11 +116,15 @@
   </article>
   <nav class="pagination" role="pagination">
     
-    <a class="newer-posts" href="/2016/11/12/clone2/">
-        ← 一、对象的深复制
+    <a class="newer-posts" href="/2016/11/12/clone/">
+        ← 二、浅赋值
     </a>
     
     <span class="icon-logo">•</span>
+    
+    <a class="older-posts" href="/2016/11/12/hello-world/">
+        Hello World →
+    </a>
     
 </nav>
 
