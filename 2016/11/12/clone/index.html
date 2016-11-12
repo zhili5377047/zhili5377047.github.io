@@ -52,36 +52,27 @@
     <h1 class="post-title">对象浅复制(1)</h1>
     <section class="post-content">
       <hr>
-<pre><code>//基本数据类型 String，Number,Boolean,null,underfined 按值传递
-    复合数据类型 Array,Object 按引用传递 
-    如果将变量类比成一个盒子，那么基本数据类型的变量装的就是实在的内容，通过&quot;=&quot;号赋值，就是复制多一份出来了
-
-    复合数据类型的变量装的一把钥匙，可以通过这个钥匙找到我们所要的数据，通过=赋值，就是复制多了一把钥匙，数据还是只要一份
-
-var person={
-        name:&quot;shafee&quot;,
-        age:20,
-        city:&quot;广州&quot;,
-        tel:[13800138000,10086],
-        say:function(){
-            console.log(this.age)
-        }
-    }
-
-
-var p1=person;
-var p1={};
-for(var i in person){//浅赋值
-    if(person.hasOwnProperty(i)){
-        p1[i] = person[i];
-    }
+<ul>
+<li><p>//基本数据类型 String，Number,Boolean,null,underfined 按值传递<br>复合数据类型 Array,Object 按引用传递<br>如果将变量类比成一个盒子，那么基本数据类型的变量装的就是实在的内容，通过”=”号赋值，就是复制多一份出来了</p>
+</li>
+<li><p>复合数据类型的变量装的一把钥匙，可以通过这个钥匙找到我们所要的数据，通过=赋值，就是复制多了一把钥匙，数据还是只要一份</p>
+</li>
+<li><p>var person={</p>
+<pre><code>name:&quot;shafee&quot;,
+age:20,
+city:&quot;广州&quot;,
+tel:[13800138000,10086],
+say:function(){
+    console.log(this.age)
 }
-
-//JSON.parse();//将字符串转化为对象，html5
-//JSON.stringify();//将对象转化成JSON格式的字符串
-//如果对象有方法会忽略掉
-var p1 = JSON.parse(JSON.stringify(person));
-</code></pre><hr>
+</code></pre><p>   }<br>var p1=person;<br>var p1={};<br>for(var i in person){//浅赋值<br>   if(person.hasOwnProperty(i)){</p>
+<pre><code>p1[i] = person[i];
+</code></pre><p>   }<br>}</p>
+</li>
+<li><p>//JSON.parse();//将字符串转化为对象，html5<br>//JSON.stringify();//将对象转化成JSON格式的字符串<br>//如果对象有方法会忽略掉<br>var p1 = JSON.parse(JSON.stringify(person));</p>
+</li>
+</ul>
+<hr>
 
     </section>
     <footer class="post-footer">
