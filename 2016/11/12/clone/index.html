@@ -58,15 +58,9 @@
 </li>
 <li><p>复合数据类型的变量装的一把钥匙，可以通过这个钥匙找到我们所要的数据，通过=赋值，就是复制多了一把钥匙，数据还是只要一份</p>
 </li>
-<li><p>var person={</p>
-<pre><code>name:&quot;shafee&quot;,
-age:20,
-city:&quot;广州&quot;,
-tel:[13800138000,10086],
-say:function(){
-    console.log(this.age)
-}
-</code></pre><p>   }<br>var p1=person;<br>var p1={};<br>for(var i in person){//浅赋值<br>   if(person.hasOwnProperty(i)){</p>
+<li><p>var person={<br>   name:”shafee”,<br>   age:20,<br>   city:”广州”,<br>   tel:[13800138000,10086],<br>   say:function(){</p>
+<pre><code>console.log(this.age)
+</code></pre><p>   }<br>}<br>var p1=person;<br>var p1={};<br>for(var i in person){//浅赋值<br>   if(person.hasOwnProperty(i)){</p>
 <pre><code>p1[i] = person[i];
 </code></pre><p>   }<br>}</p>
 </li>
