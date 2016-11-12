@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://zhili5377047.github.io/2016/11/12/My-New-Post/index.html">
 <meta property="og:site_name" content="Single_intro">
 <meta property="og:description" content="//对象的声明    var person={        name:”shafee”,        age:20,        tel:[13800,10086],        say:function(){            console.log(this.age);        }    }    var p = {        gender:”male”    }">
-<meta property="og:updated_time" content="2016-11-12T06:39:02.000Z">
+<meta property="og:updated_time" content="2016-11-12T06:41:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对象的深复制">
 <meta name="twitter:description" content="//对象的声明    var person={        name:”shafee”,        age:20,        tel:[13800,10086],        say:function(){            console.log(this.age);        }    }    var p = {        gender:”male”    }">
@@ -58,7 +58,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zhili5377047.github.io"></form>
@@ -89,8 +89,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>//对象的声明<br>    var person={<br>        name:”shafee”,<br>        age:20,<br>        tel:[13800,10086],<br>        say:function(){<br>            console.log(this.age);<br>        }<br>    }<br>    var p = {<br>        gender:”male”<br>    }<br>    function deepClone(oldObj,newObj){<br>        var newObj=newObj||{};//如果传入newObj具使用该对象，否则就是用空对象<br>        for(var i in oldObj){//遍历原有对象属性和方法<br>            if(oldObj.hasOwnProperty(i)){    //判断对象本身是否有该属性<br>                //只拷贝原有对象的自有属性<br>                if(typeof oldObj[i]===”object”){<br>                    var c= (oldObj[i].constructor==Array?[]:{});<br>                    //使用递归<br>                    newObj[i] = deepClone(oldObj[i],c)<br>                }else{<br>                    newObj[i] =oldObj[i];//浅复制<br>                }</p>
+        <p>//对象的声明<br>    var person={<br>        name:”shafee”,<br>        age:20,<br>        tel:[13800,10086],<br>        say:function(){<br>            console.log(this.age);<br>        }<br>    }<br>    var p = {<br>        gender:”male”<br>    }<br>    function deepClone(oldObj,newObj){<br>        var newObj=newObj||{};//如果传入newObj具使用该对象，否则就是用空对象<br>        for(var i in oldObj){//遍历原有对象属性和方法<br>            if(oldObj.hasOwnProperty(i)){    //判断对象本身是否有该属性<br>                //只拷贝原有对象的自有属性<br>                if(typeof oldObj[i]===”object”){<br>                    var c= (oldObj[i].constructor==Array?[]:{});<br>                    //使用递归<br>                    newObj[i] = deepClone(oldObj[i],c)<br>                }else{<br>                    newObj[i] =oldObj[i];//浅复制<br>                }</p>
 <pre><code>        }
     }
     return newObj;//返回一个新的oldObj所有属性跟方法的对象
@@ -104,7 +103,7 @@ var p2 = deepClone(person);//复制person对象
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zhili5377047.github.io/2016/11/12/My-New-Post/" data-id="civeufaz900009cw8yzl9tft0" class="article-share-link">Delen</a>
+      <a data-url="https://zhili5377047.github.io/2016/11/12/My-New-Post/" data-id="civeuh2ij00009qw8bowpvrh3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -115,7 +114,7 @@ var p2 = deepClone(person);//复制person对象
   
   
     <a href="/2016/11/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ouder</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Hello World</div>
     </a>
   
@@ -138,7 +137,7 @@ var p2 = deepClone(person);//复制person对象
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul>
     </div>
@@ -148,7 +147,7 @@ var p2 = deepClone(person);//复制person对象
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
