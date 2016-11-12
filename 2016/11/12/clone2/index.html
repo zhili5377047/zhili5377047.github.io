@@ -51,41 +51,9 @@
 </span>
     <h1 class="post-title">对象的深复制(2)</h1>
     <section class="post-content">
-      <hr>
-<pre><code>//对象的声明
-var person={
-    name:&quot;shafee&quot;,
-    age:20,
-    tel:[13800,10086],
-    say:function(){
-        console.log(this.age);
-    }
-}
-var p = {
-    gender:&quot;male&quot;
-}
-function deepClone(oldObj,newObj){
-    var newObj=newObj||{};//如果传入newObj具使用该对象，否则就是用空对象
-    for(var i in oldObj){//遍历原有对象属性和方法
-        if(oldObj.hasOwnProperty(i)){    //判断对象本身是否有该属性
-            //只拷贝原有对象的自有属性
-            if(typeof oldObj[i]===&quot;object&quot;){
-                var c= (oldObj[i].constructor==Array?[]:{});
-                //使用递归
-                newObj[i] = deepClone(oldObj[i],c)
-            }else{
-                newObj[i] =oldObj[i];//浅复制
-            }
+      <p>&lt;!DOCTYPE html&gt;</p>
+<html lang="en"><br><head><br>    <meta charset="UTF-8"><br>    <title>Document</title><br></head><br><body><br>        <a href="http://baidu.com" target="_blank" rel="external">百度一下</a><br>        —<br>        //对象的声明<br>        var person={<br>            name:”shafee”,<br>            age:20,<br>            tel:[13800,10086],<br>            say:function(){<br>                console.log(this.age);<br>            }<br>        }<br>        var p = {<br>            gender:”male”<br>        }<br>        function deepClone(oldObj,newObj){<br>            var newObj=newObj||{};//如果传入newObj具使用该对象，否则就是用空对象<br>            for(var i in oldObj){//遍历原有对象属性和方法<br>                if(oldObj.hasOwnProperty(i)){    //判断对象本身是否有该属性<br>                    //只拷贝原有对象的自有属性<br>                    if(typeof oldObj[i]===”object”){<br>                        var c= (oldObj[i].constructor==Array?[]:{});<br>                        //使用递归<br>                        newObj[i] = deepClone(oldObj[i],c)<br>                    }else{<br>                        newObj[i] =oldObj[i];//浅复制<br>                    }<br><br>                }<br>            }<br>            return newObj;//返回一个新的oldObj所有属性跟方法的对象<br><br><br>        }<br>        var p1 = deepClone(person,p);//拓展p对象，并拥有person的属性跟方法<br>        var p2 = deepClone(person);//复制person对象<br>    —<br></body><br></html>
 
-        }
-    }
-    return newObj;//返回一个新的oldObj所有属性跟方法的对象
-
-
-}
-var p1 = deepClone(person,p);//拓展p对象，并拥有person的属性跟方法
-var p2 = deepClone(person);//复制person对象
-</code></pre><hr>
 
     </section>
     <footer class="post-footer">
