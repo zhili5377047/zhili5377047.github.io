@@ -5,16 +5,49 @@
   
   <title>面向对象思想 | Single_intro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="很舒服绝对">
+  <meta name="description" content="var person={
+    name:&amp;quot;shafee&amp;quot;,
+    age:20,
+    tel:[13800,10086],
+    say:function(){
+        console.log(this.age);
+    }
+}
+var p = {
+    gender:&amp;quot;male&amp;quot;
+}
+function deepClone(old">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象思想">
 <meta property="og:url" content="https://zhili5377047.github.io/2016/11/12/My-New-Post/index.html">
 <meta property="og:site_name" content="Single_intro">
-<meta property="og:description" content="很舒服绝对">
-<meta property="og:updated_time" content="2016-11-12T06:17:59.000Z">
+<meta property="og:description" content="var person={
+    name:&amp;quot;shafee&amp;quot;,
+    age:20,
+    tel:[13800,10086],
+    say:function(){
+        console.log(this.age);
+    }
+}
+var p = {
+    gender:&amp;quot;male&amp;quot;
+}
+function deepClone(old">
+<meta property="og:updated_time" content="2016-11-12T06:27:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象思想">
-<meta name="twitter:description" content="很舒服绝对">
+<meta name="twitter:description" content="var person={
+    name:&amp;quot;shafee&amp;quot;,
+    age:20,
+    tel:[13800,10086],
+    say:function(){
+        console.log(this.age);
+    }
+}
+var p = {
+    gender:&amp;quot;male&amp;quot;
+}
+function deepClone(old">
   
     <link rel="alternate" href="/atom.xml" title="Single_intro" type="application/atom+xml">
   
@@ -89,11 +122,46 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="很舒服绝对"><a href="#很舒服绝对" class="headerlink" title="很舒服绝对"></a>很舒服绝对</h2>
+        <hr>
+<!-- 声明一个对象 -->
+<pre><code>var person={
+    name:&quot;shafee&quot;,
+    age:20,
+    tel:[13800,10086],
+    say:function(){
+        console.log(this.age);
+    }
+}
+var p = {
+    gender:&quot;male&quot;
+}
+function deepClone(oldObj,newObj){
+    var newObj=newObj||{};//如果传入newObj具使用该对象，否则就是用空对象
+    for(var i in oldObj){//遍历原有对象属性和方法
+        if(oldObj.hasOwnProperty(i)){    //判断对象本身是否有该属性
+            //只拷贝原有对象的自有属性
+            if(typeof oldObj[i]===&quot;object&quot;){
+                var c= (oldObj[i].constructor==Array?[]:{});
+                //使用递归
+                newObj[i] = deepClone(oldObj[i],c)
+            }else{
+                newObj[i] =oldObj[i];//浅复制
+            }
+
+        }
+    }
+    return newObj;//返回一个新的oldObj所有属性跟方法的对象
+
+
+}
+var p1 = deepClone(person,p);//拓展p对象，并拥有person的属性跟方法
+var p2 = deepClone(person);//复制person对象
+</code></pre><hr>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zhili5377047.github.io/2016/11/12/My-New-Post/" data-id="civetmgt700007iw8s4xcag98" class="article-share-link">Share</a>
+      <a data-url="https://zhili5377047.github.io/2016/11/12/My-New-Post/" data-id="civetzuxp000180w89ixb31jk" class="article-share-link">Share</a>
       
       
     </footer>
