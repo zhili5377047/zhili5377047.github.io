@@ -3,54 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>一、对象的深复制 | Single_intro</title>
+  <title>二.浅赋值 | Single_intro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="//对象的声明
-var person={
-    name:&amp;quot;shafee&amp;quot;,
-    age:20,
-    tel:[13800,10086],
-    say:function(){
-        console.log(this.age);
-    }
-}
-var p = {
-    gender:&amp;quot;male&amp;quot;
-}
-function deepCl">
+  <meta name="description" content="//基本数据类型 String，Number,Boolean,null,underfined 按值传递
+    复合数据类型 Array,Object 按引用传递 
+    如果将变量类比成一个盒子，那么基本数据类型的变量装的就是实在的内容，通过&amp;quot;=&amp;quot;号赋值，就是复制多一份出来了
+
+    复合数据类型的变量装的一把钥匙，可以通过这个钥匙找到我们所要的数据，通过=赋值，就是复">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一、对象的深复制">
-<meta property="og:url" content="https://zhili5377047.github.io/2016/11/12/My-New-Post/index.html">
+<meta property="og:title" content="二.浅赋值">
+<meta property="og:url" content="https://zhili5377047.github.io/2016/11/12/clone/index.html">
 <meta property="og:site_name" content="Single_intro">
-<meta property="og:description" content="//对象的声明
-var person={
-    name:&amp;quot;shafee&amp;quot;,
-    age:20,
-    tel:[13800,10086],
-    say:function(){
-        console.log(this.age);
-    }
-}
-var p = {
-    gender:&amp;quot;male&amp;quot;
-}
-function deepCl">
-<meta property="og:updated_time" content="2016-11-12T06:45:19.000Z">
+<meta property="og:description" content="//基本数据类型 String，Number,Boolean,null,underfined 按值传递
+    复合数据类型 Array,Object 按引用传递 
+    如果将变量类比成一个盒子，那么基本数据类型的变量装的就是实在的内容，通过&amp;quot;=&amp;quot;号赋值，就是复制多一份出来了
+
+    复合数据类型的变量装的一把钥匙，可以通过这个钥匙找到我们所要的数据，通过=赋值，就是复">
+<meta property="og:updated_time" content="2016-11-12T07:16:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一、对象的深复制">
-<meta name="twitter:description" content="//对象的声明
-var person={
-    name:&amp;quot;shafee&amp;quot;,
-    age:20,
-    tel:[13800,10086],
-    say:function(){
-        console.log(this.age);
-    }
-}
-var p = {
-    gender:&amp;quot;male&amp;quot;
-}
-function deepCl">
+<meta name="twitter:title" content="二.浅赋值">
+<meta name="twitter:description" content="//基本数据类型 String，Number,Boolean,null,underfined 按值传递
+    复合数据类型 Array,Object 按引用传递 
+    如果将变量类比成一个盒子，那么基本数据类型的变量装的就是实在的内容，通过&amp;quot;=&amp;quot;号赋值，就是复制多一份出来了
+
+    复合数据类型的变量装的一把钥匙，可以通过这个钥匙找到我们所要的数据，通过=赋值，就是复">
   
     <link rel="alternate" href="/atom.xml" title="Single_intro" type="application/atom+xml">
   
@@ -103,10 +79,10 @@ function deepCl">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-clone" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/11/12/My-New-Post/" class="article-date">
-  <time datetime="2016-11-12T02:50:02.000Z" itemprop="datePublished">2016-11-12</time>
+    <a href="/2016/11/12/clone/" class="article-date">
+  <time datetime="2016-11-12T07:11:13.000Z" itemprop="datePublished">2016-11-12</time>
 </a>
     
   </div>
@@ -117,7 +93,7 @@ function deepCl">
         
   
     <h1 class="article-title" itemprop="name">
-      一、对象的深复制
+      二.浅赋值
     </h1>
   
 
@@ -126,45 +102,41 @@ function deepCl">
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<pre><code>//对象的声明
-var person={
-    name:&quot;shafee&quot;,
-    age:20,
-    tel:[13800,10086],
-    say:function(){
-        console.log(this.age);
-    }
-}
-var p = {
-    gender:&quot;male&quot;
-}
-function deepClone(oldObj,newObj){
-    var newObj=newObj||{};//如果传入newObj具使用该对象，否则就是用空对象
-    for(var i in oldObj){//遍历原有对象属性和方法
-        if(oldObj.hasOwnProperty(i)){    //判断对象本身是否有该属性
-            //只拷贝原有对象的自有属性
-            if(typeof oldObj[i]===&quot;object&quot;){
-                var c= (oldObj[i].constructor==Array?[]:{});
-                //使用递归
-                newObj[i] = deepClone(oldObj[i],c)
-            }else{
-                newObj[i] =oldObj[i];//浅复制
-            }
+<pre><code>//基本数据类型 String，Number,Boolean,null,underfined 按值传递
+    复合数据类型 Array,Object 按引用传递 
+    如果将变量类比成一个盒子，那么基本数据类型的变量装的就是实在的内容，通过&quot;=&quot;号赋值，就是复制多一份出来了
 
+    复合数据类型的变量装的一把钥匙，可以通过这个钥匙找到我们所要的数据，通过=赋值，就是复制多了一把钥匙，数据还是只要一份
+
+var person={
+        name:&quot;shafee&quot;,
+        age:20,
+        city:&quot;广州&quot;,
+        tel:[13800138000,10086],
+        say:function(){
+            console.log(this.age)
         }
     }
-    return newObj;//返回一个新的oldObj所有属性跟方法的对象
 
 
+var p1=person;
+var p1={};
+for(var i in person){//浅赋值
+    if(person.hasOwnProperty(i)){
+        p1[i] = person[i];
+    }
 }
-var p1 = deepClone(person,p);//拓展p对象，并拥有person的属性跟方法
-var p2 = deepClone(person);//复制person对象
+
+//JSON.parse();//将字符串转化为对象，html5
+//JSON.stringify();//将对象转化成JSON格式的字符串
+//如果对象有方法会忽略掉
+var p1 = JSON.parse(JSON.stringify(person));
 </code></pre><hr>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zhili5377047.github.io/2016/11/12/My-New-Post/" data-id="civevqdi80000bxw8fvvox7re" class="article-share-link">Partager</a>
+      <a data-url="https://zhili5377047.github.io/2016/11/12/clone/" data-id="civevqdid0001bxw87o29e6pr" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -173,19 +145,10 @@ var p2 = deepClone(person);//复制person对象
     
 <nav id="article-nav">
   
-    <a href="/2016/11/12/clone/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          二.浅赋值
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/11/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/11/12/My-New-Post/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">一、对象的深复制</div>
     </a>
   
 </nav>
