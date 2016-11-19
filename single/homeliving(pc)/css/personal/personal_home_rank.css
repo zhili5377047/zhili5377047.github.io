@@ -1,0 +1,72 @@
+.part-right {
+  width: 1000px;
+  position: relative;
+}
+.part-right .rank-title {
+  border-bottom: 1px solid #e6e6e6;
+}
+.part-right .rank-title span {
+  display: inline-block;
+  width: 100px;
+  border: 1px solid #e6e6e6;
+  border-bottom: 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 48px;
+}
+.part-right .rank-con {
+  margin-left: 30px;
+}
+.part-right .rank-con p {
+  font-size: 14px;
+  color: #868686;
+  line-height: 14px;
+}
+.part-right .rank-con .p1 {
+  margin-top: 38px;
+}
+.part-right .rank-con .p2 {
+  margin-top: 18px;
+}
+.part-right .rank-con .p3 {
+  margin-top: 18px;
+}
+.part-right .rank-con .recharge {
+  display: inline-block;
+  width: 90px;
+  height: 35px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 35px;
+  color: #FFFFFF;
+  text-align: center;
+  background: #26c08a;
+  margin-top: 30px;
+}
+.part-right .rank-con .text {
+  width: 547px;
+  margin-top: 115px;
+}
+.part-right .rank-con ul {
+  position: absolute;
+  display: inline-block;
+}
+.part-right .rank-con ul li {
+  font-size: 14px;
+  color: #868686;
+}
+.part-right .rank-con ul li:nth-child(1) {
+  margin-top: 48px;
+}
+.part-right .rank-con ul li:nth-child(2) {
+  margin-top: 32px;
+}
+.part-right .rank-con ul li:nth-child(3) {
+  margin-top: 32px;
+}
+.part-right .rank-con .vip {
+  left: 120px;
+}
+.part-right .rank-con .shareholder {
+  left: 412px;
+}

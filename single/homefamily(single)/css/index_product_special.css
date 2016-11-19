@@ -1,0 +1,299 @@
+html,
+body {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+}
+#head {
+  height: 40px;
+  width: 100%;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4), #f2f2f2);
+  color: #ffffff;
+  font-size: 16px;
+  position: fixed;
+  z-index: 80;
+  line-height: 40px;
+}
+#head a {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 100%;
+}
+#head .back-btn {
+  width: 40px;
+  top: 0;
+  background: url(../img/index_productimg.png) 15px 8px no-repeat;
+  background-size: 355px 200px;
+}
+#head .restore {
+  left: 73.86666666666667%;
+  background: url(../img/index_productimg.png) -270px 8px no-repeat;
+  background-size: 355px 200px;
+}
+#head .share {
+  background: orange;
+  right: 0;
+  background: url(../img/index_productimg.png) -325px 8px no-repeat;
+  background-size: 357px 200px;
+}
+#content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: left;
+  height: 100%;
+}
+#content .bg_header {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 0;
+}
+#content .bg_bottom {
+  width: 100%;
+  height: 50px;
+}
+#content div {
+  width: 94.66666666666667%;
+  margin: 0 auto 14px;
+}
+#content .controll_iphone {
+  margin-bottom: 48px;
+}
+#content .controll_iphone a {
+  display: block;
+  width: 72.11267605633803%;
+  margin: 0px auto;
+}
+#content .price {
+  position: relative;
+  color: #666666;
+}
+#content .price .discount_price {
+  font-size: 14px;
+  margin-right: 7.323943661971831%;
+  color: #ff3b0e;
+}
+#content .price .true_price span {
+  text-decoration: line-through;
+}
+#content .price .amount {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+}
+#content .price .this_time {
+  color: #666666;
+}
+#content .honor {
+  font-size: 16px;
+}
+#content .phone_detail {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #979797;
+}
+#content .phone_detail .change {
+  float: left;
+  width: 50%;
+  height: 100%;
+  color: #666666;
+}
+#content .phone_detail .change span {
+  display: block;
+  width: 58px;
+  margin: 0 auto;
+}
+#content .phone_detail .change .show {
+  border-bottom: 2px solid #ff3b0e;
+}
+#content .intro_detail {
+  width: 100%;
+  position: relative;
+}
+#content .intro_detail ul {
+  width: 100%;
+  display: none;
+  position: absolute;
+}
+#content .intro_detail .showing {
+  display: block;
+  width: 100%;
+}
+#content .intro_detail .showing .phone_img {
+  width: 100%;
+  height: 100%;
+}
+#content .intro_detail .showing .phone_img .botImg {
+  width: 100%;
+}
+#content .intro_detail .comment .name_detail {
+  height: 20px;
+  width: 100%;
+}
+#content .intro_detail .comment .name_detail .little_ball {
+  font-size: 14px;
+  float: left;
+  margin-right: 1.6%;
+  padding-left: 2.666666666666667%;
+}
+#content .intro_detail .comment .name_detail .time_start {
+  float: right;
+  font-size: 14px;
+  padding-right: 2.666666666666667%;
+  color: #979797;
+}
+#content .intro_detail .comment .name_detail img {
+  width: 55px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#content .intro_detail .comment .name_detail .block_comment {
+  display: block;
+  text-align: left;
+  margin-top: 14px;
+  padding-left: 2.666666666666667%;
+}
+#mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+#mask .big_dir {
+  width: 80%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+#mask .share_bottom {
+  display: none;
+  width: 100%;
+  padding-top: 9px;
+  height: 226px;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 80;
+  text-align: center;
+}
+#mask .share_bottom h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+#mask .share_bottom .wrapall {
+  width: 100%;
+  text-align: center;
+  height: 75px;
+}
+#mask .share_bottom .wrapall .shareOthers {
+  float: left;
+  text-align: center;
+  width: 18.666666666666668%;
+  height: 55px;
+  margin: 0 7.333333333333333% 0 7.333333333333333%;
+  color: #262626;
+  font-size: 12px;
+}
+#mask .share_bottom .wrapall .shareOthers span {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+#mask .share_bottom .wrapall .shareOthers .create_1 {
+  background: url(../img/index_productimg.png) 4px -134px no-repeat;
+  background-size: 355px 200px;
+}
+#mask .share_bottom .wrapall .shareOthers .create_2 {
+  background: url(../img/index_productimg.png) -124px -134px no-repeat;
+  background-size: 355px 200px;
+}
+#mask .share_bottom .wrapall .shareOthers .create_3 {
+  background: url(../img/index_productimg.png) -254px -134px no-repeat;
+  background-size: 355px 200px;
+}
+#mask .share_bottom .wrapall .shareOthers span:before {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 60px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+#mask .share_bottom .cancelthem {
+  width: 84%;
+  height: 45px;
+  background: #cccccc;
+  margin: 40px auto 0;
+  border-radius: 0.4rem;
+  font-size: 16px;
+  line-height: 45px;
+  text-align: center;
+}
+#mask .share_bottom .cancelthem a {
+  color: #262626;
+}
+#foot {
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  bottom: 0;
+}
+#foot a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28.799999999999997%;
+  height: 32px;
+  border-radius: 0.4rem;
+  text-align: center;
+  line-height: 32px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+#foot .direction_1 {
+  position: relative;
+  width: 14.666666666666666%;
+  height: 100%;
+  margin-left: 2.666666666666667%;
+  margin-right: 14.666666666666666%;
+  background: url(../img/index_productimg.png) 0 -51px no-repeat;
+  background-size: 355px 200px;
+}
+#foot .direction_1 .number {
+  display: block;
+  height: 12px;
+  width: 12px;
+  line-height: 12px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 6px;
+  background-color: #ee3749;
+  position: absolute;
+  left: 22px;
+  top: 20px;
+}
+#foot .direction_2 {
+  background-color: #f29004;
+  margin-right: 6%;
+}
+#foot .direction_3 {
+  background-color: #ee3749;
+}

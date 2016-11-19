@@ -1,0 +1,56 @@
+@import "../../common";
+
+body {
+	background-color: @bg_color;
+}
+#paymentBox {
+	background-color: #fff;
+	border-top: 1px solid @border_color;
+	.fs14;
+	margin-top: 16px;
+	.top-bar {
+		position: relative;
+		height: 44px;
+		line-height: 44px;
+		padding-left: 66px;
+		&.p-zhifubao:after {
+			background-position: 0 -166px;
+		}
+		&.p-weixin:after {
+			background-position: -32px -166px;
+		}
+		&:after {
+			position: absolute;
+			left:18px;
+			top: 6px;
+			width: 30px;
+			height: 30px;
+			content: "";
+			background: url("../../../img/icon.png") no-repeat;
+			background-size: 216px 226px;
+		}
+	}
+	.tips {
+		display: block;
+		height: 44px;
+		line-height: 44px;
+		border:1px solid @border_color;
+		span {
+			display: inline-block;
+			width:60px;
+			text-align: center;
+		}
+		input {
+			border: none;
+			height: 20px;
+			padding: 10px 0;
+			.fs14;
+			font-family: "Microsoft Yahei";
+		}
+	}
+}
+.next-btn {
+	.common-btn(@width:80%;@bg:#26c08a;@height:46px;);
+	.fs16;
+	margin-top: 54px;
+}

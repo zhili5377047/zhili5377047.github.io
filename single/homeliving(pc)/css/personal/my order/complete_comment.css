@@ -1,0 +1,77 @@
+.section {
+  width: 1200px;
+  margin: 0 auto;
+  min-height: 920px;
+  padding-top: 30px;
+}
+.section .content {
+  padding: 30px 56px 70px 26px;
+  border: 1px solid #dbdbdb;
+}
+.section .content img {
+  width: 100px;
+  display: inline-block;
+}
+.section .content .text {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 38px;
+}
+.section .content .text .title {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+.section .content .text .size {
+  font-size: 14px;
+  color: #757575;
+  line-height: 48px;
+}
+.section .content .text strong {
+  font-size: 22px;
+  color: #DE0000;
+}
+.section .comment {
+  float: right;
+  width: 430px;
+}
+.section .comment .title {
+  font-size: 14px;
+  line-height: 30px;
+}
+.section .comment .title .stars {
+  float: right;
+}
+.section .comment .title span {
+  display: inline-block;
+  background: url(../../../img/home.png) no-repeat;
+  width: 16px;
+  height: 16px;
+  background-position: -318px -32px;
+  margin-top: 6px;
+}
+.section .comment .title .active {
+  background-position: -340px -32px;
+}
+.section .comment textarea {
+  outline: none;
+  padding: 10px;
+  width: 408px;
+  height: 123px;
+  background: #f7f7f7;
+  font-size: 14px;
+  resize: none;
+  overflow: auto;
+  border: 1px solid #dbdbdb;
+}
+.section .comment button {
+  margin-top: 22px;
+  float: right;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  background: #f29004;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: bold;
+}
