@@ -1,0 +1,47 @@
+@import "../../common";
+
+section {
+	margin:4% 10px;
+}
+.recharge {
+	margin-bottom: 6px;
+	text-align: right;
+	a {
+		.fs14;
+		color:@c3;
+	}
+}
+dl {
+	margin:0 10px;
+	.fs12;
+}
+.level-tips {
+	margin-top: 20px;
+	h2 {
+		position: relative;
+		text-align: center;
+		color:@c3;
+		.fs14;
+		height: 28px;
+		line-height: 28px;
+		span {
+			display: inline-block;
+			padding:0 20px;
+			background-color: #fff;
+			position: relative;
+			z-index: 1;
+		}
+		&:after {
+			position: absolute;
+			left:0;
+			top:14px;
+			content:"";
+			height: 1px;
+			width:100%;
+			background-color: @bg_color;
+		}
+	}
+	p {
+		color:@c6;
+	}
+}

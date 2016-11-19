@@ -1,0 +1,178 @@
+.main {
+  width: 1200px;
+  margin: 30px auto;
+}
+.main .aside {
+  float: left;
+}
+.main .aside ul {
+  border: 1px solid #dbdbdb;
+  border-bottom: none;
+}
+.main .aside ul li {
+  width: 140px;
+  height: 40px;
+  padding-left: 30px;
+  line-height: 40px;
+  font-size: 14px;
+  border-bottom: 1px solid #dbdbdb;
+  cursor: pointer;
+}
+.main .aside ul .active {
+  background-color: #f29004;
+  color: #fff;
+}
+.main .center {
+  float: left;
+  width: 720px;
+  min-height: 256px;
+  margin-left: 24px;
+  padding-bottom: 54px;
+  border: 1px solid #dbdbdb;
+}
+.main .center ul {
+  border-bottom: none;
+  display: none;
+}
+.main .center ul li {
+  padding-top: 20px;
+  padding-bottom: 26px;
+  border-bottom: 4px solid #dbdbdb;
+}
+.main .center ul li a {
+  color: #000;
+  display: inline-block;
+}
+.main .center ul li img {
+  width: 86px;
+  height: 86px;
+  display: inline-block;
+  margin: 0 16px 16px 18px;
+}
+.main .center ul li .title {
+  display: inline-block;
+  vertical-align: top;
+  width: 590px;
+}
+.main .center ul li .title p {
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+}
+.main .center ul li .title span {
+  font-size: 16px;
+  display: inline-block;
+  color: #62AB00;
+  margin-top: 10px;
+}
+.main .center ul li .intro {
+  font-size: 18px;
+  line-height: 44px;
+  background-color: #f2f2f2;
+  padding: 0 16px;
+}
+.main .center ul li .intro:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../../img/home.png) no-repeat;
+  vertical-align: middle;
+  background-position: -235px -5px;
+  margin-right: 6px;
+}
+.main .center ul li .message {
+  font-size: 14px;
+  padding: 16px 16px 0;
+}
+.main .center ul:first-child {
+  display: block;
+}
+.main .right {
+  float: left;
+  width: 254px;
+  margin-left: 26px;
+}
+.main .right .hotSell {
+  padding-top: 20px;
+  border: 1px solid #dbdbdb;
+  border-bottom: none;
+}
+.main .right .hotSell a {
+  display: inline-block;
+  width: 228px;
+  padding: 24px 12px 16px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.main .right .hotSell .headline {
+  padding-left: 12px;
+}
+.main .right .hotSell .headline span {
+  display: inline-block;
+  font-size: 18px;
+  border-bottom: 4px solid #f29004;
+}
+.main .right .hotSell img {
+  width: 86px;
+  display: inline-block;
+}
+.main .right .hotSell .title {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.main .right .hotSell .title p {
+  color: #000;
+  font-weight: bold;
+}
+.main .right .hotSell .title span {
+  display: inline-block;
+  color: #62AB00;
+  margin-top: 10px;
+}
+.main .right .newMeg {
+  padding-top: 20px;
+  border: 1px solid #dbdbdb;
+  border-top: none;
+}
+.main .right .newMeg .headline {
+  padding-left: 12px;
+}
+.main .right .newMeg .headline span {
+  display: inline-block;
+  font-size: 18px;
+  border-bottom: 4px solid #f29004;
+}
+.main .right .newMeg ul {
+  padding-top: 14px;
+}
+.main .right .newMeg ul li {
+  border-top: 1px solid #dbdbdb;
+}
+.main .right .newMeg ul li a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  display: block;
+  padding: 12px 14px;
+  background: #f2f2f2;
+}
+.main .right .newMeg ul li a:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../../img/home.png) no-repeat;
+  background-position: -235px -5px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.main .right .newMeg ul li p {
+  font-size: 14px;
+  padding: 16px 14px 24px;
+  display: block;
+  word-break: break-all;
+  overflow: hidden;
+}

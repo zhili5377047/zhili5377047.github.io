@@ -1,0 +1,117 @@
+html,
+body {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+}
+#head {
+  height: 40px;
+  width: 100%;
+  background-color: #f29004;
+  color: #ffffff;
+  font-size: 1.6rem;
+  position: fixed;
+  z-index: 10;
+  line-height: 40px;
+}
+#head .back-btn {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 0;
+  background: url(../img/index_productimg.png) 15px 8px no-repeat;
+  background-size: 355px 200px;
+}
+#head h1 {
+  text-align: center;
+}
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+#content .bg_header {
+  width: 100%;
+  height: 40px;
+}
+#content .swiper-container {
+  overflow: hidden;
+  width: 100%;
+  height: 150px;
+}
+#content .swiper-container .swiper-wrapper {
+  height: 100%;
+}
+#content .swiper-container .swiper-wrapper a img {
+  height: 100%;
+}
+#content .swiper-container .swiper-pagination {
+  bottom: 1%;
+}
+#content .content_detail {
+  width: 94.66666666666667px;
+  margin: 10px auto 0;
+}
+#content .content_detail a {
+  float: left;
+  width: 49.014084507042256px;
+  margin-bottom: 6px;
+}
+#content .content_detail a img {
+  width: 100%;
+}
+#content .content_detail a:nth-child(odd) {
+  margin-right: 1.971830985915493px;
+}
+#foot {
+  width: 100%;
+  height: 5rem;
+  border-top: 1px solid #dbdbdb;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #f2f2f2;
+}
+#foot .direction {
+  float: left;
+  width: 20%;
+  height: 5rem;
+  text-align: center;
+}
+#foot .direction .nav {
+  font-size: 1rem;
+  color: #808080;
+}
+#foot .direction .nav_icon1 {
+  color: #f29004;
+}
+#foot .direction .nav:before {
+  content: "";
+  display: block;
+  width: 2rem;
+  margin: 0 auto;
+  margin-top: 10%;
+  margin-bottom: 2%;
+  height: 40%;
+  overflow: hidden;
+  background: url(../img/icon.png) -1px -102px no-repeat;
+  background-size: 216px 226px;
+}
+#foot .direction .nav_icon1:before {
+  background-position: -72px -78px;
+}
+#foot .direction .nav_icon2:before {
+  background-position: -48px -102px;
+}
+#foot .direction .nav_icon3:before {
+  background-position: -24px -102px;
+}
+#foot .direction .nav_icon4:before {
+  background-position: -96px -102px;
+}
+#foot .direction .nav_icon5:before {
+  background-position: 0 -102px;
+}
+/*# sourceMappingURL=number2_mixed.css.map */

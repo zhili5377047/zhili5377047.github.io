@@ -1,0 +1,104 @@
+html,
+body {
+  background-color: #f2f2f2;
+  width: 100%;
+}
+#head {
+  height: 40px;
+  width: 100%;
+  background-color: #f29004;
+  color: #ffffff;
+  font-size: 1.6rem;
+  position: fixed;
+  line-height: 40px;
+}
+#head .pay_list {
+  display: block;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  padding-right: 2.666666666666667px;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+}
+#head .back-btn {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 0;
+  background: url(../img/index_productimg.png) 15px 8px no-repeat;
+  background-size: 355px 200px;
+}
+#head h1 {
+  text-align: center;
+}
+.clearfix {
+  display: block;
+  content: "";
+  clear: both;
+}
+#content {
+  width: 100%;
+  font-size: 14px;
+  color: #838383;
+}
+#content .bg_bottom {
+  width: 100%;
+  height: 60px;
+}
+#content .bg_header {
+  width: 100%;
+  height: 40px;
+}
+#content .searchlist {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 14px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #E6E6E6;
+}
+#content .searchlist .each_list {
+  height: 70px;
+  padding-left: 10px;
+}
+#content .searchlist .each_list .wrap_click {
+  padding-top: 14px;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#content .searchlist .each_list .wrap_click .fruit_apple {
+  font-size: 14px;
+}
+#content .searchlist .each_list .wrap_click .bottle_count {
+  position: relative;
+  display: block;
+  color: #FF0000;
+}
+#content .searchlist .each_list .wrap_click img {
+  width: 70px;
+  float: left;
+  margin-right: 8px;
+}
+#content .searchlist .each_list .wrap_click .click_select {
+  display: block;
+  height: 100%;
+  width: 35px;
+  float: left;
+  display: none;
+  background: url(../img/index_productimg.png) -337px -53px no-repeat;
+  background-size: 355px 200px;
+}
+#content .searchlist .each_list .wrap_click > span {
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  color: #000000;
+  line-height: 24px;
+}
+/*# sourceMappingURL=myrestore_1.css.map */

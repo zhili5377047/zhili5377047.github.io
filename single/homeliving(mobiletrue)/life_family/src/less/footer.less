@@ -1,0 +1,49 @@
+@import "common";
+.footer-bar {
+	margin-top:2%;
+	height: 50px;
+	ul {
+		border-top:1px solid @border_color;
+		background-color: #fff;
+		overflow: hidden;
+		position: fixed;
+		bottom:0;
+		width:100%;
+		max-width: 720px;
+	}
+	li {
+		float: left;
+		width:20%;
+		text-align: center;
+		a {
+			display: block;
+			color:@c80;
+			padding: 4px 0;
+			.fs10;
+			&:before {
+				content:"";
+				display: block;
+				margin:0 auto;
+				width:24px;
+				height: 24px;
+				background: url(../img/icon.png) no-repeat;
+				background-size: 216px 226px;
+			}
+		}
+		.loop(@counter) when (@counter <= 5) {
+			&.icon-@{counter} {
+				&.active a {
+					color:@cf3;
+					&:before {
+						background-position: -24px*(@counter - 1) -78px;
+					}
+				}
+				a:before {
+					background-position: -24px*(@counter - 1) -102px;
+				}
+			}
+			.loop(@counter + 1);
+		}
+		.loop(1);	
+	}
+}

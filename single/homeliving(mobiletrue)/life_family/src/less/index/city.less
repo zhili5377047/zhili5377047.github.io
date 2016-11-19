@@ -1,0 +1,29 @@
+@import "../common";
+
+body {
+	background-color: @bg_color;
+}
+.city-list {
+	color:@c3;
+	dt {
+		height:38px;
+		line-height:38px;
+		&.province-title {
+			background-color:#e6e6e6;
+		}
+		padding-left: 10px;
+	}
+	.current-title {
+		border-bottom: 1px solid @border_color;
+	}
+	dd {
+		padding-left: 10px;
+		height:54px;
+		line-height:54px;
+		border-bottom: 1px solid @border_color;
+		a {
+			display:block;
+			color:@c3;
+		}
+	}
+}

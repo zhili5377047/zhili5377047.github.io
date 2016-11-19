@@ -1,0 +1,47 @@
+@import "../common.less";
+
+body {
+	background-color: @bg_color;
+}
+.logo {
+	width:26.5625%;
+	margin:5% auto;
+}
+.input-group {
+	width:86%;
+	margin:0 auto;
+	border:1px solid @border_color;
+	border-radius: @border_radius;
+	overflow: hidden;
+	.mt10;
+	input {
+		width:100%;
+		padding:0 10px;
+		box-sizing: border-box;
+		.fs16;
+		border:none;
+		height: 36px;
+		line-height: 36px;
+	}
+}
+.register-btn {
+	position: absolute;
+	right:7%;
+	top:10px;
+	color:#fff;
+	.fs16;
+}
+.forget-box {
+	width:86%;
+	margin:10px auto;
+	text-align: right;
+	padding-bottom: 5%;
+	a {
+		color:@font_yellow;
+		.fs10;
+	}
+}
+.login-box {
+	width:86%;
+	margin:0 auto;
+}

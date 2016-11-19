@@ -1,0 +1,148 @@
+@fz12:12px;
+@fz14:14px;
+@fz16:16px;
+.section{
+	width: 1200px;
+	margin:0 auto;
+	padding-top: 80px;
+	padding-bottom: 100px;
+	&>div{
+		border:1px solid #dbdbdb;
+	}
+	.orderMessage{
+		padding:12px 16px 42px;
+		position: relative;
+		margin-bottom: 28px;
+		.title{
+			position: absolute;
+			font-size: @fz16;
+			width: 100px;height: 48px;
+			text-align: center;
+			line-height: 48px;
+			border:1px solid #dbdbdb;
+			color:#959595;
+			left: 0;top: -50px;
+		}
+		li{
+			margin-bottom: 16px;
+			font-size: @fz14;
+			color:#737373;
+			span{
+				color:#4d4d4d;
+				font-weight: bold;
+			}
+		}
+		.remark{
+			margin-top: 30px;
+			margin-bottom: 0;
+			textarea{
+				vertical-align: top;
+				margin-left: 26px;
+				resize:none;
+				outline: none;
+				width: 628px;height: 54px;
+				padding:10px;
+				overflow: auto;
+			}
+		}
+	}
+	.goodsMessage{
+		padding-bottom: 20px;
+		.title{
+			padding-left: 16px;
+			font-size: @fz16;
+			color:#4d4d4d;
+			line-height: 40px;
+		}
+		.headline{
+			border-top: 1px solid #dbdbdb;
+			border-bottom:1px solid #dbdbdb;
+			background-color: #f5f5f5;
+			padding-left: 16px;
+			span{
+				display: inline-block;
+				line-height: 40px;
+				text-align: center;
+				font-size: @fz14;
+				color:#808080;
+			}
+			.goodsIntro{
+				width: 390px;
+			}
+			.size{
+				width: 130px;
+			}
+			.quantity{
+				width: 130px;
+			}
+			.prize{
+				width: 180px;
+			}
+			.state{
+				width: 160px;
+			}
+			.prizes{
+				width: 176px;
+			}
+		}
+		li{
+			padding:6px 0 6px 16px;
+			font-size:@fz14;
+			border-bottom: 1px solid #dbdbdb;
+			&>div{
+				float:left;
+				// display: inline-block;
+				min-height: 124px;
+			}
+			.goodsIntro{
+				background: url(../../../img/shopping_car1.png) no-repeat;
+				background-position: 0 12px;
+				padding-left: 146px;
+				p{
+					padding-top: 50px;
+				}
+				width: 244px;
+			}
+			.size{
+				width: 130px;
+				text-align: center;
+				line-height: 124px;
+			}
+			.quantity{
+				width: 130px;
+				text-align: center;
+				line-height: 124px;
+			}
+			.prize{
+				width: 180px;
+				text-align: center;
+				p{
+					padding-top: 42px;
+					font-size: @fz16;
+					color:#737373;
+				}
+				span{
+					font-size: 13px;
+					color:#999
+				}
+			}
+			.state{
+				width: 160px;
+				text-align: center;
+				line-height: 124px;
+			}
+		}
+		.totalPrize{
+			padding-top: 36px;
+			padding-right: 40px;
+			text-align: right;
+			font-size: @fz14;
+			color:#4d4d4d;
+			strong{
+				font-size: @fz16;
+				color:#ed601b;
+				margin:0 8px;
+			}
+		}
+	}
+}

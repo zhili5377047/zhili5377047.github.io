@@ -1,0 +1,90 @@
+@import "../../common";
+
+.edit-bar {
+	background-color: #fff;
+	text-align: right;
+	height: 32px;
+	line-height: 32px;
+	padding-right: 10px;
+	border-bottom: 1px solid @border_color;
+	a {
+		color:@c1a;
+	}	
+}
+.c-list {
+	&.edit-status {
+		.weui-bar {
+			width: 8%;
+		}
+	}
+	background-color: #fff;
+	li {
+		padding:0 10px;
+		border-bottom: 1px solid @border_color;
+	}
+	a,label {
+		display: block;
+		overflow: hidden;
+		padding: 10px 0;
+		h2 {
+			.ellipsis;
+			.fs14;
+			color:@c1a;
+		}
+	}
+	div {
+		display: inline-block;
+		vertical-align: middle;
+		&.c-pic {
+			width:20%;
+		}
+		&.c-info {
+			width:60%;
+			margin-left: 10px;
+			vertical-align: top;
+			span {
+				color:@cde;
+				.fs14;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.delete-bar {
+	margin-top: 20px;
+	height: 48px;
+	line-height: 48px;
+}
+.delete-wrap {
+	position: fixed;
+	left:0;
+	bottom:0;
+	width:100%;
+	border-top: 1px solid @border_color;
+	background-color: @bg_color;
+	.del-btn {
+		position: absolute;
+		right:10px;
+		top:9px;
+		.common-btn(@width:108px;@height:30px;@bg:#ee4147;);
+		.fs14;
+	}
+}
+.delete-wrap label {
+	display: block;
+	width:25%;
+	box-sizing: border-box;
+	span:nth-of-type(1) {
+		margin: 0 12px;
+	}
+	span {
+		.fs14;
+		color:@c1a;
+	}
+	input,span{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+}

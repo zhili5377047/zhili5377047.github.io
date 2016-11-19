@@ -1,0 +1,107 @@
+html,
+body {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+}
+#head {
+  height: 40px;
+  width: 100%;
+  background-color: #f29004;
+  color: #ffffff;
+  font-size: 1.6rem;
+  position: relative;
+  line-height: 40px;
+}
+#head .back-btn {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 0;
+  background: url(../img/index_productimg.png) 15px 8px no-repeat;
+  background-size: 355px 200px;
+}
+#head h1 {
+  text-align: center;
+}
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+#content {
+  width: 100%;
+  text-align: center;
+}
+#content .swiper-container {
+  overflow: hidden;
+  width: 100%;
+  height: 150px;
+}
+#content .swiper-container .swiper-wrapper {
+  height: 100%;
+}
+#content .swiper-container .swiper-wrapper a img {
+  height: 100%;
+}
+#content .swiper-container .swiper-pagination {
+  bottom: 1%;
+}
+#content .content_detail .nav_detail {
+  float: left;
+  width: 28%;
+}
+#content .content_detail .nav_detail li {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #f2f2f2;
+}
+#content .content_detail .nav_detail li a {
+  display: block;
+  width: 97.14285714%;
+  border-left: 6px solid #f2f2f2;
+  height: 100%;
+  color: #000000;
+}
+#content .content_detail .nav_detail li .active_tips {
+  border-left: 6px solid #f29004;
+  width: 97.14285714%;
+  color: #f29004;
+  background: #e6e6e6;
+}
+#content .contenting {
+  float: left;
+  margin-left: 2.66666667%;
+  width: 69.33333333%;
+}
+#content .contenting .listpage {
+  padding-top: 10px;
+  height: 100px;
+  width: 97.33333333%;
+  border-bottom: 1px solid #d9d5d5;
+  color: #a6a4a4;
+}
+#content .contenting .listpage img {
+  width: 88px;
+  display: inline-block;
+  margin-right: 1.92307692%;
+}
+#content .contenting .listpage .timate {
+  float: left;
+  text-align: left;
+}
+#content .contenting .listpage .timate h2 {
+  font-size: 16px;
+  color: #1b1b1b;
+}
+#content .contenting .listpage .timate > p:nth-of-type(1) {
+  line-height: 24px;
+}
+#content .contenting .listpage .timate > p:nth-of-type(2) {
+  padding-left: 24px;
+  background: url(../img/index_productimg.png) -107px 1px no-repeat;
+  background-size: 355px 200px;
+}

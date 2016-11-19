@@ -1,0 +1,132 @@
+@import "../../common";
+
+body {
+	background-color: @bg_color;
+}
+
+.user-info {
+	padding: 15px 10px;
+	background-color: #fff;
+	color:@c3;
+	.fs14;
+	dt {
+		margin-bottom: 2px;
+	}
+	dt span {
+		margin-right: 10px;
+	}
+}
+
+.product-details {
+	border-top: 1px solid @border_color;
+	border-bottom: 1px solid @border_color;
+	background-color: #fff;
+	margin-top: 10px;
+	padding: 0 10px;
+	.order-top {
+		height: 38px;
+		line-height: 38px;
+		color:@c6;
+		.clearfix;
+		.order-tips {
+			float: left;
+		}
+		.return-btn {
+			float: right;
+			margin-top: 5px;
+			margin-right: 15px;
+			width:70px;
+			color:#fff;
+			text-align: center;
+			border:1px solid @c6;
+			border-radius:@border_radius;
+			height:28px;
+			line-height:28px;
+			.fs14;
+			color:@c6;
+		}
+		.order-status {
+			float: right;
+		}
+	}
+	.pro-info {
+		padding: 10px 0;
+		border-top: 1px solid @border_color;
+		border-bottom: 1px solid @border_color;
+		a {
+			display: block;
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 2px;
+			div {
+				float: left;
+			}
+			div:nth-child(1) {
+				width:70px;
+			}
+			div:nth-child(2) {
+				margin-left: 10px;
+				max-width: 200px;
+				width:64%;
+				h2 {
+					.ellipsis;
+					color:@c1a;
+					.fs14;
+					margin-bottom: 5px;
+				}
+			}
+			.pro-size {
+				color:@c6;
+				.fs12;
+			}
+			.pro-price {
+				color:@cde;
+				font-weight: bold;
+				.fs14;
+			}
+			.pro-count {
+				position: absolute;
+				right:5px;
+				color:@c3;
+				bottom:5px;
+				i {
+					margin-left: 8px;
+					.fs14;
+				}
+			}
+		}
+	}
+	.p-record {
+		p {
+			padding: 15px 0;
+			color: @c6;
+			border-top: 1px solid @border_color;
+			&:first-child {
+				border-top: none;
+			}
+			.text-right {
+				float: right;
+			}
+		}
+	}
+}
+
+.order-info {
+	background-color: #fff;
+	margin-top: 10px;
+	padding: 0 10px 40px;
+	border-top: 1px solid @border_color;
+	border-bottom: 1px solid @border_color;
+	.fs14;
+	dt {
+		height: 36px;
+		line-height: 36px;
+		border-bottom: 1px solid @border_color;
+		margin-bottom: 15px;
+	}
+}
+.ensure-btn,.payment-btn {
+	.fs16;
+	.common-btn(@height:45px;@width:90%;);
+	margin:20px auto;
+}

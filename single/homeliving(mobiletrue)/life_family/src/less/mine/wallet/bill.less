@@ -1,0 +1,37 @@
+@import "../../common";
+
+body {
+	background-color: @bg_color;
+}
+
+#billBox {
+	background-color: #fff;
+	dt {
+		height: 40px;
+		line-height: 40px;
+		border-bottom: 1px solid @bg_color;
+		color:@c6;
+		.fs18;
+		background-color: @bg_color;
+		padding: 0 10px;
+	}
+	dd {
+		background-color: #fff;
+		padding: 12px 10px;
+		border-bottom: 1px solid @border_color;
+		p {
+			.fs16;
+			margin-bottom: 2px;
+			overflow: hidden;
+			span:nth-child(1) {
+				float: left;
+			}
+			span:nth-child(2) {
+				float: right;
+			}
+		}
+		.d-time {
+			color:@c6;
+			.fs12;
+		}
+	}}

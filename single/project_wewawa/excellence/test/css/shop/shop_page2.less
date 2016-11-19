@@ -1,0 +1,198 @@
+
+//@import "files/backgrounds.less";
+@import "../../css/static/base.css";
+
+@import "shop_page1.css";
+@import "../static/head";
+@mkcolor:#f0bc4b;
+@color0:#878787;
+@colorl:#ececec;
+@fs0:18px;
+@fs1: 16px;
+@fs2:14px;
+
+.product_grids>div:nth-of-type(4n){
+    margin-right: 30px;
+}
+.product_grids>div:nth-of-type(3n){
+    margin-right: 0;
+}
+
+.shop_body .left_culomn{
+    display: inline-block;
+    width: 870px;
+    
+}
+//  ----- 右边 -----
+.shop_body .right_column{
+    display: inline-block;
+    width: 270px;height: 100%;
+    
+}
+//s搜索框
+.search_box{
+    height: 60px;line-height: 60px;
+    margin-top: 8px; 
+    border: 1px solid @colorl;
+}
+.search_box input{
+    margin-left: 20px;
+    width: 200px;height: 25px;
+    border: none;
+    font-size: @fs1;
+}
+.search_box:after{
+    content: "";
+    display: inline-block;
+    width: 20px;height: 16px;
+    margin-left: 8px;
+    vertical-align: middle;
+    background: url(../../img/shop/static/shop_icons.png) -45px 0 no-repeat;
+}
+
+// ----------------
+.byCate, .byColor, .byPrice, .bySize, .TopSale, .Tags{
+    margin-top: 30px;
+    font-size: @fs1;
+    color: @color0;
+}
+.byCate .menu,.byColor .menu{
+    padding-left: 30px;
+}
+.search_title{
+   font-size:@fs0;font-style: oblique;
+   font-weight: bolder; 
+   padding: 12px 0;
+   color: black;
+   font-weight: bolder;
+   border-bottom: 1px solid;
+   margin-bottom: 30px;
+}
+.search_title:before{
+    content: "";
+    display: inline-block;
+    width: 18px;height: 16px;
+    margin-right: 12px;
+    vertical-align: middle;
+    background: url(../../img/shop/static/shop_icons.png) -65px 0 no-repeat;
+}
+
+.byCate .Cate>p, .byColor .Color>p{
+    margin-bottom: 15px;  
+    cursor: pointer;
+}
+.Cate>p:hover, .Color>p:hover{
+    color: @mkcolor;
+   
+}
+.act{
+    color: @mkcolor;
+}
+
+// byprice-------
+.range{ text-align: center; }
+.price_bar{
+    height: 5px;background-color: gray;
+    position: relative;
+    margin-top: 5px;
+    span{
+        display: inline-block;
+        width: 16px;height: 16px;
+        background-color: @mkcolor;
+        border-radius: 8px;
+        position: absolute;
+        top: -6px;
+    }
+    .leftBtn{left: 30%;}
+    .rightBtn{left: 70%;}
+}
+
+.filter_btn{
+    display: inline-block;
+    width: 110px;height: 38px;
+    line-height: 38px;
+    font-size:@fs2;   
+    text-align: center;
+    border: 2px solid @colorl;
+    margin-top: 25px;
+}
+
+.bySize{
+    
+    span{
+        display: inline-block;
+        height: 38px;padding: 0 15px;
+        line-height: 38px;
+        border: 2px solid @colorl;
+        margin-right: 10px;margin-bottom: 10px;
+    }
+    .sizeAct{
+        border-color:black ;color: black;
+    }
+    span:hover{
+        border-color:black ;color: black;
+        
+    }
+}
+
+.TopSale{
+    
+    div{
+        overflow: hidden;
+        height: 75px;
+        margin-bottom: 25px;
+        div{
+            display: inline-block;
+        }
+        .s_img{
+            float: left;
+            width: 70px;height: 100%;
+            background-color: lemonchiffon;
+            margin-right: 30px;
+            
+            img{ width: 100%; height: 100%;}
+        }
+        .s_title{
+            float: right;
+            max-width: 170px;
+            .s_price{font-style: italic; margin-top: 10px;}
+        }
+    }
+    div:hover{
+        color: @mkcolor;
+    }
+}
+
+
+
+.Tags{
+    
+    span{
+        display: inline-block;
+        height: 38px;padding: 0 15px;
+        line-height: 38px;
+        border: 2px solid @colorl;
+        margin-right: 10px;margin-bottom: 10px;
+    }
+    .TagsAct{
+        border-color:black ;color: black;
+    }
+    span:hover{
+        border-color:black ;color: black;
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

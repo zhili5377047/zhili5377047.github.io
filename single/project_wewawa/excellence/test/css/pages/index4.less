@@ -1,0 +1,169 @@
+@import url("../static/head.less");
+@import url("../static/variable.less");
+
+
+.background-image(){
+ 	background-image: url("../../img/home/static/icon.png");
+}
+
+p, .h1{
+	margin: 0;
+}
+
+
+
+#head{
+	height: 800px;
+	background-color: @blackColor;
+
+	.hollo{
+		.titlefont(48px);
+		color: #fff;
+		margin-top: 270px;
+		text-align: center;
+	}
+	.local{
+		margin-top: 60px;
+		color: #fff;
+		font-size: 12px;
+		text-align: center;
+
+		span{
+			margin: 0 15px;
+		}
+	}
+}
+
+
+
+
+#body{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	/*******************container1***********************/
+	.container1{
+		padding-bottom: 170px;
+		.container-fluid{
+			margin-top: 85px;
+			width: 1200px;
+
+			.img{
+				margin-bottom: 15px;
+				position: relative;
+
+				&:hover{
+					.arrow_l, .arrow_r, .play{
+						display: block;
+					}
+				}
+
+				img{
+					display: block;
+					width: 100%;
+				}
+
+				.arrow_l, .arrow_r{
+					display: none;
+					line-height: 35px;
+					width: 35px;
+					height: 35px;
+					text-align: center;
+					position: absolute;
+					top: 0; bottom: 0;
+					margin: auto;
+					background-color: #fff;
+				}
+
+				.arrow_l{
+					left: 10px;
+				}
+				.arrow_r{
+					right: 10px;
+				}
+
+				.play{
+					display: none;
+					.posmiddle();
+					width: 88px;
+					height: 88px;
+					.background-image();
+					background-position: -389px -93px;
+				}
+			}
+
+			.title{
+				.titlefont(18px);
+				letter-spacing: 1px;
+
+				span{
+					color: @yellowColor;
+				}
+			}
+			
+			.count{
+				border-top: 1px solid @borderColor;
+				border-bottom: 1px solid @borderColor;
+				padding: 10px 0;
+				margin-top: 10px;
+				position: relative;
+				.command, .see{
+					margin-right: 8px;
+				}
+				a{
+					color: @grayColor;
+
+					&:before{
+						content: '';
+						float: left;
+						display: block;
+						.background-image();
+						margin: 3px 10px 0 0;
+					}
+				}
+				li.command a:before{
+					width: 19px;
+					height: 15px;
+					background-position: -235px -126px;
+				}
+				li.see a:before{
+					width: 19px;
+					height: 13px;
+					background-position: -258px -126px;
+				}
+				li.photo a:before{
+					width: 13px;
+					height: 15px;
+					background-position: -286px -126px;
+				}
+
+
+				.jun{
+					position: absolute;
+					background-color: @yellowColor;
+					right: 0; 
+					bottom: 0;
+					text-align: center;
+					padding: 5px 14px;
+					p{
+						.grayfont(16px);
+						color: #fff;
+						margin: 0;
+					}
+				}
+			}
+			.text{
+				.textfont(13px);
+				margin-top: 30px;
+			}
+			.btn{
+				width: 170px;
+				height: 50px;
+				margin-top: 36px;
+				margin-bottom: 55px;
+			}
+		}
+	}
+	/*******************container1***********************/
+}
