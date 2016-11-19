@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scri</title>
+</head>
+<body>
+	
+</body>
+	<script>
+		if(typeof String.prototype.trim !== "function" ){
+			var reg = /^\s+|\s+$/;
+			String.prototype.trim = function(){ //在字符串的原型上添加trim方法
+				return this.replace(reg,""); //将匹配的空格全部替换成空格
+			}
+
+			//去掉左边空格
+			var regL = /^\s+/;
+			String.prototype.ltrim = function(){
+				return this.replace(regL,"");
+			}
+			//去掉右边空格
+			var regR = /\s+$/;
+			String.prototype.rtrim = function(){
+				return this.replace(regR,"");
+			}
+		}
+		//去掉左边的空格
+	</script>
+</html>
