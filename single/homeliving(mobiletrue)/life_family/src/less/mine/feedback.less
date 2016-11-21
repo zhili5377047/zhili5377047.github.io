@@ -1,0 +1,28 @@
+@import "../common";
+body {
+	background-color: @bg_color;
+}
+/**************意见反馈*******************/
+.feedback-box {
+	textarea {
+		display: block;
+		width:100%;
+		outline: none;
+		border:1px solid @border_color;
+		padding:6px 8px;
+		height: 150px;
+		.fs12;
+		font-family: "Microsoft Yahei";
+		resize:none;
+		background-color: #fff;
+		margin-bottom: 30px;
+	}
+	#ensure-btn {
+		.common-btn(@height:40px);
+		width:80%;
+		.fs16;
+		margin:30px auto 0;
+	}
+}
+/**************意见反馈*******************/
+

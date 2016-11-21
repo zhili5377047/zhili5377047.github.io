@@ -1,0 +1,63 @@
+.section{
+	width: 1200px;
+	margin:54px auto 76px;
+	border:1px solid #dbdbdb;
+	text-align: center;
+	padding-top: 78px;
+	padding-bottom: 64px;
+}
+.section>div{
+	margin:0 auto;
+	text-align: left;
+}
+.success_message{
+	position: relative;
+	width: 308px;
+	padding-left: 158px;
+
+}
+.success_message p{
+	display: inline-block;
+}
+.success_message p:first-child{
+	font-size: 24px;
+	letter-spacing: 2px;
+}
+.success_message p:last-child{
+	font-size:12px;
+}
+.success_message:before{
+	content:"";
+	position: absolute;
+	vertical-align: middle;
+	width: 54px;height: 54px;
+	background: url(../../img/home.png) no-repeat;
+	background-position: -446px -91px;
+	left: 90px;top: 0;
+}
+
+.section .order_message{
+	margin-top: 40px;
+	padding:24px 100px 24px;
+	width: 266px;
+	background: #f7f7f7;
+	font-size: 14px;
+}
+.order_message p{
+	line-height: 40px;
+}
+
+.section .return{
+	margin-top: 60px;
+	width: 446px;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.return span{
+	color:#41c899;
+}
+.return a{
+	color:#6f6f6f;
+	margin-left: 16px;
+}

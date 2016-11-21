@@ -1,0 +1,159 @@
+@border:#e6e6e6;
+@orange:#ffa130;
+@font:#868686;
+@green:#26c08a;
+
+.part-right{
+    width: 1000px;
+    position: relative;  
+    .wallet-title{
+        border: 1px solid @border;
+        background: #f0f0f0;
+        span{
+            display: inline-block;
+            width: 100px;
+            a{
+                display: inline-block;
+                width: 100%;
+                font-size: 18px;
+                line-height: 48px;
+                text-align: center;
+                color: #000000;
+            }
+        }
+        .flash{
+            background: #FFFFFF;
+        }       
+    }
+    .wallet-con{
+        .sum{
+            width: 340px;
+            // height: 153px;
+            border:1px solid @border;
+            background: #faf8f4;
+            text-align: center;
+            margin: 35px auto 0;
+            padding-bottom:20px;
+            .sum-con{
+                display:inline-block;
+                margin:45px auto 0;
+                .title{
+                    font-size: 14px;
+                    color: @font;
+                    // display:inline-block;
+                    vertical-align: top;
+                    margin-top: 5px;
+                    text-align: center;
+                }
+                .money{
+                    font-size: 22px;
+                    font-weight: bold;
+                    // display:inline-block;
+                    text-align: center;
+                    vertical-align: bottom;
+                }
+                &:before{
+                    content: "";
+                    // display: inline-block;
+                    display: block;
+                    margin-bottom: 0 auto;
+                    width: 62px;height: 62px;
+                    background: url(../../img/icon.png) no-repeat -176px -390px;
+                    // margin-right: 30px;
+                }
+            }           
+        }
+        .zhifubao{
+            width: 340px;
+            height: 50px;
+            border: 1px solid @border;
+            margin: 32px auto 63px;
+            p{
+                font-size: 14px;
+                display: inline-block;
+                margin-top: 10px;
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 30px;height: 30px;
+                    background: url(../../img/icon.png) no-repeat -109px -296px;
+                    vertical-align: middle;
+                    margin: 0 13px 0 20px;
+                }
+            }      
+        }
+        #charge{
+            display:block;
+            width: 88px;
+            height: 35px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 35px;
+            color: #FFFFFF;
+            background: @green;
+            border-radius: 4px;
+            margin: 0 auto;
+        }
+    }
+    
+    
+    .bill{
+        display: none;
+        .bill-con{
+            border-left: 1px dashed @green;
+            margin: 0 0 0 16px;
+            .month{
+                font-size: 18px;
+                margin-top: 27px;
+                &:before{
+                    content:"";
+                    display: inline-block;
+                    width: 11px;
+                    height: 11px;
+                    background: url(../../img/icon.png) no-repeat -381px 0;
+                    margin-left: -6px;
+                    margin-right: 7px;
+                }                
+            }
+            ul{
+                li{
+                    width: 473px;
+                    height: 85px;
+                    margin-left: 13px;
+                    margin-top: 13px;
+                    background: url(../../img/personal_home_bg.png) no-repeat 0 0;
+                    span{
+                        display: inline-block;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                    span:nth-child(1){
+                        margin: 13px 0 0 20px;
+                    }
+                    span:nth-child(2){
+                        margin: 13px 38px 0 0;
+                    }
+                    p{
+                        display: inline-block;
+                        font-size: 14px;
+                        color:@font;
+                        margin: 56px 0 0 -32px;
+                    }
+                    &:before{
+                        content: "";
+                        display: inline-block;
+                        width: 6px;
+                        height: 5px;
+                        background: url(../../img/icon.png) no-repeat -396px 0;
+                        margin-left: -150px;
+                        margin-top: 38px;
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }       
+    }
+    .show{
+        display: block;
+    }
+}

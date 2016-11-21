@@ -1,0 +1,55 @@
+@import "../common.less";
+
+body {
+	background-color: @bg_color;
+}
+section {
+	width:86%;
+	margin:42px auto;
+}
+.register-box {
+	margin-top: 80px;
+}
+.input-group {
+	border:1px solid @border_color;
+	border-radius: @border_radius;
+	overflow: hidden;
+	margin-bottom: 10px;
+	input {
+		width:100%;
+		padding:0 10px;
+		box-sizing: border-box;
+		.fs16;
+		border:none;
+		height: 36px;
+		line-height: 36px;
+	}
+	&.code-bar {
+		border:none;
+	}
+	.code-input {
+		width:64%;
+		float: left;
+		border:1px solid @border_color;
+		border-radius: @border_radius;
+		overflow: hidden;
+	}
+	.code-btn {
+		float: right;
+		width:32%;
+		text-align: center;
+		background-color: #ea6c6c;
+		color:#fff;
+		.fs16;
+		border-radius: @border_radius;
+		height: 36px;
+		line-height: 36px;
+	}	
+	&.password-bar {
+		padding:0 10px;
+		background-color: #fff;
+		input:first-child {
+			border-bottom:1px solid @border_color;
+		}
+	}
+}

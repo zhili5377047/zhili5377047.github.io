@@ -1,0 +1,278 @@
+@import "../common";
+
+body {
+	background-color: @bg_color;
+}
+
+.address-link {
+	position: relative;
+	display: block;
+	padding: 14px 10px;
+	background-color: #fff;
+	color:@c3;
+	.fs14;
+	.default-tips {
+		color:@cf3;
+		margin-right: 12px;
+	}
+	&:after {
+		position: absolute;
+		content:"";
+		top:50%;
+		margin-top: -5px;
+		right: 12px;
+		.arrow();
+	}
+	.username {
+		margin-right: 10px;
+	}
+	.u-bar {
+		margin-bottom: 8px;
+	}
+	.address-bar {
+		margin-right: 32px;
+	}
+}	
+
+.product-details {
+	border-top: 1px solid @border_color;
+	border-bottom: 1px solid @border_color;
+	background-color: #fff;
+	margin-top: 10px;
+	padding: 0 10px;
+	.order-top {
+		height: 38px;
+		line-height: 38px;
+		color:@c6;
+		.clearfix;
+		.order-tips {
+			float: left;
+		}
+		.return-btn {
+			float: right;
+			margin-top: 5px;
+			margin-right: 15px;
+			width:70px;
+			color:#fff;
+			text-align: center;
+			border:1px solid @c6;
+			border-radius:@border_radius;
+			height:28px;
+			line-height:28px;
+			.fs14;
+			color:@c6;
+		}
+		.order-status {
+			float: right;
+		}
+	}
+	.pro-info {
+		padding: 10px 0;
+		border-top: 1px solid @border_color;
+		border-bottom: 1px solid @border_color;
+		a {
+			display: block;
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 2px;
+			div {
+				float: left;
+			}
+			div:nth-child(1) {
+				width:70px;
+			}
+			div:nth-child(2) {
+				margin-left: 10px;
+				max-width: 200px;
+				width:64%;
+				h2 {
+					.ellipsis;
+					color:@c1a;
+					.fs14;
+					margin-bottom: 5px;
+				}
+			}
+			.pro-size {
+				color:@c6;
+				.fs12;
+			}
+			.pro-price {
+				color:@cde;
+				font-weight: bold;
+				.fs14;
+			}
+			.pro-count {
+				position: absolute;
+				right:5px;
+				color:@c3;
+				bottom:5px;
+				i {
+					margin-left: 8px;
+					.fs14;
+				}
+			}
+		}
+	}
+	.p-record {
+		p {
+			padding: 15px 0;
+			color: @c6;
+			border-top: 1px solid @border_color;
+			&:first-child {
+				border-top: none;
+			}
+			.text-right {
+				float: right;
+			}
+		}
+	}
+}
+
+.payment-box {
+	margin-top: 10px;
+	border-top: 1px solid @border_color;
+	background-color: #fff;
+	form>p {
+		.fs14;
+		color:@c6;
+		padding-left: 18px;
+		height: 38px;
+		line-height: 38px;
+	}
+}
+.payment-box label {
+	&:first-child {
+		border-top: 0;
+	}
+	display: block;
+	position: relative;
+	color:@c1a;
+	margin:0 10px;
+	height: 48px;
+	line-height: 48px;
+	border-top: 1px solid @border_color;
+	&.p-zhifubao:after {
+		background-position: 0 -166px;
+	}
+	&.p-weixin:after {
+		background-position: -32px -166px;
+	}
+	&.p-mywallet:after {
+		background-position: -61px -166px;
+	}
+	&:after {
+		position: absolute;
+		left:10px;
+		top: 10px;
+		width: 30px;
+		height: 30px;
+		content: "";
+		background: url("../../img/icon.png") no-repeat;
+		background-size: 216px 226px;
+	}
+	.p-method {
+		margin-left: 60px;
+	}
+	.weui-icon-checked {
+		position: absolute;
+		right: 10px;
+		top: 0;
+	}
+	span,input {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.pay-bottom-bar {
+	position: relative;
+	background-color: #fff;
+	margin-top: 10px;
+	border-top: 1px solid @border_color;
+	height: 56px;
+	line-height: 56px;
+	padding: 0 10px;
+	.fs16;
+	span {
+		color:@c3;
+		margin-left: 12px;
+	}
+	strong {
+		color:#e02626;
+	}
+	.q-payment-btn {
+		position: absolute;
+		right:10px;
+		top:10px;
+		.common-btn(@bg:#e02626;@width:128px;@height:36px;);
+	}
+}
+
+#paymentBox {
+	display: none;
+	position: absolute;
+	left: 0;
+	top:0;
+	width:100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.wallet-box {
+	position: absolute;
+	top:150px;
+	width:90%;
+	left:5%;
+	background-color: #fff;
+	border-radius: 8px;
+	text-align: center;
+	>p {
+		.fs16;
+		color:@c3;
+		height: 42px;
+		line-height: 42px;
+		margin:  0 10px;
+		border-bottom: 1px solid @border_color;
+	}
+	>h2 {
+		.fs24;
+		color:@c3;
+		font-weight: bold;
+		margin:20px 0;
+	}
+	.password-box {
+		display: inline-block;
+		border-radius: 4px;
+		overflow: hidden;
+		background-color: @bg_color;
+		border:1px solid @border_color;
+	}
+	input {
+		display: inline-block;
+		text-align: center;
+		background-color: transparent;
+		border:none;
+		width:36px;
+		border-left: 1px solid @border_color;
+		&:first-child {
+			border:none;
+		}
+		.fs14;
+		color:@c3;
+		padding:10px 0;
+	}
+	.bottom-link {
+		margin: 20px 12px 16px;
+		overflow: hidden;
+		.cancel-btn {
+			float: left;
+			.common-btn(@bg:@bg_color;@width:108px;@height:40px;);
+			color:@c3;
+			.fs16;
+		}
+		.pay-btn {
+			float: right;
+			.common-btn(@bg:@cf2;@width:108px;@height:40px;);
+			.fs16;
+		}
+	}
+}

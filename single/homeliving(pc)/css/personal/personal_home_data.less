@@ -1,0 +1,168 @@
+@border:#e6e6e6;
+@orange:#ffa130;
+@font:#868686;
+.fl{
+    float: left;
+}
+.fr{
+    float:right;
+}
+/**************section*****************/
+.section{
+    width: 1200px;
+    margin: 0 auto;
+}
+.section{
+    margin-top: 30px; 
+}
+.part-left{
+    width: 170px;
+    height: 410px;
+    border:1px solid @border; 
+    
+    .list-nav{
+        text-align: center;
+        li{
+            height: 50px;
+            box-sizing: border-box;
+            a{
+                display: inline-block;
+                width: 100%;
+                font-size: 14px;
+                line-height: 50px;
+                color: #000000;
+            }
+            .show{
+                background: @orange;
+            }
+        }      
+    }
+    .active{
+        border-top:4px solid @orange;
+    }
+}
+.part-right{
+    width: 1000px;
+    
+    .userinformation{
+        .user-title{
+            border: 1px solid @border;
+            span{
+                font-size: 18px;
+                margin-left: 20px;
+                line-height: 50px;
+            }
+        }
+        .head-portrait{
+            border: 1px solid @border;
+            span{
+                display: inline-block;
+                font-size: 14px;
+                color: @font;
+                vertical-align: top;
+                margin: 0 45px 0 20px;
+            }
+            .change_head{
+                display: inline-block;
+                width: 90px;
+                margin-top: 45px;
+            }
+            input{
+                display: inline-block;
+                width: 266px;
+                height: 45px;
+                border: 1px solid @border;
+                font-size: 14px;
+                line-height: 45px;
+                padding-left: 10px;
+            }
+            .i1{
+                margin-top: 50px;
+            }
+            .i2{
+                margin-top: 40px;
+            }
+            p{
+                font-size: 12px;
+                color: @font;
+                margin:10px  0 0 110px;
+            }
+            .keepit{
+                display: inline-block;
+                color: #FFFFFF;
+                font-size: 14px;
+                background: @orange;
+                width: 80px;height: 35px;
+                border-radius: 4px;
+                text-align: center;
+                line-height: 35px;
+                margin: 50px 0 114px 200px;
+            }
+            .t1{
+                margin-top: 45px;
+                
+            }
+            .t2{
+                margin-top: 67px;
+            }
+            .t3{
+                margin: 54px 17px 0 20px;
+            }
+        }
+        .select{
+            border: 1px solid @border;
+            border-top: 0;
+            margin-bottom: 75px;
+            ul{
+                .li{
+                    .tit{
+                        font-size: 14px;
+                    }
+                    .li-con{
+                        font-size: 12px;
+                        color: @font;
+                    }
+                    a{
+                        display: inline-block;
+                        width: 80px;height: 35px;
+                        border-radius: 4px;
+                        background: #26c08a;
+                        color: #FFFFFF;
+                        font-size: 14px;
+                        line-height: 35px;
+                        text-align: center;
+                    }
+                }
+                .li-1{
+                    padding-top: 24px;
+                    margin: 0 0 0 22px;
+                    .tit1{
+                        margin-right: 45px;
+                    }
+                    .li-con1{
+                        margin-right: 72px;
+                    }
+                }
+                .li-2{
+                    margin: 25px 0 0 22px;
+                    .tit2{
+                        margin-right: 17px;
+                    }
+                    .li-con2{
+                        margin-right: 72px;
+                    }
+                }
+                .li-3{
+                    margin: 25px 0 50px 22px;
+                    .tit3{
+                        margin-right: 44px;
+                    }
+                    .li-con3{
+                        margin-right: 180px;
+                    }
+                }
+            }
+        }
+    }
+   
+}

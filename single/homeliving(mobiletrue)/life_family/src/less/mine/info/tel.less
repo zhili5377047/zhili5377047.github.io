@@ -1,0 +1,64 @@
+@import "../../common";
+body {
+	background-color: @bg_color;
+}
+.tel-box {
+	margin:10px;
+	input {
+		display: block;
+		width:100%;
+		box-sizing: border-box;
+		border-radius: 4px;
+		outline: none;
+		border:1px solid @border_color;
+		padding:10px 12px;
+		.fs14;
+		font-family: "Microsoft Yahei";
+		resize:none;
+		background-color: #fff;
+	}
+	.edit-bar {
+		text-align: right;
+		margin-bottom: 10px;
+		.edit-btn {
+			color:@c3;
+			display: inline-block;
+			height: 30px;
+			line-height: 30px;
+			padding: 0 8px;
+		}
+	}
+	.code-bar {
+		border:1px solid @border_color;
+		border-radius: @border_radius;
+		overflow: hidden;
+		div {
+			border-top:1px solid @border_color;
+			position: relative;
+			a {
+				position: absolute;
+				top:4px;
+				right: 10px;
+				border-radius: @border_radius;
+				width:65px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				color:#fff;
+				padding: 0 8px;
+				background-color: #26c08a;
+			}
+		}
+		input {
+			border:none;
+			border-radius: 0;
+		}
+	}
+	#ensure-btn {
+		.common-btn(@height:40px);
+		width:80%;
+		.fs16;
+		margin:30px auto 0;
+	}
+}
+

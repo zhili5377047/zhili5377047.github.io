@@ -1,0 +1,69 @@
+@import "../common";
+body {
+	background-color: @bg_color;
+}
+
+.help-box {
+	margin-top: 38px;
+	figure {
+		text-align: center;
+		margin-bottom: 40px;
+		p {
+			color:@c6;
+			.fs12;
+			margin: 2px 0;
+			&.tel-number {
+				.fs16;
+				font-weight: bold;
+			}
+		}
+		.dial-btn {
+			display: inline-block;
+			margin-top: 8px;
+			border-radius: 4px;
+			color:#fff;
+			text-align: left;
+			text-indent: 20px;
+			width:78px;
+			height: 28px;
+			line-height:28px;
+			background: #5fb9ff url(../../img/icon-tel.png) no-repeat 10px 9px;
+			background-size: 12px 12px;
+		}
+	}
+}
+.online-icon {
+	width:12.5%;
+	margin:0 auto 10px;
+}
+.list-title {
+	margin-left: 12px;
+}
+.list-box {
+	background-color: #fff;
+	margin:6px 0;
+	border-top: 1px solid @border_color;
+	border-bottom:1px solid @border_color;
+	li {
+		border-top:1px solid @border_color;
+		&:first-child {
+			border:none;
+		}
+		a {
+			position:relative;
+			display:block;
+			height:46px;
+			line-height:46px;
+			color:@c1a;
+			padding-left: 12px;
+			.fs14;
+			&:after {
+				position:absolute;
+				right:12px;
+				bottom:18px;
+				content:"";
+				.arrow();
+			}
+		}
+	}
+}

@@ -1,0 +1,234 @@
+body {
+  background: #f5f5f5;
+}
+.section {
+  width: 1200px;
+  margin: 32px auto 50px;
+}
+.section .search_result {
+  width: 172px;
+  border: 1px solid #dbdbdb;
+  border-top: 3px solid #f29004;
+  background: #fff;
+  float: left;
+}
+.section .search_result li {
+  height: 38px;
+  border-top: 1px solid #dbdbdb;
+  line-height: 38px;
+  padding-left: 30px;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+}
+.section .search_result li:first-child {
+  font-size: 18px;
+}
+.section .search_result .active {
+  background: #f29004;
+  color: #fff;
+}
+.section .filter {
+  float: right;
+  width: 1004px;
+  height: 36px;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  font-size: 14px;
+}
+.section .filter a {
+  display: inline-block;
+  line-height: 36px;
+  padding: 0 12px;
+  border-right: 1px solid #dbdbdb;
+  color: #4e4e4e;
+}
+.section .filter .active {
+  color: #f29004;
+}
+.section .filter .num:after,
+.section .filter .rate:after,
+.section .filter .prize:after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 36px;
+  background: url(../../img/home.png) no-repeat;
+  background-position: -145px 6px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.section .filter .filter_message {
+  float: right;
+  line-height: 36px;
+  margin-right: 38px;
+}
+.section .filter .filter_message button {
+  border: 1px solid #dbdbdb;
+  width: 20px;
+  height: 18px;
+  background-color: #f2f2f2;
+  vertical-align: middle;
+  background-image: url(../../img/home.png);
+  background-repeat: no-repeat;
+}
+.section .filter .filter_message .prev {
+  background-position: -163px -2px;
+}
+.section .filter .filter_message .next {
+  background-position: -183px -2px;
+}
+.section .result {
+  float: right;
+  margin-top: 10px;
+  width: 1004px;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  font-size: 14px;
+}
+.section .result li {
+  float: left;
+  width: 198px;
+  height: 314px;
+  border-bottom: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  padding: 22px 26px 0;
+}
+.section .result li img {
+  width: 147px;
+  margin: 0 auto 40px;
+}
+.section .result li .title {
+  color: #4D4D4D;
+  font-weight: bold;
+}
+.section .result li p strong {
+  font-size: 1.6rem;
+  color: #ed601b;
+}
+.section .result li p del {
+  float: right;
+  color: #b8b8b8;
+}
+.section .result li .addCar {
+  text-align: center;
+  margin-top: 16px;
+}
+.section .result li .addCar a {
+  border: 1px solid #dbdbdb;
+  padding: 10px 8px;
+  display: inline-block;
+  color: #949494;
+}
+.section .result li .addCar a:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../../img/home.png) no-repeat;
+  background-position: -208px -3px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.section .result .last1 {
+  border-right: none;
+}
+.section .result .last2 {
+  border-bottom: none;
+}
+.section .pagination {
+  margin-top: 20px;
+  float: right;
+  width: 1006px;
+  text-align: center;
+}
+.section .pagination ul {
+  display: inline-block;
+}
+.section .pagination ul a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #1A1A1A;
+}
+.section .pagination ul li {
+  float: left;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #dbdbdb;
+  line-height: 30px;
+  font-size: 1.4rem;
+  margin-left: 30px;
+}
+.section .pagination ul .active {
+  background: #f29004;
+}
+.section .pagination ul .active a {
+  color: #fff;
+}
+.nothing {
+  float: right;
+  width: 1006px;
+  height: 730px;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  display: none;
+}
+.mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  display: none;
+}
+.mask .bar {
+  position: absolute;
+  background-color: #fff;
+  width: 354px;
+  height: 350px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.mask .bar > p {
+  font-size: 14px;
+  color: #999;
+  background-color: #f2f2f2;
+  line-height: 30px;
+  padding: 0 10px;
+}
+.mask .bar > p span {
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+.mask .bar .leave_message {
+  padding: 10px 10px 30px;
+  text-align: center;
+}
+.mask .bar .leave_message textarea {
+  resize: none;
+  width: 310px;
+  height: 204px;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  font-size: 14px;
+  color: #999;
+  outline: none;
+  margin-bottom: 24px;
+}
+.mask .bar .leave_message button {
+  width: 84px;
+  height: 30px;
+  background-color: #f29004;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
