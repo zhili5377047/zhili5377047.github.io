@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>生活家居</title>
+	<link rel="stylesheet"link href="../../css/base.css">
+	<link rel="stylesheet" href="../../css/index/life.css">
+</head>
+<body>
+	<div class="slide" id="slideContainer">
+	    <ul>
+	        <li>
+	            <a href="//m.yhd.com/">
+	                <img src="http://d10.yihaodianimg.com/V00/M03/4D/41/CgQDsVQG4d6AISZPAAFa7N3KyPY18100.jpg" alt="">
+	            </a>
+	        </li>
+	        <li>
+	            <a href="//www.baidu.com/">
+	                <img src="http://d10.yihaodianimg.com/V00/M04/32/59/CgQDsVQDEtaAVv4BAAEFc6n3fws75000.jpg" alt="">
+	            </a>
+	        </li>
+	        <li>
+	            <a href="//m.taobao.com/">
+	                <img src="http://d11.yihaodianimg.com/N05/M04/82/EC/CgQI01QEHoiAFBbgAAC9du5zOPc62900.jpg" alt="">
+	            </a>
+	        </li>
+	        <li>
+	            <a href="//www.qq.com/">
+	                <img src="http://d10.yihaodianimg.com/N07/M09/26/8B/CgQI0FQFd8-ACrb7AADBtSan3a084000.jpg" alt="">
+	            </a>
+	        </li>
+	    </ul>
+	    <div class="dot">
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	    </div>
+	</div>
+	<div id="mainContent" class="clearfix">
+		<aside class="right-bar">
+			<ul>
+				<li class="active">
+					<a href="javascript:void(0);">生活百货</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">收纳整理</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">餐饮卫生</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">杂志报纸</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">厨房用品</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">创意用品</a>
+				</li>
+			</ul>
+		</aside>
+		<div class="container-list">
+			<ul>
+				<li>
+					<a href="###">
+						<div>
+							<img src="../../img/active/f7.jpg">
+						</div>
+						<div>
+							<h2>薯条点心面休闲零食五味园  小包装500g</h2>
+							<p>
+								<span>&yen;12.2</span>
+								<em>
+									原价：<del>&yen;15.6</del>
+								</em>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="###">
+						<div>
+							<img src="../../img/active/f7.jpg">
+						</div>
+						<div>
+							<h2>薯条点心面休闲零食五味园  小包装500g</h2>
+							<p>
+								<span>&yen;12.2</span>
+								<em>
+									原价：<del>&yen;15.6</del>
+								</em>
+							</p>
+						</div>
+					</a>
+				</li>	
+				<li>
+					<a href="###">
+						<div>
+							<img src="../../img/active/f7.jpg">
+						</div>
+						<div>
+							<h2>薯条点心面休闲零食五味园  小包装500g</h2>
+							<p>
+								<span>&yen;12.2</span>
+								<em>
+									原价：<del>&yen;15.6</del>
+								</em>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="###">
+						<div>
+							<img src="../../img/active/f7.jpg">
+						</div>
+						<div>
+							<h2>薯条点心面休闲零食五味园  小包装500g</h2>
+							<p>
+								<span>&yen;12.2</span>
+								<em>
+									原价：<del>&yen;15.6</del>
+								</em>
+							</p>
+						</div>
+					</a>
+				</li>	
+				<li>
+					<a href="###">
+						<div>
+							<img src="../../img/active/f7.jpg">
+						</div>
+						<div>
+							<h2>薯条点心面休闲零食五味园  小包装500g</h2>
+							<p>
+								<span>&yen;12.2</span>
+								<em>
+									原价：<del>&yen;15.6</del>
+								</em>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="###">
+						<div>
+							<img src="../../img/active/f7.jpg">
+						</div>
+						<div>
+							<h2>薯条点心面休闲零食五味园  小包装500g</h2>
+							<p>
+								<span>&yen;12.2</span>
+								<em>
+									原价：<del>&yen;15.6</del>
+								</em>
+							</p>
+						</div>
+					</a>
+				</li>	
+			</ul>
+		</div>
+	</div>
+	<script src="../../js/zepto.js"></script>
+	<script src = "../../js/swipeSlide.js"></script>
+	<script>
+		$("#slideContainer").swipeSlide({
+		   continuousScroll:true,
+		   speed : 3000,
+		   transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+		   firstCallback : function(i,sum,me){
+		       me.find('.dot').children().first().addClass('cur');
+		   },
+		   callback : function(i,sum,me){
+		       me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+		   }
+		});
+	</script>
+</body>
+</html>

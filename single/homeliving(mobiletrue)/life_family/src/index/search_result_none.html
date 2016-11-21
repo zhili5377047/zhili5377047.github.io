@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>搜索</title>
+	<link rel="stylesheet"link href="../css/base.css">
+	<link rel="stylesheet" href="../css/index/search.css">
+	<link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+	<div class="search-box">
+		<div class="search-bar">
+			<input type="search" placeholder="输入关键字/商品名称">
+		</div>
+	</div>	
+	<div class="result-tips">
+		<h3>抱歉，没有找到相关商品！</h3>
+		<p>
+			给我留言告诉你喜欢的东西吧
+		</p>
+		<a href="javascipt:void(0);" class="message-btn">我要留言</a>
+	</div>
+	<footer class="footer-bar">
+		<ul>
+			<li class="icon-4 active">
+				<a href="index.html">首页</a>	
+			</li>
+			<li class="icon-3">
+				<a href="../assortment/assortment.html">会员杂锦</a>	
+			</li>
+			<li class="icon-2">
+				<a href="../classification/classification.html">分类</a>	
+			</li>
+			<li class="icon-5">
+				<a href="###">购物车</a>	
+			</li>
+			<li class="icon-1">
+				<a href="###">我的</a>	
+			</li>
+		</ul>
+	</footer>
+	<!-- 留言弹窗 -->
+	<div id="popBox" class="pop-box">
+		<div class="message-box">
+			<form action="">
+				<h2>
+					<span>留言</span>
+					<a href="javascipt:void(0);" class="close-pop"></a>
+				</h2>
+				<textarea placeholder="想买什么商品？" rows="10"></textarea>
+				<a href="javascipt:void(0);" class="submit-btn">提交</a>
+			</form>
+		</div>
+	</div>
+	<script src="../js/zepto.js"></script>
+	<script type="text/javascript">
+		$(".message-btn").on("click",function() {
+			$("#popBox").show();
+		})
+		$(".close-pop").on("click", function() {
+			$("#popBox").hide();
+		})
+	</script>
+</body>
+</html>

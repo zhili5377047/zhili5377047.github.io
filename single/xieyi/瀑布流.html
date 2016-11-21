@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+			div{
+				position: absolute;
+				width: 23%;
+				/*background:red;*/
+				/*overflow: hidden;*/
+				/*font-size: 40px;*/
+				transition: 0.2s;
+			}
+			div img{
+				width:100%;
+				cursor: pointer;
+			}
+			div ul{
+				width:600px;
+				height:600px;
+				background-color: rgba(0,0,0,0.5);
+				position: absolute;
+				/*display: none;*/
+				top: 0;
+				left:0;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+	
+	<script type="text/javascript">
+		//创建div
+		
+		var value= 0;
+		createDiv(20);
+		change();
+		function createDiv(n){
+				for(var i=0;i<n;i++){
+					value++;//每次调用for循环都会对value进行++
+					var oDiv = document.createElement("div");
+					var img = document.createElement("img");
+					img.src = "img/B"+value+".jpg"
+					oDiv.style.height = getStyle(img,"height")+"px";
+//					oDiv.innerHTML = value;
+					console.log(img.offsetHeight)
+					oDiv.appendChild(img);
+					document.body.appendChild(oDiv);
+				}
+				
+			}
+	//对高度随机设置
+//	function rndFn(min,max){
+//		return rnd = Math.floor(Math.random()*(max - min)+ min);
+//	}
+	//对div进行排序
+	function change(){
+		window.onload = function(){
+			
+			
+			
+		
+		var winW =document.documentElement.clientWidth||window.innerWidth;
+		var oImg = document.querySelectorAll("img");
+		//计算窗口宽度能够放多少个div
+		var num = parseInt(winW/oImg[0].offsetWidth);
+		var center = (winW-num*oImg[0].offsetWidth+5)/2;
+		var aDiv = document.querySelectorAll("div");
+		arr=[];
+		for(var i=0;i<aDiv.length;i++){
+			if(i<num){
+				aDiv[i].style.left = center+(oImg[i].offsetWidth)*i+"px";
+				aDiv[i].style.top =20;
+				arr[i] = oImg[i].offsetHeight+5;
+			}
+			else{
+				var min = findMin(arr);
+				aDiv[i].style.left =	center+min*(oImg[i].offsetWidth)+"px";
+				aDiv[i].style.top = arr[min]+"px";
+				arr[min] += oImg[i].offsetHeight+5;
+			}
+		}
+		}
+	}
+	function findMin(arr){
+		var min =arr[0];
+		var index = 0;
+		for(var i=1;i<arr.length;i++){
+		 if(min>arr[i]){
+				min = arr[i];
+				index = i;
+			}
+		}
+		return index;
+	}
+	
+	//鼠标滚动进行进行预加载
+//	window.onscroll=function(){
+//		var sTop=document.documentElement.scrollTop||document.body.scrollTop;
+//		var winH = document.documentElement.clientHeight||window.innerHeight;
+//		if(sTop+winH>arr[0]){
+//			createDiv(5);
+//			change();
+//		}
+//	}
+	window.onresize=function(){
+		change();
+	}
+		//瀑布流经验
+		/*
+		 1.创建div，设置div的高度
+		 2.对div进行变换函数封装
+		 （1）首先排序第一行
+		 （2）第二行排序从第一行高度最小的一个开始
+		 （3）比较哪一个是最小高度的div
+		 3.进行鼠标滚动事件，如果是滚动的部分+可见窗口部分的高度大于任何一行的最后一个的高度位置
+		 进行创建和变换
+		4.进行onresize事件进行自动变形
+		 * */
+		
+		function getStyle(obj,attr){
+			return parseInt(obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj).attr)||0
+		}
+		
+//		function check1(){
+//			var divD = document.querySelectorAll("div");
+//			var img = document.querySelectorAll("div img")
+////			var ul = document.querySelectorAll("div ul");
+//			
+//			for(var i=0;i<divD.length;i++){
+//				var ul = document.createElement("ul");
+//			ul.style.height = getStyle(img[i],"height")+"px";
+//			ul.style.width = getStyle(img[i],"width")+"px";
+//			ul.style.backgroundColor = getStyle(img[i],"backgroundColor");
+//			ul.style.display = getStyle(img[i],"display");
+//				divD[i].appendChild(ul);
+//			}
+//		}
+//		check1()
+	</script>
+</html>

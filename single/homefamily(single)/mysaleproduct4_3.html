@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>评论</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mysaleproduct4_3.css"/>
+	</head>
+	<body>
+	
+		<header id="head">
+			<a href="login_1.html" class="back-btn"></a>
+			<h1>评论</h1>
+		</header>
+		<section id="content">
+			<div class="bg_header"></div>
+			<div class="link_address clearfix">
+				<div class="address_left">
+				<p class="name_this">刘晓心<span>13562021254</span></p>
+				<p class="default_color">广州市天河区东圃时代TIT广场</p>
+				</div>
+				<a href="###" class="address_link this_link"></a>
+				
+			</div>
+			<div class="purchase_things">
+				<div	 class="buy_things clearfix">
+					<span>购买商品</span>
+					<!--<span class="give_money">待评价</span>
+					<a href="###" class="return_request">申请退货</a>-->
+			</div>
+				<div class="purchase_details clearfix">
+					<img src="img/index_img14.png" alt="" />
+					<div class="purchase_right">
+						<h3>坚果特产山核桃奶油碧根...</h3>
+						<p class="purchase_regular">规格：1盒6片</p>
+						<p class="purchase_price"><span>&yen;29.5</span><span>X2</span></p>
+					</div>
+				</div>
+				<div class="run_money clearfix">
+					<span>评论</span>
+					<span class="comment">
+						<a class="click_comment active" ></a>
+						<a class="click_comment"></a>
+						<a class="click_comment"></a>
+						<a class="click_comment"></a>
+						<a class="click_comment"></a>
+					</span>
+				</div>
+				<!--<div class="run_money clearfix"><span>备注：</span><span></span></div>-->
+				
+			</div>
+			<form action="" class="form6">
+				<textarea>
+					
+				</textarea>
+			</form>
+			
+			<a href="###" class="pay_quick">确认</a>
+			
+			
+		</section>
+		
+		
+		
+		
+	</body>
+	
+	<script type="text/javascript" src="js/zepto.js">
+		
+	</script>
+	<!--<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>-->
+		
+	
+	<script>
+		
+		
+		$(function(){
+			var bol = true;
+			$commentClick = $(".comment>a");
+			$textarea = $(".form6>textarea");
+			$aClick = $(".pay_quick");
+				
+		
+			$commentClick.on("touchstart",function(){
+				var index = $($commentClick).index($(this));
+//				console.log(index);
+				if(bol){
+					$commentClick.eq(index).addClass("active");
+				}else{
+					$commentClick.eq(index).removeClass("active");
+				}
+				
+				bol = !bol;
+			})
+			
+			$aClick.on("click",function(){
+				
+				if($.trim($textarea.val())==""){
+					alert("你需要输入评论吗？");
+					return;				
+				}
+				$textarea.focus();
+				$aClick.css({
+					display:"none"
+				});
+				
+			})
+			$textarea.on("click",function(){
+				$textarea.focus();
+			})
+		})
+	
+
+		
+		
+	</script>
+</html>

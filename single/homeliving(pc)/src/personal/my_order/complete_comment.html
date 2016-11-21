@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单评价</title>
+	<link rel="stylesheet" href="../../../css/base.css">
+	<link rel="stylesheet" href="../../../css/public.css">
+	<link rel="stylesheet" href="../../../css/personal/my order/complete_comment.css">
+</head>
+<body>
+<!-- 头部导航 -->
+	<div class="header">
+		<div class="header_top">
+			<div class="state header_size">
+				<a href="javascript:void(0)">[登录]</a>
+				<a href="javascript:void(0)">[注册]</a>
+				<a href="javascript:void(0)">我的账号</a>
+				<a href="download.html">生活一家APP下载</a>
+			</div>
+		</div>
+		<div class="header_middle">
+			<div class="choose header_size">
+				<a href="homepage.html"><img src="../../../img/home_logo.png" alt=""></a>
+				<a href="javascript:void(0)" class="location">广州</a>
+				<div class="search">
+					<input type="text" placeholder="手机开抢">
+					<a href="search.html"><button>搜索</button></a>
+				</div>
+				<a href="javascript:void(0)" class="box shopping">购物车<span>2</span></a>
+				<a href="service.html" class="box">一键客服</a>
+			</div>
+		</div>
+		<div class="nav">
+			<ul class="clearfix">
+				<li><a href="../../home/homepage.html">首页</a></li>
+				<li><a href="../../life_living/life_living.html">精彩生活</a></li>
+				<li class="active"><a href="../../life_foods/life_foods.html">生活食品</a></li>
+				<li><a href="javascript:void(0)">生活用品</a></li>
+				<li><a href="javascript:void(0)">生活家居</a></li>
+				<li><a href="javascript:void(0)">会员杂锦</a></li>
+				<li><a href="javascript:void(0)">关于我们</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="section">
+		<div class="content clearfix">
+			<img src="../../../img/shopping_car1.png" alt="">
+			<div class="text">
+				<p class="title">坚果特产山核桃奶油味碧根...</p>
+				<p class="size">规格:600g</p>
+				<strong>￥29.5</strong>
+			</div>
+			<div class="comment">
+				<div class="title">
+					评论   
+					<div class="stars">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<textarea>好吃！</textarea>
+				<button>发表评论</button>
+			</div>
+
+		</div>
+	</div>
+<!-- 尾部 -->
+	<div class="footer">
+		<p>
+			<a href="../../home/homepage.html">首页</a>
+			<a href="../../life_living/life_living.html">精彩生活</a>
+			<a href="../../life_foods/life_foods.html">生活食品</a>
+			<a href="javascript:void(0)">生活用品</a>
+			<a href="javascript:void(0)">生活家居</a>
+			<a href="javascript:void(0)">会员杂锦</a>
+			<a href="javascript:void(0)">一键客服</a>
+			<a href="javascript:void(0)">关于我们</a>
+		</p>
+		<p>Copyright© 生活一家 2007-2015，All Rights Reserved</p>
+	</div>
+	<!-- <script src="../../../js/jquery-3.1.0.min.js"></script> -->
+	<script src="../../../js/jquery-1.12.4.js"></script>
+	<script>
+		$(".comment .stars span").on('click',function(){
+			var len = $(this).index();
+			console.log(len);
+			$(".comment .stars span").removeClass("active");
+			for(var i = 0;i < len+1;i++){
+				$(".comment .stars span").eq(i).addClass("active");
+			}
+		})
+	</script>
+</body>
+</html>

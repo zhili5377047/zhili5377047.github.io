@@ -1,0 +1,49 @@
+@import "../../common";
+
+body {
+	background-color: @bg_color;
+}
+
+.address-list {
+	li {
+		margin-bottom: 10px;
+		border-top: 1px solid @border_color;
+		border-bottom: 1px solid @border_color;
+	}
+	a {
+		position: relative;
+		display: block;
+		padding: 14px 10px;
+		background-color: #fff;
+		color:@c3;
+		.fs14;
+		.default-tips {
+			color:@cf3;
+			margin-right: 12px;
+		}
+		&:after {
+			position: absolute;
+			content:"";
+			top:50%;
+			margin-top: -5px;
+			right: 12px;
+			.arrow();
+		}
+	}	
+	.username {
+		margin-right: 10px;
+	}
+	.u-bar {
+		margin-bottom: 8px;
+	}
+	.address-bar {
+		margin-right: 32px;
+	}
+}
+
+.ensure-btn {
+	letter-spacing: 2px;
+	.fs16;
+	.common-btn(@height:46px;@width:90%);
+	margin-top: 20%;
+}

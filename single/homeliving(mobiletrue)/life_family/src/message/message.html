@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>消息</title>
+	<link rel="stylesheet"link href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="message.css">
+</head>
+<body>
+	<header class="top-bar">
+		<ul class="clearfix">
+			<li class="active">
+				<a href="javascript:void(0);">订单消息</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);">系统消息</a>
+			</li>
+		</ul>
+	</header>
+	<div class="content-box order-box">
+		<a href="details.html">
+			<dl>
+				<dt>订单消息：你的订单SHJ45554订单SHJ45554已发的订单SHJ45554已发货</dt>
+				<dd>2016-01-01</dd>
+			</dl>
+		</a>
+		<a href="details.html">
+			<dl>
+				<dt>订单消息：你的订单SHJ45554已发</dt>
+				<dd>2016-01-01</dd>
+			</dl>
+		</a>
+	</div>
+	<div class="content-box system-box">
+		<a href="details.html">
+			<dl>
+				<dt>订单消息：你的订单SHJ45554已发的订单SHJ45554已发的订单SHJ45554已发货</dt>
+				<dd>2016-01-02</dd>
+			</dl>
+		</a>
+		<a href="details.html">
+			<dl>
+				<dt>订单消息：你的订单SHJ45554已发</dt>
+				<dd>2016-01-04</dd>
+			</dl>
+		</a>
+	</div>
+	<script type="text/javascript" src="../js/zepto.js"></script>
+	<script type="text/javascript">
+	//头部切换
+	$(".top-bar li").click(function() {
+		var $index = $(this).index();
+		$(this).addClass("active").siblings().removeClass("active");
+		$(".content-box").hide().eq($index).show();
+	})
+	</script>
+</body>
+</html>

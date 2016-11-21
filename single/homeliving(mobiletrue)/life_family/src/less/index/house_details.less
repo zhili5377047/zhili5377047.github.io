@@ -1,0 +1,79 @@
+@import "../common";
+body {
+	background-color: @bg_color;
+}
+.top-wrap {
+	background-color: #fff;
+	border-bottom: 1px solid @border_color;
+	h1 {
+		.fs16;
+		margin-top: 10px;
+		padding: 0 10px;
+		color:@c1a;
+	}
+	p {
+		.fs14;
+		color:@c6;
+		padding: 10px;
+	}
+}
+.pic-wrap {
+	position: relative;
+	left:0;
+	top:0;
+	&:after {
+		content:"";
+		position: absolute;
+		left:0;
+		top:0;
+		z-index: 1;
+		width:100%;
+		height: 100%;
+	    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2),transparent 20%,rgba(0, 0, 0, 0));
+	}
+}
+.house-info {
+	background-color: #fff;
+	border-top: 1px solid @border_color;
+	border-bottom: 1px solid @border_color;
+	margin: 10px 0;
+	dl {
+		overflow: hidden;
+		padding: 12px;
+	}
+	dt,dd {
+		float: left;
+	}
+	dt {
+		width:18%;
+		margin-right: 10px;
+		border:1px solid @border_color;
+	}
+	dd {
+		width:72%;
+		h2 {
+			.fs14;
+		}
+		p {
+			.fs12;
+			color:@c6;
+		}
+		a {
+			padding-left: 24px;
+			background: url(../../img/icon-tel-green.png) left center no-repeat;
+			background-size: 12px 14px;
+			span {
+				color:#0add27;
+			}
+			em {
+				color:@c6;	
+			}
+		}
+	}
+
+}
+.house-pic {
+	background-color: #fff;
+	padding: 10px;
+	border-top: 1px solid @border_color;
+}

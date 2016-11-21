@@ -1,0 +1,117 @@
+@import "../common";
+body {
+	background-color: @bg_color;
+}
+
+.info-box {
+	position: relative;
+	.user-info {
+		position: absolute;
+		width:100%;
+		left:0;
+		top:32px;
+		text-align: center;
+		color:#fff;
+		&.u-vip,&.u-stockholder {
+			.user-logo:after {
+				position: absolute;
+				right:3px;
+				bottom:-7px;
+				content:"";
+				width: 24px;
+				height: 24px;
+				background: url(../../img/icon.png) no-repeat;
+				background-size: 216px 226px;
+			}
+		}
+		&.u-stockholder .user-logo:after{
+			background-position: -24px 0;			
+		}
+		.user-logo {
+			position: relative;
+			display: inline-block;
+			width:65px;
+			height: 65px;
+			border-radius: 50%;
+			border:2px solid #eeedeb;
+			margin:0 auto;
+		}
+		.username {
+			.fs14;
+			margin:4px 0 8px;
+		}
+		.user-level {
+			display: inline-block;
+			background-color: rgba(255, 255, 255, 0.2);
+			width:60px;
+			padding: 2px 0;
+			border:1px solid #fff;
+			border-radius: 16px;
+			.fs12;
+		}
+	}
+}
+
+.list-box {
+	background-color:#fff;
+	padding-left:10px;
+	border-top:1px solid @border_color;
+	border-bottom:1px solid @border_color;
+	margin:10px 0;
+	li {
+		border-top:1px solid @border_color;
+		&:first-child {
+			border:none;
+		}
+		a {
+			position:relative;
+			display:block;
+			height:46px;
+			line-height:46px;
+			color:@c1a;
+			.fs14;
+			padding-left:42px;
+			&:before {
+				content:"";
+				position:absolute;
+				left:10px;
+				top:10px;
+				width:24px;
+				height:24px;
+				background:url(../../img/icon.png) no-repeat;
+				background-size:216px 226px;
+			}
+			&:after {
+				position:absolute;
+				right:12px;
+				bottom:18px;
+				content:"";
+				.arrow();
+			}
+		}
+		&.list-1 a:before{
+			background-position:-120px 0;
+		}
+		&.list-2 a:before{
+			background-position:-72px 0;
+		}
+		&.list-3 a:before{
+			background-position:-96px 0;
+		}
+		&.list-4 a:before{
+			background-position:-168px 0;
+		}
+		&.list-5 a:before{
+			background-position:-144px 0;
+		}
+		&.list-6 a:before{
+			background-position:-48px 0;
+		}
+		&.list-7 a:before{
+			background-position:-122px -78px;
+		}
+		&.list-8 a:before{
+			background-position:-122px -100px;
+		}
+	}
+}

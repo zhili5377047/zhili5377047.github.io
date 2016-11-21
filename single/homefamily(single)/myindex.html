@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>分类</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/myindex.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+   
+    </style>
+</head>
+<body>
+	<section id="content">
+		<div class="top_img">
+			<a href="###" class="back_image"><img src="img/index_img22.png" /></a>
+			<div class="single_logo">
+				<a href="###" class="single_img">
+					<img src="img/index_img21.png" class="head_img"/>
+					<span class="vip"></span>
+					<span class="boss"></span>
+				</a>
+				<p class="single_name">凯丽_Kylie</p>
+				<p class="vipMember">VIP会员</p>
+				<p class="bossMember">股东会员</p>
+			</div>
+		</div>
+    		<div class="payfor_style">
+			<a href="mydetails_1.html" class="my_money clearfix">
+				<span href="###" class="left_click"></span>
+				<span class="details_single">基本资料</span>
+				<!--<span href="###" class="right_click right1 right2"></span>-->
+			</a>
+			<a href="mysaleproduct_1.html" class="my_money clearfix">
+				<span href="###" class="left_click left1"></span>
+				<span class="details_single">我的订单</span>
+				<!--<span href="###" class="right_click right1 right2"></span>-->
+			</a>
+			<a href="myrestore_1.html" class="my_money clearfix">
+				<span  class="left_click left2"></span>
+				<span class="details_single">我的收藏</span>
+				<!--<span href="###" class="right_click right1 right2"></span>-->
+			</a>
+			<a href="mymoneypackage_1.html" class="my_money clearfix">
+				<span href="###" class="left_click left3"></span>
+				<span class="details_single">我的钱包</span>
+				<!--<span href="###" class="right_click right1 right2"></span>-->
+			</a>
+			<a href="###" class="my_money clearfix">
+				<span href="###" class="left_click left4"></span>
+				<span>收货地址</span>
+				<!--<span href="###" class="right_click right1 right2"></span>-->
+			</a>
+			<a href="paymoney.html" class="my_money clearfix">
+				<span href="###" class="left_click left5"></span>
+				<span>升级会员</span>
+				<!--<span href="###" class="right_click right1 right2"></span>-->
+			</a>
+
+			
+		</div>
+		<div class="payfor_style">
+			<a href="mymore2_aboutus.html" class="my_money clearfix">
+				<span href="###" class="left_click left6"></span>
+				<span>更多</span>
+				<span href="###" class="right_click right1 right2"></span>
+			</a>
+			<a href="" class="my_money my_money1 clearfix">
+				<span class="left_click left7"></span>
+				<span>注销</span>
+				<span href="###" class="right_click right1"></span>
+			</a>
+			
+		</div>
+    		<!--<div class="bg_bottom"></div>-->
+	</section>
+    <footer id="foot">
+		<ul class="fixing">
+			<li><a class="direction" href="index.html"><span class="nav nav_icon1">首页</span></a></li>
+			<li><a class="direction" href="member2_mixed.html"><span class="nav nav_icon2">会员杂锦</span></a></li>
+			<li><a class="direction" href="sort3_class.html"><span class="nav nav_icon3">分类</span></a></li>
+			<li><a class="direction" href="purchase_car.html"><span class="nav nav_icon4">购物车</span></a></li>
+			<li><a class="direction" href="myindex.html"><span class="nav nav_icon5">我的</span></a></li>
+			
+		</ul>
+	</footer>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true,
+        autoplay:2000
+    });
+    var navdetail = document.querySelectorAll(".nav_detail li a");
+    var before = 0;
+    for(var i=0;i<navdetail.length;i++){
+    		navdetail[i].index = i;
+    		navdetail[i].onclick = function(){
+    			for(var j=0;j<navdetail.length;j++){
+    				navdetail[j].className = "";
+    			}
+    			navdetail[this.index].className = "active_tips";
+    		}
+    }
+    </script>
+</body>
+</html>

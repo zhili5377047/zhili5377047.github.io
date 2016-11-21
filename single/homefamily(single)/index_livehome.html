@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index_livehome.css"/>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+   
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <header id="head">
+		<a href="login_1.html" class="back-btn"></a>
+		<h1>生活百货</h1>
+	</header>
+	<section id="content">
+		<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href=""><img src="img/index_img6.png"/></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/index_img5.png"/></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/index_img4.png"/></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/index_img3.png"/></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/index_img2.png"/></a></div>
+            
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination"></div>
+	        <!-- Add Arrows -->
+	        <!--<div class="swiper-button-next"></div>
+	        <div class="swiper-button-prev"></div>-->
+    		</div>
+    		<div class="content_detail clearfix">
+    			<ul class="nav_detail">
+    				<li><a href="###">生活百货</a></li>
+    				<li><a href="###" class="active_tips">收纳整理</a></li>
+    				<li><a href="###">餐饮卫具</a></li>
+    				<li><a href="###">杂志报纸</a></li>
+    				<li><a href="###">厨房用品</a></li>
+    				<li><a href="###">创意用品</a></li>
+    			</ul>
+    			<ul class="contenting">
+    				<li class="listpage">
+    					<a href="###">
+    						<img src="img/index_img8.png" class="timate"/>
+    						<span class="timate">
+    							<span>沃之沃 多功能收纳盒</span>
+	    						<span class="boxColorful">内衣盒六件套</span>
+	    						<span class="bottom_set bottle_red">&yen;11.5</span>
+	    						<span class="bottom_set">原价：<span>&yen;12.8</span></span>
+    						</span>
+    						
+    					</a>
+    				</li>
+    				<li class="listpage">
+    					<a href="###">
+    						<img src="img/index_img8.png" class="timate"/>
+    						<span class="timate">
+    							<span>沃之沃 多功能收纳盒</span>
+	    						<span class="boxColorful">内衣盒六件套</span>
+	    						<span class="bottom_set bottle_red">&yen;11.5</span>
+	    						<span class="bottom_set">原价：<span>&yen;12.8</span></span>
+    						</span>
+    						
+    					</a>
+    				</li>
+    				<li class="listpage">
+    					<a href="###">
+    						<img src="img/index_img8.png" class="timate"/>
+    						<span class="timate">
+    							<span>沃之沃 多功能收纳盒</span>
+	    						<span class="boxColorful">内衣盒六件套</span>
+	    						<span class="bottom_set bottle_red">&yen;11.5</span>
+	    						<span class="bottom_set">原价：<span>&yen;12.8</span></span>
+    						</span>
+    						
+    					</a>
+    				</li>
+    				<li class="listpage">
+    					<a href="###">
+    						<img src="img/index_img8.png" class="timate"/>
+    						<span class="timate">
+    							<span>沃之沃 多功能收纳盒</span>
+	    						<span class="boxColorful">内衣盒六件套</span>
+	    						<span class="bottom_set bottle_red">&yen;11.5</span>
+	    						<span class="bottom_set">原价：<span>&yen;12.8</span></span>
+    						</span>
+    						
+    					</a>
+    				</li>
+    				
+    				
+    				
+    			</ul>
+    		</div>
+	</section>
+    
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true,
+        autoplay:2000
+    });
+    var navdetail = document.querySelectorAll(".nav_detail li a");
+    var before = 0;
+    for(var i=0;i<navdetail.length;i++){
+    		navdetail[i].index = i;
+    		navdetail[i].onclick = function(){
+    			for(var j=0;j<navdetail.length;j++){
+    				navdetail[j].className = "";
+    			}
+    			navdetail[this.index].className = "active_tips";
+    		}
+    }
+    </script>
+</body>
+</html>

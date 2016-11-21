@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>修改密码</title>
+	<link rel="stylesheet"link href="../../css/base.css">
+	<link rel="stylesheet" href="../../css/mine/info/supply.css">
+</head>
+<body>
+	<section class="password-box">
+		<form>
+			<div class="input-group">
+				<label>
+					<span>行业类型：</span>
+					<input type="text">
+				</label>
+			</div>
+			<div class="input-group">
+				<label>
+					<span>我能供应：</span>
+					<input type="text">
+				</label>
+			</div>
+			<div class="input-group mutlple-group">
+				<label>
+					<textarea placeholder="描述"></textarea>
+				</label>
+			</div>
+			<div class="upload-box">
+				<p>图片：</p>
+				<div>
+					<!-- <img src="" alt=""> -->
+					<a href="javascript:void(0);" id="uploadBtn"></a>
+				</div>
+				<input type="file" accept="image/*" id="uploadFile" name="uploadFile" style="display: none;">
+			</div>
+			<a href="javascript:void(0);" id="ensure-btn">确认</a>
+		</form>
+	</section>
+	<script src="../../js/zepto.js"></script>
+	<script src="../../js/mine/supply.js"></script>
+</body>
+</html>

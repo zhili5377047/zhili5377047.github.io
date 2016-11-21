@@ -1,0 +1,77 @@
+@import "../../common";
+
+body {
+	background-color: @bg_color;
+}
+.wallet-box {
+	text-align: center;
+	.wallet {
+		width: 21.6%;
+		margin: 50px auto 16px;
+	}
+	span {
+		color:@c80;
+		.fs14;
+	}
+	p {
+		color:@c1a;
+		.fs24;
+	}
+}
+#billBtn {
+	position: absolute;
+	right: 10px;
+	top:10px;
+	.common-btn(@width:60px;);
+}
+.payment-box {
+	background-color: #fff;
+	margin:42px 10px 0;
+	border: 1px solid @border_color;
+	border-radius: 4px;
+}
+.payment-box label {
+	&:first-child {
+		border-top: 0;
+	}
+	display: block;
+	position: relative;
+	color:@c1a;
+	margin:0 10px;
+	height: 48px;
+	line-height: 48px;
+	border-top: 1px solid @border_color;
+	&.p-zhifubao:after {
+		background-position: 0 -166px;
+	}
+	&.p-weixin:after {
+		background-position: -32px -166px;
+	}
+	&:after {
+		position: absolute;
+		left:10px;
+		top: 10px;
+		width: 30px;
+		height: 30px;
+		content: "";
+		background: url("../../../img/icon.png") no-repeat;
+		background-size: 216px 226px;
+	}
+	.p-method {
+		margin-left: 60px;
+	}
+	.weui-icon-checked {
+		position: absolute;
+		right: 10px;
+		top: 0;
+	}
+	span,input {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.payment-btn {
+	.common-btn(@width:80%;@bg:#26c08a;@height:46px;);
+	.fs16;
+	margin-top: 54px;
+}

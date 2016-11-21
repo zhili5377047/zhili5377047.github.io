@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			label{
+				display: block;
+				border:1px solid;
+			}
+			.input-group .input{
+				position: relative;
+				left: -9999rem;
+			}
+			.input-group .input:checked +.icon{
+				color:red;
+				background: blue;
+			}
+			.icon{
+				-webkit-user-select: none;
+			}
+		</style>
+	</head>
+	<body>
+		<label class="input-group">
+			
+			<input type="checkbox" class="input" name="gender"/>
+			<span class="icon">
+				XXX
+			</span>
+		</label>
+	</body>
+</html>

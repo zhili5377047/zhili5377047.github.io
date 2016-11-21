@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的收藏</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/myrestore_2.css"/>
+	</head>
+	<body>
+	
+		<header id="head">
+			<a href="login_1.html" class="back-btn"></a>
+			<h1>我的收藏</h1>
+			<a href="myindex.html" class="pay_list">完成</a>
+		</header>
+		<section id="content">
+			<div class="bg_header"></div>
+			
+			<ul class="searchlist clearfix">
+				<li class="each_list">
+					<span class="wrap_click">
+						<a href="###" class="click_select"></a>
+						<img src="img/index_search1.png"/>
+						<span class="fruit_apple">坚果特产山核桃奶油味碧根...</span>
+						<!--<span>规格：1盒6片</span>-->
+						<span class="bottle_count">
+							<span>&yen;29.5</span>
+							<!--<span>X2</span>-->
+							
+						</span>
+						
+					</span>
+					
+				</li>
+				
+				
+			</ul>
+			<ul class="searchlist clearfix">
+				<li class="each_list">
+					<span class="wrap_click">
+						<a href="###" class="click_select"></a>
+						<img src="img/index_search1.png"/>
+						<span class="fruit_apple">坚果特产山核桃奶油味碧根...</span>
+						<!--<span>规格：1盒6片</span>-->
+						<span class="bottle_count">
+							<span>&yen;29.5</span>
+							<!--<span>X2</span>-->
+							
+						</span>
+						
+					</span>
+					
+				</li>
+				
+				
+			</ul>
+			<div class="select_this clearfix">
+				<div class="this_bg select_1">
+					<!--<a href="###" class="select_bg">全选</a>-->
+					<a href="###" class="select_bg">全选</a>
+					
+				</div>
+				<!--<div class="this_bg select_2">
+					<span class="all_count">合计：<span class="this_money">&yen;14.60</span></span>
+					<div>(不含运费)</div>
+				</div>-->
+				
+				<div class="this_bg select_3">
+					<a href="###" class="delete_this">删除</a>
+				</div>
+				
+			</div>
+			<!--<div class="top_image1">
+				<img src="img/index_img24.png"/>
+				<p class="rest_count">我的余额</p>
+				<p class="true_count">&yen;88.50</p>
+			</div>-->
+			
+			
+			<!--<div class="top_linking">-->
+				<!--<a href="###" class="clearfix">头像<span class="this_change"><img src="img/index_img19.png" alt="" /></span></a>-->
+				<!--<a href="###" class="clearfix">姓名 <span class="this_change">李晓晓</span></a>
+				
+				<a href="###" class="clearfix">联系方式<span class="this_change">134**5617</span></a>
+			</div>-->
+			
+			
+			
+			<!--<div class="bg_bottom"></div>-->
+			
+			
+		</section>
+		
+		
+		
+		
+	</body>
+	
+	// <script type="text/javascript" src="js/jquery-2.1.3.min.js">
+		
+	// </script>
+	
+	<script>
+		var oInput = document.querySelector(".input_product");
+		var mask = document.getElementById("mask");
+		var submit = document.querySelector(".submit");
+		var form1 = document.querySelector(".form1");
+		var form2 = document.querySelector(".form2");
+		var tipsblock = document.querySelector(".tips_block");
+		var notfind = document.querySelector(".not_find");
+		var clickleave = document.querySelector(".click_leave");
+		var searchlist = document.querySelectorAll(".searchlist");
+		var textarea = document.querySelector("#mask textarea");
+
+		var clickSelect = document.querySelectorAll(".click_select");
+		var allSelect = document.querySelector(".select_bg");
+		var deleteThis = document.querySelector(".delete_this");
+		console.log(clickSelect);
+		var bol = true;
+		
+		function check(){
+			allSelect.onclick = function(){
+				if(this.style.backgroundPosition == "-338px -58px"){
+					
+					for(var j=0;j<clickSelect.length;j++){
+						clickSelect[j].style.backgroundPosition = "-258px -52px";
+						this.style.backgroundPosition = "-258px -58px";
+					}
+					
+				}else{
+					
+					for(var j=0;j<clickSelect.length;j++){
+						clickSelect[j].style.backgroundPosition = "-338px -52px";
+						this.style.backgroundPosition = "-338px -58px";
+					}
+				}
+				
+			}
+		}
+		check();
+		var lisebol = true;
+		
+		function makeChecking(){
+			for(var j=0;j<clickSelect.length;j++){
+				searchlist[j].index = j;
+				searchlist[j].onclick = function(){
+					var tick = 0;
+					if(clickSelect[this.index].style.backgroundPosition == "-258px -52px"){
+
+						if(clickSelect[this.index].style.backgroundPosition == "-258px -52px"){
+							clickSelect[this.index].style.backgroundPosition = "-338px -52px";
+
+						}else{
+							clickSelect[this.index].style.backgroundPosition = "-258px -52px";
+						}
+					}else{
+						
+						if(clickSelect[this.index].style.backgroundPosition == "-338px -52px"){
+							
+
+							clickSelect[this.index].style.backgroundPosition = "-258px -52px"
+						}else{
+							clickSelect[this.index].style.backgroundPosition = "-338px -52px"
+						}
+					}
+					for(var i=0;i<clickSelect.length;i++){
+						if(clickSelect[i].style.backgroundPosition == "-338px -52px"){
+							tick++;
+							if(tick ==clickSelect.length){
+								// console.log(tick);
+								allSelect.style.backgroundPosition = "-338px -58px";
+								tick = clickSelect.length;
+							}
+						}else{
+							
+							// if(clickSelect[i].style.backgroundPosition == "-338px -52px"){
+							// 	tick--;
+							// }
+							allSelect.style.backgroundPosition = "-258px -58px";
+						}
+					}
+				}
+
+	
+			}
+
+//			deleteThis.onclick = function(){
+//				for(var j=0;j<clickSelect.length;j++){
+//					if(clickSelect[j].style.backgroundPosition == "-338px -52px"){
+//						clickSelect[j].
+//					}
+//				}
+//			}
+			deleteThis.onclick = function(){
+				for(var i=0;i<clickSelect.length;i++){
+					if(clickSelect[i].style.backgroundPosition == "-338px -52px"){
+						clickSelect[i].parentNode.parentNode.parentNode.remove();
+					}
+
+				}
+				allSelect.style.backgroundPosition = "-258px -58px";
+			}
+			
+		}
+		makeChecking()
+		
+		
+//		var clickSelect = document.querySelectorAll(".click_select");
+//		var allSelect = document.querySelector(".select_bg");
+//		var deleteThis = document.querySelector(".delete_this");
+		
+		
+		
+		
+//		for(var i=0;i<clickSelect.length;i++){
+//				clickSelect[i].bol = false;		
+//			}
+//		
+//		function checking(){
+//			for(var j=0;j<clickSelect.length;j++){
+//				if(clickSelect[j].style.backgroundPosition = "-258px -52px"){
+//					
+//				}
+//			}
+//			
+//		}
+		
+		
+		
+		
+// 		$(function(){
+// 			$pic_move = $("#content .pic_move");
+// 			console.log($pic_move);
+// 			$img = $("#content .pic_move a");
+// 			console.log($img);
+// 			$oLi = $("#content .dot li");
+// 			console.log($oLi);
+// 			$prev = $(".prev");
+// 			$next = $(".next");
+// 			var timer = null;
+// 			var index = 0;
+			
+// 			$next.on("click",function(){
+// 				index++;
+// 				if(index==5){
+// 					index  = 0;
+// 				}
+// 				tab();
+// 			})
+// 			function tab(){
+// 				$img.eq(index).fadeIn().siblings("#content .pic_move a").fadeOut();
+// 				$oLi.eq(index).addClass("active").siblings("#content .dot li").removeClass("active");
+// 			}
+// 			$prev.on("click",function(){
+// 				index--;
+// 				if(index<0){
+// 					index  = 4;
+// 				}
+// 				tab();
+// 			})
+// 			function automove(){
+// //				clearInterval(timer);
+// 				timer = setInterval(function(){
+// 					$next.click();
+// 				},3000);
+// 			}
+// 			$oLi.on("mouseover",function(){
+// 				clearInterval(timer);
+// 				index = $(this).index();
+// 				tab();
+// 			});
+// 			$pic_move.hover(function(){
+// 				clearInterval(timer);
+// 			},function(){
+// 				automove();
+// 			})
+// 			automove();
+// 		})
+		
+		
+	</script>
+</html>

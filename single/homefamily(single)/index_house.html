@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index_house.css"/>
+	</head>
+	<body>
+	
+		<header id="head">
+			<a href="login_1.html" class="back-btn"></a>
+			<a href="###" class="restore"></a>
+			<a href="###" class="share"></a>
+			<!--<h1>搜索</h1>-->
+		</header>
+		<section id="content">
+			<div class="bg_header"></div>
+			<div class="controller">
+				<a href="###"><img src="img/index_bigImg2.png" class="big_img"/></a>
+				
+				
+			</div>
+			<div class="content_1">
+				<h1 class="tips theme">[番禺 华南] 星力时代豪庭</h1>
+			
+				<div class="tips">
+					番禺地铁大盘低首付5万起送入户花园，4万抵10万抢购中,市场均价：住宅  12800元/㎡
+				</div>
+			</div>
+			<div class="collect_1">
+				<div class="tips1">
+					<a href="###"><img src="img/index_bigImg3.png"/></a>
+				</div>
+			</div>
+			<div class="collect_2">
+				<div class="tips2">
+					<a href="###"><img src="img/index_bigImg4.png"/></a>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+		</section>
+		<footer id="foot">
+			<!--<a class="direction direction_1" href="###"></a>
+			<a class="direction direction_2" href="###">加入购物车</a>
+			<a class="direction direction_3" href="###">立即购买</a>-->
+				
+		</footer>
+		<!--<div id="mask">
+			<img src="img/index_commoney.png"/>
+		</div>-->
+		
+	</body>
+	
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js">
+		
+	</script>
+	<!--<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>-->
+		
+	
+	<script>
+		var change = document.querySelectorAll(".change");
+		var saleDetail = document.querySelectorAll(".sale_detail");
+		var demake = document.querySelectorAll(".demake");
+		var before = 0;
+		var introdetail = document.querySelector(".intro_detail");
+		var mask = document.getElementById("mask");
+//		mask.onclick = function(){
+//			this.style.display = "none";
+//		}
+//		var img = new Image();
+//		img.src = "img/index_iphone_detail.png";
+//		img.onload = function(){
+//			introdetail.style.height = img.offsetHeight + "px";
+//		}
+		
+		for(var i=0;i<change.length;i++){
+			change[i].index = i;
+			change[i].onclick = function(){
+				saleDetail[before].className = "";
+				saleDetail[this.index].className = "show";
+				demake[before].style.display = "none";
+				demake[this.index].style.display = "block";
+				before = this.index;
+			}
+		}
+		
+		
+		
+		
+		
+		$(function(){
+			$pic_move = $("#content .pic_move");
+			console.log($pic_move);
+			$img = $("#content .pic_move a");
+			console.log($img);
+			$oLi = $("#content .dot li");
+			console.log($oLi);
+			$prev = $(".prev");
+			$next = $(".next");
+			var timer = null;
+			var index = 0;
+			
+			$next.on("click",function(){
+				index++;
+				if(index==5){
+					index  = 0;
+				}
+				tab();
+			})
+			function tab(){
+				$img.eq(index).fadeIn().siblings("#content .pic_move a").fadeOut();
+				$oLi.eq(index).addClass("active").siblings("#content .dot li").removeClass("active");
+			}
+			$prev.on("click",function(){
+				index--;
+				if(index<0){
+					index  = 4;
+				}
+				tab();
+			})
+			function automove(){
+//				clearInterval(timer);
+				timer = setInterval(function(){
+					$next.click();
+				},3000);
+			}
+			$oLi.on("mouseover",function(){
+				clearInterval(timer);
+				index = $(this).index();
+				tab();
+			});
+			$pic_move.hover(function(){
+				clearInterval(timer);
+			},function(){
+				automove();
+			})
+			automove();
+		})
+		
+		
+	</script>
+</html>

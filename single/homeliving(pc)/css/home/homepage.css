@@ -1,0 +1,217 @@
+img {
+  border-style: none;
+}
+body {
+  background: #f5f5f5;
+}
+.wrap {
+  background: #ff7070;
+}
+.wrap .container {
+  width: 1200px;
+  height: 480px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.wrap .container .inner {
+  width: 7200px;
+  position: absolute;
+  left: 0;
+}
+.wrap .container .inner img {
+  width: 1200px;
+  height: 480px;
+  float: left;
+}
+.wrap .container #left {
+  left: 0;
+}
+.wrap .container #right {
+  right: 0;
+}
+.wrap .container .button {
+  font-size: 50px;
+  color: #fff;
+  background: #000;
+  position: absolute;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  height: 100%;
+  width: 50px;
+  text-align: center;
+  line-height: 480px;
+  cursor: pointer;
+}
+.wrap .container .pagination_pic {
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+  line-height: 20px;
+  left: 50%;
+  margin-left: -70px;
+}
+.wrap .container .pagination_pic span {
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
+  cursor: pointer;
+}
+.wrap .container .pagination_pic .active {
+  background-color: #f29004;
+}
+.home_list {
+  width: 1200px;
+  margin: 20px auto 0;
+  height: 400px;
+  position: relative;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  /*列表通用样式ul与div*/
+  /*第一种列表*/
+  /*第二种列表*/
+}
+.home_list ul a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.home_list .list {
+  width: 932px;
+  height: 400px;
+  float: right;
+}
+.home_list .list li {
+  float: left;
+  border: 1px solid #f4f4f4;
+}
+.home_list .list1 li {
+  width: 184px;
+  height: 98px;
+  background: url(../../img/home_details1.png) no-repeat;
+}
+.home_list .choose {
+  width: 234px;
+  position: absolute;
+  top: 112px;
+  left: 16px;
+}
+.home_list .choose li {
+  float: left;
+  width: 78px;
+  height: 30px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 15px;
+  margin-top: 6px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.home_list .choose .active {
+  color: #fff;
+}
+.home_list .list2 {
+  width: 466px;
+  height: 400px;
+  float: left;
+}
+.home_list .list2 li {
+  width: 230px;
+  height: 198px;
+}
+.home_list .list2 .middle {
+  height: 400px;
+}
+.home_list1 {
+  background-image: url(../../img/home_list1.png);
+}
+.home_list2 {
+  background-image: url(../../img/home_list2.png);
+}
+.home_list2 .choose .active {
+  background-color: #5ed67a;
+}
+.home_list2 .list2 li {
+  background: url(../../img/home_details2_1.png) no-repeat;
+}
+.home_list2 .list2 .middle {
+  background-image: url(../../img/home_details2_2.png);
+}
+.home_list3 {
+  background-image: url(../../img/home_list3.png);
+}
+.home_list3 .choose .active {
+  background-color: #69bbe5;
+}
+.home_list3 .list2 li {
+  background: url(../../img/home_details3_1.png) no-repeat;
+}
+.home_list3 .list2 .middle {
+  background-image: url(../../img/home_details3_2.png);
+}
+.home_list4 {
+  background-image: url(../../img/home_list4.png);
+}
+.home_list4 .choose .active {
+  background-color: #f65b86;
+}
+.home_list4 .list2 li {
+  background: url(../../img/home_details4_1.png) no-repeat;
+}
+.home_list4 .list2 .middle {
+  background-image: url(../../img/home_details4_2.png);
+}
+.sales_area {
+  width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 38px;
+}
+.sales_area .title {
+  font-size: 20px;
+  color: #808080;
+  line-height: 64px;
+  text-align: center;
+}
+.sales_area span {
+  border: 1px solid #dbdbdb;
+  width: 488px;
+  margin-top: 32px;
+}
+.sales_area span.first {
+  float: left;
+}
+.sales_area span.last {
+  float: right;
+}
+.sales_area .list3 li {
+  float: left;
+  margin-top: 20px;
+  width: 592px;
+  height: 306px;
+  background-color: #fff;
+}
+.sales_area .list3 li img {
+  width: 592px;
+  height: 252px;
+}
+.sales_area .list3 li p {
+  padding-left: 14px;
+  font-size: 24px;
+  color: #000;
+  line-height: 54px;
+}
+.sales_area .list3 li.even {
+  margin-left: 16px;
+}
+.sales_area .list3 li:hover p {
+  color: blue;
+  text-decoration: underline;
+}

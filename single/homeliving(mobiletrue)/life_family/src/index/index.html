@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>首页</title>
+	<link rel="stylesheet"link href="../css/base.css">
+	<link rel="stylesheet" href="../css/index/index.css">
+	<link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+	<div class="search-bar">
+		<a href="city.html" class="address-btn">广州市</a>
+		<div class="input-group">
+			<input type="text" placeholder="请输入你想要的商品">
+			<a href="javacript:void(0);" class="search-btn"></a>
+		</div>
+	</div>
+	<div class="slide" id="slideContainer">
+	    <ul>
+	        <li>
+	            <a href="//m.yhd.com/">
+	                <img src="http://d10.yihaodianimg.com/V00/M03/4D/41/CgQDsVQG4d6AISZPAAFa7N3KyPY18100.jpg" alt="">
+	            </a>
+	        </li>
+	        <li>
+	            <a href="//www.baidu.com/">
+	                <img src="http://d10.yihaodianimg.com/V00/M04/32/59/CgQDsVQDEtaAVv4BAAEFc6n3fws75000.jpg" alt="">
+	            </a>
+	        </li>
+	        <li>
+	            <a href="//m.taobao.com/">
+	                <img src="http://d11.yihaodianimg.com/N05/M04/82/EC/CgQI01QEHoiAFBbgAAC9du5zOPc62900.jpg" alt="">
+	            </a>
+	        </li>
+	        <li>
+	            <a href="//www.qq.com/">
+	                <img src="http://d10.yihaodianimg.com/N07/M09/26/8B/CgQI0FQFd8-ACrb7AADBtSan3a084000.jpg" alt="">
+	            </a>
+	        </li>
+	    </ul>
+	    <div class="dot">
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	    </div>
+	</div>
+	<div class="channel-box clearfix">
+		<div>
+			<a href="###">
+				<img src="../img/channel1.jpg" alt="">
+			</a>
+		</div>
+		<div>
+			<a href="###">
+				<img src="../img/channel2.jpg" alt="">
+			</a>
+			<a href="###">
+				<img src="../img/channel3.jpg" alt="">
+			</a>
+			<a href="###">
+				<img src="../img/channel4.jpg" alt="">
+			</a>
+			<a href="###">
+				<img src="../img/channel5.jpg" alt="">
+			</a>
+		</div>
+	</div>
+	
+	<div class="sales-box">
+		<h2>
+			<span>特卖专区 Sales</span>
+		</h2>
+		<ul class="topic-list">
+			<li>
+				<a href="###">
+					<img src="../img/active/action1.jpg" alt="">
+					<p>【10月抢购预告】 荣耀乐檬大神爆款 惊爆价</p>
+				</a>
+			</li>
+			<li>
+				<a href="###">
+					<img src="../img/active/action1.jpg" alt="">
+					<p>【10月抢购预告】 荣耀乐檬大神爆款 惊爆价</p>
+				</a>
+			</li>
+			<li>
+				<a href="###">
+					<img src="../img/active/action1.jpg" alt="">
+					<p>【10月抢购预告】 荣耀乐檬大神爆款 惊爆价</p>
+				</a>
+			</li>
+			<li>
+				<a href="###">
+					<img src="../img/active/action1.jpg" alt="">
+					<p>【10月抢购预告】 荣耀乐檬大神爆款 惊爆价</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<footer class="footer-bar">
+		<ul>
+			<li class="icon-4 active">
+				<a href="###">首页</a>	
+			</li>
+			<li class="icon-3">
+				<a href="###">会员杂锦</a>	
+			</li>
+			<li class="icon-2">
+				<a href="###">分类</a>	
+			</li>
+			<li class="icon-5">
+				<a href="###">购物车</a>	
+			</li>
+			<li class="icon-1">
+				<a href="###">我的</a>	
+			</li>
+		</ul>
+	</footer>
+	<script src="../js/zepto.js"></script>
+	<script src = "../js/swipeSlide.js"></script>
+	<script>
+		$("#slideContainer").swipeSlide({
+		   continuousScroll:true,
+		   speed : 3000,
+		   transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+		   firstCallback : function(i,sum,me){
+		       me.find('.dot').children().first().addClass('cur');
+		   },
+		   callback : function(i,sum,me){
+		       me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+		   }
+		});
+	</script>
+</body>
+</html>

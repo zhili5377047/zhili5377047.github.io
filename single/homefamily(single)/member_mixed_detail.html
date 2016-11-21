@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/member_mixed_detail.css"/>
+	</head>
+	<body>
+	
+		<header id="head">
+			<a href="login_1.html" class="back-btn"></a>
+			<a href="###" class="restore"></a>
+			<a href="###" class="share"></a>
+			<!--<h1>搜索</h1>-->
+		</header>
+		<section id="content">
+			<div class="bg_header"></div>
+			<div class="controll_iphone">
+				<a href="###"><img src="img/index_phonebig.png" class="big_img"/></a>
+				
+			</div>
+			<div class="honor tips">Huawei/华为 荣耀7 全网通4G手机</div>
+			<div class="price tips">
+				<span class="discount_price">&yen;11.5</span>
+				<span class = "true_price">原价：<span>¥ 12.8</span></span>
+				<span class="amount">销量：1235</span>
+			</div>
+			<div class="price tips">
+				<span class="this_time discount_price">限时：2天23分02秒</span>
+				<span class="this_count amount">限量：120件</span>
+			</div>
+			
+			<div class="phone_detail">
+				<a href="###" class="change"><span class="sale_detail show">商品详情</span></a>
+				<a href="###" class="change"><span class="sale_detail">用户评价</span></a>
+			</div>
+			<div class="intro_detail">				
+				<ul class="showing demake">
+					<li class="phone_img">
+						<img src="img/index_iphone_detail.png" class="botImg"/>
+						
+					</li>
+				
+				</ul>
+				<ul class="comment demake">
+					<li class="name_detail">
+						<span class="little_ball">小球</span><span class="time_start">2015-10-05</span><img src="img/index_commentplaug.png"/>
+						<span class="block_comment">手机挺好的，喜欢</span>
+						
+					</li>
+					
+				</ul>				
+			</div>
+			<div class="bg_bottom"></div>
+			
+		</section>
+		<footer id="foot">
+			<a class="direction direction_1" href="###"><span class="number">2</span></a>
+			<a class="direction direction_2" href="###">加入购物车</a>
+			<a class="direction direction_3" href="paymoney.html">立即购买</a>
+				
+		</footer>
+		<div id="mask">
+			<!--<a href="paymoney.html" class="img_link1"><img src="img/index_commoney.png" class="big_dir"/></a>-->
+			<div class="share_bottom">
+				<h2>分享到</h2>
+				<div class="wrapall clearfix">
+					<a href="###" class="shareOthers"><span class="create_1">微信朋友</span></a>
+					<a href="###" class="shareOthers"><span class="create_2">微信朋友圈</span></a>
+					<a href="###" class="shareOthers "><span class="create_3">新浪微博</span></a>
+				</div>
+				<div class="cancelthem"><a href="###">取消</a></div>
+			
+			</div>
+		</div>
+		
+		
+	</body>
+	
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js">
+		
+	</script>
+	<!--<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>-->
+		
+	
+	<script>
+		var change = document.querySelectorAll(".change");
+		var saleDetail = document.querySelectorAll(".sale_detail");
+		var demake = document.querySelectorAll(".demake");
+		var before = 0;
+		var introdetail = document.querySelector(".intro_detail");
+		var mask = document.getElementById("mask");
+		var direction = document.querySelector(".direction_2");
+		var number = document.querySelector(".number");
+		
+		
+		var tick = 0;
+		number.style.display = "none";
+		direction.onclick = function(){
+			number.style.display = "block";
+			tick++;
+			number.innerHTML = tick;
+			
+		}
+		mask.onclick = function(){
+			this.style.display = "none";
+		}
+		var img = new Image();
+		img.src = "img/index_iphone_detail.png";
+		img.onload = function(){
+			introdetail.style.height = img.offsetHeight + "px";
+		}
+		
+		for(var i=0;i<change.length;i++){
+			change[i].index = i;
+			change[i].onclick = function(){
+				saleDetail[before].className = "";
+				saleDetail[this.index].className = "show";
+				demake[before].style.display = "none";
+				demake[this.index].style.display = "block";
+				before = this.index;
+			}
+		}
+		
+		
+		var shareL = document.querySelector(".share");
+		
+		var sharebottom = document.querySelector(".share_bottom");
+		var imglink = document.querySelector(".img_link1");
+		shareL.onclick = function(){
+			mask.style.display = "block";
+//			alert("你好")
+//			imglink.style.display = "none";
+			sharebottom.style.display = "block";
+		}
+		
+		
+		$(function(){
+			$pic_move = $("#content .pic_move");
+			console.log($pic_move);
+			$img = $("#content .pic_move a");
+			console.log($img);
+			$oLi = $("#content .dot li");
+			console.log($oLi);
+			$prev = $(".prev");
+			$next = $(".next");
+			var timer = null;
+			var index = 0;
+			
+			$next.on("click",function(){
+				index++;
+				if(index==5){
+					index  = 0;
+				}
+				tab();
+			})
+			function tab(){
+				$img.eq(index).fadeIn().siblings("#content .pic_move a").fadeOut();
+				$oLi.eq(index).addClass("active").siblings("#content .dot li").removeClass("active");
+			}
+			$prev.on("click",function(){
+				index--;
+				if(index<0){
+					index  = 4;
+				}
+				tab();
+			})
+			function automove(){
+//				clearInterval(timer);
+				timer = setInterval(function(){
+					$next.click();
+				},3000);
+			}
+			$oLi.on("mouseover",function(){
+				clearInterval(timer);
+				index = $(this).index();
+				tab();
+			});
+			$pic_move.hover(function(){
+				clearInterval(timer);
+			},function(){
+				automove();
+			})
+			automove();
+		})
+		
+		
+	</script>
+</html>

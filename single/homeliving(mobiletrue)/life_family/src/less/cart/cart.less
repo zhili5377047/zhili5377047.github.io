@@ -1,0 +1,153 @@
+@import "../common";
+
+.edit-bar {
+	background-color: #fff;
+	text-align: right;
+	height: 32px;
+	line-height: 32px;
+	padding-top: 10px;
+	padding-right: 10px;
+	border-bottom: 1px solid @border_color;
+	a {
+		.common-btn(@width:60px);
+		color:#fff;
+		float: right;
+	}	
+}
+.c-list {
+	&.edit-status {
+		.weui-bar {
+			width: 8%;
+		}
+	}
+	background-color: #fff;
+	li {
+		padding:0 10px;
+		border-bottom: 1px solid @border_color;
+		position: relative;
+	}
+	.edit-count-bar {
+		position: absolute;
+		right:10px;
+		bottom:10px;
+		width:80px;
+		height: 32px;
+		line-height: 32px;
+		span {
+			color: @c3;
+			.fs16;
+			display: inline-block;
+			vertical-align: middle;
+			height: 25px;
+			line-height: 25px;
+			margin:0 4px;
+		}
+		a {
+			display: inline-block;
+			vertical-align: middle;
+			width:25px;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+			font-size: 22px;
+			border-radius: 25px;
+			border:1px solid @border_color;
+			color:@cf2;
+			&.disabled {
+				color:@c6;
+			}
+		}
+	}
+	label {
+		display: block;
+		overflow: hidden;
+		padding: 10px 0;
+		h2 {
+			.ellipsis;
+			.fs14;
+			color:@c1a;
+		}
+	}
+	label {
+		position: relative;
+		.product-count {
+			position: absolute;
+			right:15px;
+			bottom:10px;
+			.fs12;
+			span {
+				.fs14;
+				margin-left: 4px;
+			}
+			color:@c3;
+		}
+	}
+	div {
+		display: inline-block;
+		vertical-align: middle;
+		&.c-pic {
+			width:20%;
+		}
+		&.c-info {
+			width:60%;
+			margin-left: 10px;
+			vertical-align: top;
+			span {
+				color:@cde;
+				.fs14;
+				font-weight: bold;
+			}
+		}
+	}
+}
+.cart-bar {
+	position: fixed;
+	left:0;
+	bottom:50px;
+	width:100%;
+
+	border-top: 1px solid @border_color;
+	background-color: @bg_color;
+	.settlement-btn,.del-btn  {
+		position: absolute;
+		right:10px;
+		top:9px;
+		.common-btn(@width:100px;@height:36px;@bg:#ee4147;);
+		.fs14;
+	}
+	.total-bar {
+		position: absolute;
+		left: 30%;
+		top:5px;
+		.fs14;
+		color:@c1a;
+		p span {
+			color:@cf2;
+		}
+		>span {
+			color:@c6;
+			.fs12;
+		}
+	}
+}
+.cart-bar label {
+	display: block;
+	width:27%;
+	box-sizing: border-box;
+	height: 55px;
+	line-height: 55px;
+	span:nth-of-type(1) {
+		margin: 0 12px;
+	}
+	span {
+		.fs16;
+		color:@c1a;
+	}
+	input,span{
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.cart.footer-bar {
+	height: 108px;
+}

@@ -1,0 +1,52 @@
+@import "../../common";
+body {
+	background-color: @bg_color;
+}
+.order-box {
+	padding: 0 10px;
+	background-color: #fff;
+	border-bottom: 1px solid @border_color;
+	>p {
+		.fs12;
+		height: 32px;
+		line-height: 32px;
+		border-bottom: 1px solid @border_color;
+		span:nth-child(1) {
+			float: left;
+		}
+		span:nth-child(2) {
+			float: right;
+		}
+	}
+}
+.order-details {
+	padding: 10px 0;
+	>div {
+		float: left;
+		&.member-logo {
+			width:20%;
+			margin-right: 10px;
+		}
+		&:nth-child(2) {
+			h3 {
+				color:@c1a;
+				.fs14;
+				font-weight: bold;
+			}
+			p {
+				.fs12;
+				color:@c6;
+				margin:2px 0;
+			}
+			strong {
+				color:#de0000;
+			}
+		}
+	}
+}
+#payBtn {
+	.common-btn(@height:40px);
+	width:80%;
+	.fs16;
+	margin:30px auto 0;
+}

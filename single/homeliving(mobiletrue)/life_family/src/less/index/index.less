@@ -1,0 +1,184 @@
+@import "../common";
+
+body {
+	background-color: @bg_color;
+}
+.search-bar {
+	height: 45px;
+	line-height: 45px;
+	.address-btn,.input-group {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.address-btn {
+		color:@c3;
+		.fs14;
+		margin:0 12px;
+		&:after {
+			content:"";
+			background: url(../../img/icon1.png);
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 auto;
+			background-position: -20px 0;
+			background-size: 40px 20px;
+			width: 20px;
+			height: 20px;
+		}
+	}
+	.input-group {
+		position: relative;
+		background-color: @bg_color;
+		height: 28px;
+		line-height: 28px;
+		border-radius: 4px;
+		padding-left: 14px;
+		width: 64%;
+		input {
+			border:none;
+			height: 20px;
+			line-height: 20px;
+			padding: 4px 0;
+			display: block;
+			width:100%;
+			background-color: transparent;
+		}
+		.search-btn {
+			position: absolute;
+			right: 4%;
+			top: 0;
+			width: 28px;
+			height: 28px;
+			background: url(../../img/icon1.png) no-repeat;
+			background-size: 40px 20px;
+			background-position: 4px center;
+		}
+	}
+}
+
+/************滚动 顶部 **************/
+#slideContainer {
+	margin-bottom: 2%;
+}
+.slide{
+   position: relative;
+   overflow: hidden;
+}
+.slide:after{
+   content: '';
+   display: block;
+   width: 100%;
+   padding-top: 50%;
+}
+.slide ul{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+.slide li{
+   list-style: none;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+/* 解决js阻塞页面显示首屏 */
+.slide li:first-child{
+   z-index: 1;
+}
+.slide li img{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   border: none;
+}
+.slide .dot{
+   position: absolute;
+   width:100%;
+   left:0;
+   bottom: 8px;
+   text-align: center;
+   z-index: 5;
+   font-size: 0;
+}
+.slide .dot span{
+   display: inline-block;
+   width: 5px;
+   height: 5px;
+   margin-left: 5px;
+   background-color: #a19fa1;
+   border-radius: 50%;
+}
+.slide .dot .cur{
+   background-color: #f59650;
+}
+/************滚动 顶部 **************/
+
+.channel-box {
+	margin:0 10px;
+	box-sizing: border-box;
+	div {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	div:nth-child(1) {
+		width: 32%;
+	}
+	div:nth-child(2) {
+		width: 67%;
+		a {
+			float: left;
+			width:48%;
+			margin-left: 2%;
+			&:nth-child(-n+2) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+.sales-box {
+	margin:12px 10px 0;
+	h2 {
+		.fs14;
+		color:@c80;
+		text-align: center;
+		position: relative;
+		height: 30px;
+		margin-bottom: 12px;
+		line-height: 30px;
+		span {
+			display: inline-block;
+			padding:0 12px;
+			background-color: @bg_color;
+		}
+		&:after {
+			content:"";
+			position: absolute;
+			left:0;
+			z-index: -1;
+			top:14px;
+			width:100%;
+			height: 1px;
+			background-color: @border_color;
+		}
+	}
+}
+.topic-list li {
+	margin-bottom: 10px;
+	a {
+		display: block;
+		background-color: #fff;
+		.fs14;
+		color:@c3;
+		p {
+			height: 35px;
+			line-height: 35px;
+		}
+	}
+}

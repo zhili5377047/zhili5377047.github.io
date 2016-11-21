@@ -1,0 +1,120 @@
+@border:#e6e6e6;
+@orange:#ffa130;
+@font:#868686;
+@green:#26c08a;
+.fl{
+    float: left;
+}
+.fr{
+    float:right;
+}
+/**************section*****************/
+.section{
+    width: 1200px;
+    margin: 0 auto;
+    
+} 
+.section{
+    margin-top: 30px; 
+    margin-bottom: 480px;
+}
+.part-left{
+    width: 170px;
+    height: 410px;
+    border:1px solid @border; 
+    
+    .list-nav{
+        text-align: center;
+        li{
+            height: 50px;
+            box-sizing: border-box;
+            a{
+                display: inline-block;
+                width: 100%;
+                font-size: 14px;
+                line-height: 50px;
+                color: #000000;
+            }
+            .show{
+                background: @orange;
+            }
+        }      
+    }
+    .active{
+        border-top:4px solid @orange;
+    }
+}
+.part-right{
+    width: 1000px;
+    .pwd-title{
+        border-bottom: 1px solid @border;
+        span{
+            display: inline-block;
+            width: 100px;
+            border: 1px solid @border;
+            border-bottom: 0;
+            text-align: center;
+            font-size: 18px;
+            line-height: 48px;
+        }
+    }
+    .pwd-con{
+        border-bottom:1px solid @border; 
+        span{
+            display: inline-block;
+        }
+        input{
+            display: inline-block;
+            width: 260px;
+            height: 32px;
+            border: 1px solid @border;
+            padding-left: 15px;
+            line-height: 32px;
+        }
+        .t1,.t2,.t3{
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        .t2{
+            margin-left: 12px;
+        }
+        .t1{
+            margin-top: 44px;
+        }
+        .i1{
+            margin-top: 34px;
+        }
+         .t2{
+            margin-top: 26px;
+        }
+        .i2{
+            margin-top: 15px;
+        }
+         .t3{
+            margin-top: 26px;
+        }
+        .i3{
+            margin-top: 15px;
+        }
+        p{
+            font-size: 14px;
+            color: @font;
+            margin-top: 18px;
+            line-height: 14px;
+        }
+        .keepit{
+            display: inline-block;
+            width: 80px;
+            height: 35px;
+            font-size: 14px;
+            line-height: 35px;
+            border-radius: 4px;
+            background: @orange;
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 55px;
+            margin-bottom: 65px;
+        }
+    }
+    
+}

@@ -1,0 +1,38 @@
+@border:#e6e6e6;
+@orange:#ffa130;
+@font:#868686;
+@green:#26c08a;
+
+.section{
+    border: 1px solid @border;
+    text-align: center;
+    height: 473px;
+    margin-bottom: 125px;
+    .p1{
+        font-size: 24px;
+        margin-top: 78px;
+    }
+    .p1:before{
+        content:"";
+        display: inline-block;
+        width: 53px;height: 53px;
+        background: url("../../img/icon.png") no-repeat -89px -394px;
+        vertical-align: middle;
+    }
+    .p2{
+        margin-top: 40px;
+        span{
+            font-size: 13px;
+        }
+        .countdown{
+            color: @green;
+        }
+        .goback{
+            color: @font;
+            font-size: 13px;
+            margin-left: 20px;
+            padding-right: 35px;
+           
+        }
+    }
+}

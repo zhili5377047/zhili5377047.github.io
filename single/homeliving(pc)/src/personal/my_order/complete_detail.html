@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>待收货详情页</title>
+	<link rel="stylesheet" href="../../../css/base.css">
+	<link rel="stylesheet" href="../../../css/public.css">
+	<link rel="stylesheet" href="../../../css/personal/my order/complete_detail.css">
+</head>
+<body>
+<!-- 头部导航 -->
+	<div class="header">
+		<div class="header_top">
+			<div class="state header_size">
+				<a href="javascript:void(0)">[登录]</a>
+				<a href="javascript:void(0)">[注册]</a>
+				<a href="javascript:void(0)">我的账号</a>
+				<a href="download.html">生活一家APP下载</a>
+			</div>
+		</div>
+		<div class="header_middle">
+			<div class="choose header_size">
+				<a href="homepage.html"><img src="../../../img/home_logo.png" alt=""></a>
+				<a href="javascript:void(0)" class="location">广州</a>
+				<div class="search">
+					<input type="text" placeholder="手机开抢">
+					<a href="search.html"><button>搜索</button></a>
+				</div>
+				<a href="javascript:void(0)" class="box shopping">购物车<span>2</span></a>
+				<a href="service.html" class="box">一键客服</a>
+			</div>
+		</div>
+		<div class="nav">
+			<ul class="clearfix">
+				<li><a href="../../home/homepage.html">首页</a></li>
+				<li><a href="../../life_living/life_living.html">精彩生活</a></li>
+				<li class="active"><a href="../../life_foods/life_foods.html">生活食品</a></li>
+				<li><a href="javascript:void(0)">生活用品</a></li>
+				<li><a href="javascript:void(0)">生活家居</a></li>
+				<li><a href="javascript:void(0)">会员杂锦</a></li>
+				<li><a href="javascript:void(0)">关于我们</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="orderState">
+			<p>当前订单状态： 商品正在打包发货，请耐心等候~   </p>
+			<a href="complete_comment.html" class="rate">去评价</a>
+			<a href="javascript:void(0)" class="salereturn">申请退货</a>
+		</div>
+		<div class="orderMessage">
+			<div class="title">订单信息</div>
+			<ul>
+				<li><span>收货地址 ：</span> 庞少军，86-13751893217，广东省 广州市 天河区 车陂街道 广州市天河区东圃大马路8号时代TIT广场4楼430 ，000000</li>
+				<li><span>订单编号：</span>SKYJ12525441</li>
+				<li><span>创建时间：</span>2015-10-02   12:20</li>
+				<li><span>付款时间：</span>2015-10-02   12:36</li>
+				<li><span>物流信息：</span>申通物流  5221255142</li>
+				<li><span>收货时间：</span>2015-10-06   15:36</li>
+				<li class="remark"><span>备注：</span><textarea></textarea></li>
+			</ul>
+		</div>
+		<div class="goodsMessage">
+			<p class="title">商品信息</p>
+			<div class="headline">
+				<span class="goodsIntro">宝贝</span>
+				<span class="size">规格</span>
+				<span class="quantity">数量</span>
+				<span class="prize">单价(元)</span>
+				<span class="state">订单状态</span>
+				<span class="prizes">商品总价</span>
+			</div>
+			<ul>
+				<li class="clearfix">
+					<div class="goodsIntro">
+						<p>百草味 夏威夷果200g*3袋奶油味  夏威夷果</p>
+					</div>
+					<div class="size">规格：600g</div>
+					<div class="quantity">x2</div>
+					<div class="prize">
+						<p>￥158</p>
+						<span>在线支付</span>
+					</div>
+					<div class="state">待发货</div>
+					<div class="prize">
+						<p>￥316</p>
+						<span>(运费：￥10)</span>
+					</div>
+				</li>
+			</ul>
+			<p class="totalPrize">订单总价：<strong>￥158</strong>元</p>
+		</div>
+	</div>
+
+<!-- 尾部 -->
+	<div class="footer">
+		<p>
+			<a href="../../home/homepage.html">首页</a>
+			<a href="../../life_living/life_living.html">精彩生活</a>
+			<a href="../../life_foods/life_foods.html">生活食品</a>
+			<a href="javascript:void(0)">生活用品</a>
+			<a href="javascript:void(0)">生活家居</a>
+			<a href="javascript:void(0)">会员杂锦</a>
+			<a href="javascript:void(0)">一键客服</a>
+			<a href="javascript:void(0)">关于我们</a>
+		</p>
+		<p>Copyright© 生活一家 2007-2015，All Rights Reserved</p>
+	</div>
+
+	<div class="mask">
+		<div class="applyReturn">
+			<p class="title">申请退款<span>x</span></p>
+			<form action="javascript:void(0)">
+				<div><span>退货原因<sup>*</sup></span><select><option>请选择退货原因</option></select></div>
+				<div><span>退款金额<sup>*</sup></span><input type="text"></div>
+				<div><span>退款说明<sup>*</sup></span><textarea></textarea></div>
+				<div><span>上传凭证：</span><input type="file" class="file" accept="image/*"><button class="upload">选择要上传的图片</button><span class="mention">每张图片大小不超过5M，最多3张，支持JPG、PNG、BMP格式</span></div>
+				<button class="submit">提交</button>
+			</form>
+		</div>
+	</div>
+	<!-- <script src="../../../js/jquery-3.1.0.min.js"></script> -->
+	<script src="../../../js/jquery-1.12.4.js"></script>
+	<script>
+		$(".mask").on('click',function(){
+			$(this).hide();
+		})
+		$(".applyReturn .title span").on('click',function(){
+			$(".mask").hide();
+		})
+		$(".applyReturn").on('click',function(e){
+			e.stopPropagation();
+		})
+		$(".applyReturn .upload").on('click',function(){
+			$(this).siblings(".file").click();
+		})
+		$(".orderState .salereturn").on('click',function(){
+			$(".mask").show();
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.d1{
+				width: 300px;
+			}
+			img{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="d1">
+			<img src="img/3d_1.jpg" alt="" />
+		</div>
+	</body>
+	<script>
+		var img = document.getElementsByTagName('img')[0];
+		var a = getComputedStyle(img)['height'];
+		console.log(a);
+	</script>
+</html>

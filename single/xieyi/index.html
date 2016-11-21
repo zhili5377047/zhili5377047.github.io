@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"/>
+  <style type="text/css">
+  	*{
+  		margin:0;
+  		padding:0;
+ 	 }
+ 	 html,body{
+  		width: 100%;
+  		height: 100%;
+  		font-size: 100%;
+  	}
+ 	.wrap{
+ 		width:100%;
+ 		height: 100%;
+ 	}
+ 	.header{
+ 		width:100%;
+ 		height:68px;
+ 		background:rgb(21,21,21);
+ 		/*overflow: hidden;*/
+ 		/*min-width: 860px;*/
+ 		position: relative;
+ 	}
+ 	.header .hidden{
+ 		position: absolute;
+		z-index: 10;
+		top: 36%;
+		right: 50px;
+		/*display: block;*/
+		display: none;
+ 	}
+ 	.header .hidden img{
+ 		width: 22px;
+ 	}
+ 	.header .nav{
+ 		width:70%;
+ 		height: 100%;
+ 		min-width: 920px;
+ 		margin:0 auto;
+ 		position: relative;
+ 		
+ 	}
+ 	.header .nav .logo{
+ 		width:150px;
+ 		height: 100%;
+ 		/*display: inline-block;
+ 		position: relative;*/
+ 		float: left;
+ 		/*left:0;*/
+ 		
+ 	}
+ 	.header .nav .logo img{
+ 		padding-top: 17px;
+ 	}
+ 	.wrap  .margin1{
+ 		position: absolute;
+ 		width:180px;
+ 		height:246px;
+ 		z-index: 10000;
+ 		background: black;
+ 		opacity: 0.9;
+ 		right: 45px;
+ 		top: 55px;
+ 		display: none;
+ 	}
+ 	.wrap  .margin1 p{
+ 		width:100%;
+ 		height: 40px;
+ 		text-align: center;
+ 		line-height: 40px;
+ 		border-bottom: 1px solid gray;
+ 	}
+ 	.wrap  .margin1 p a{
+ 		display: block;
+ 		width: 100%;
+ 		height: 100%;
+ 		text-decoration: none;
+ 		color: white;
+ 	}
+ 	.header .nav .nav1{
+ 		width: 680px;
+ 		height: 46px;
+ 		float: right;
+ 		text-align: right;
+ 		padding-top:22px;
+ 		
+ 		/*line-height: 68px;*/
+ 	} 
+ 	.header .nav .nav1 a{
+ 		float: left;
+ 		margin-right: 1.8rem;
+ 		padding:5px 10px;
+ 		height: 1.2rem;
+ 		line-height: 1.2rem;
+ 		border-radius: 8px;
+ 		border:1px solid rgb(21,21,21);
+ 		text-decoration: none;
+ 		color: gray;
+ 		font-size: 1.04rem;
+		font-family: arial;
+		font-weight: lighter;
+ 		
+ 	}
+ 	.header .nav .nav1 .a:hover{
+ 		border:1px solid gray;
+ 		color: white;
+ 	}
+ 	.header .nav .nav1 .home{
+ 		border:1px solid gray;
+ 		color: white;
+ 	}
+ 	.content{
+ 		width:100%;
+ 		/*height:*/
+ 	}
+ 	.content .page1{
+ 		width: 100%;
+ 	}
+ 	.content .page1 ul{
+ 		margin:0;
+ 		padding:0;
+ 		transition: 1s;
+ 		/*min-width:640px;*/
+ 		width:980px;
+ 		/*height: 160;*/
+ 		margin:0 auto;
+ 		list-style: none;
+ 		overflow: hidden;
+ 		border-bottom: 1px solid rgb(218,218,218);
+ 		
+ 	}
+ 	.content .con1 .li1{
+ 		width: 60%;
+ 		/*height: 159px;*/
+ 		float: left;
+ 		
+ 	}
+ 	.content .con1 .li1 a{
+ 		display: inline-block;
+ 		width:100%;
+ 		/*height:100%*/
+ 		position: relative;
+ 		
+ 	}
+ 	.content .con1 .li1 a img{
+ 		width: 100%;
+ 		vertical-align: top;
+ 	}
+ 	.content .con1 .li1 a img:nth-of-type(2){
+ 		position:absolute;
+ 		top: 0;
+ 		left: 0;
+ 		/*display: none;*/
+ 	}
+ 	.content .con1 .center1{
+ 		float: left;
+ 		width: 2%;
+ 		height: 169.86px;
+ 		background: gray;
+ 		transition: 1s;
+ 	}
+ 	.content .con1 .word1{
+ 		width: 36%;
+ 		height:140px;
+ 		float: left;
+ 	/*	background: orange;*/
+ 		padding-left: 2%;
+ 	}
+ 	.content .con1 .word1 h6{
+ 		width: 90%;
+ 		text-align: left;
+    		font-size: 1.875em;
+    		font-weight: bold;
+    		font-family: arial;
+    		padding-top: 0.5em;
+    		word-break: break-all;
+ 	}
+ 	.content .con1 .word1 p{
+ 		width: 90%;
+ 		text-align: left;
+   		font-family: "微软雅黑";
+    		font-size: 0.9375em;
+    		line-height: 1.8em;
+    		padding-top: 0.5em;
+    		word-break: break-all;
+ 	}
+ 	.con2 .li2{
+ 		width:60%;
+ 		float: right;
+ 	}
+ 	.con2 .li2 a{
+ 		display: inline-block;
+ 		width:100%;
+ 		/*height:100%*/
+ 		position: relative;
+ 	}
+ 	.con2 .li2 a img{
+ 		width: 100%;
+ 		vertical-align: top;
+ 	}
+ 	.content .con2 .li2 a img:nth-of-type(2){
+ 		position:absolute;
+ 		top: 0;
+ 		left: 0;
+ 		/*display: none;*/
+ 	}
+ 	.content .con2 .center2{
+ 		width:2%;
+ 		height: 169.86px;
+ 		background: gray;
+ 		float: right;
+ 		transition: 1s;
+ 	}
+ 	
+ 	.content .con2 .word2{
+ 		width: 36%;
+ 		height:140px;
+ 		float: right;
+ 	
+ 	}
+ 	.content .con2 .word2 h6{
+ 		width: 90%;
+ 		text-align: right;
+    		font-size: 1.875em;
+    		font-weight: bold;
+    		font-family: arial;
+    		padding-top: 0.5em;
+    		word-break: break-all;
+ 	}
+ 	.content .con2 .word2 p{
+ 		width: 90%;
+ 		text-align: right;
+ 		font-family: "微软雅黑";
+    		font-size: 0.9375em;
+    		line-height: 1.8em;
+   		 padding-top: 0.5em;
+   		 word-break: break-all;
+ 	}
+ 	
+ 	.content .con3 .li3{
+ 		width: 60%;
+ 		/*height: 159px;*/
+ 		float: left;
+ 		
+ 	}
+ 	.content .con3 .li3 a{
+ 		display: inline-block;
+ 		width:100%;
+ 		/*height:100%*/
+ 		position: relative;
+ 		
+ 	}
+ 	.content .con3 .li3 a img{
+ 		width: 100%;
+ 		vertical-align: top;
+ 	}
+ 	.content .con3 .li3 a img:nth-of-type(2){
+ 		position:absolute;
+ 		top: 0;
+ 		left: 0;
+ 		/*display: none;*/
+ 	}
+ 	.content .con3 .center3{
+ 		float: left;
+ 		width: 2%;
+ 		height: 169.86px;
+ 		background: gray;
+ 		transition: 1s;
+ 	}
+ 	.content .con3 .word3{
+ 		width: 36%;
+ 		height:140px;
+ 		float: left;
+ 	/*	background: orange;*/
+ 		padding-left: 2%;
+ 	}
+ 	.content .con3 .word3 h6{
+ 		width: 90%;
+ 		text-align: left;
+    		font-size: 1.875em;
+    		font-weight: bold;
+    		font-family: arial;
+    		padding-top: 0.5em;
+    		word-break: break-all;
+ 	}
+ 	.content .con3 .word3 p{
+ 		width: 90%;
+ 		text-align: left;
+   		font-family: "微软雅黑";
+    		font-size: 0.9375em;
+    		line-height: 1.8em;
+    		padding-top: 0.5em;
+    		word-break: break-all;
+ 	}
+ 	
+ 	@media only screen and (min-width: 640px) and (max-width:960px){
+ 		.header{
+ 			width:100%;
+ 		}
+ 		.header .nav{
+ 			width: 100%;
+ 		}
+ 		.wrap .header .hidden{
+ 			display: block;
+ 			top: 24%;
+ 			width:30px;
+ 		}
+ 		.wrap .header .img1{
+ 			width:100%;
+ 		}
+ 		.header .nav1{
+ 			display: none;
+ 		}
+ 	}
+ 	@media only screen and (min-width: 160px) and (max-width:640px){
+ 		.header .nav{
+ 			width: 100%;
+ 		}
+ 		.wrap .header .hidden{
+ 			display: block;
+ 			top: 24%;
+ 			width:36px;
+ 		}
+ 		.wrap .header .img1{
+ 			width:100%;
+ 		}
+ 		.header .nav1{
+ 			display: none;
+ 		}
+ 		.content{
+ 			width:96%;
+ 			margin:0 auto;
+ 			/*min-width: 320px;*/
+ 		}
+ 		.content .page1 ul{
+ 			width:100%;
+ 			transition: 0.5s;
+ 		}
+ 		.content .page1 .center{
+ 			display: none;
+ 		}
+ 		.content .page1 ul .li{
+ 			margin:0;
+ 			padding:0;
+ 			width: 100%;
+ 			transition: 0.5s;
+ 		}
+ 		.content .page1 ul .h6{
+ 			text-align: center;
+ 			transition: 0.5s;
+ 		}
+ 		.content .page1 ul  .p{
+ 			
+ 			/*width: 100%;*/
+ 			text-align: left;
+ 			transition: 0.5s;
+ 		}
+ 	}
+ 	
+ 	
+ 	.email{
+ 		width: 100%;
+ 		margin-top: 50px;
+ 	}
+ 	.email a{
+ 		display: block;
+ 		width:25px;
+ 		height: 18.56px;
+ 		margin:0 auto;
+ 		/*background: orange;*/
+ 		background: url(img/share.png) 0px -37px no-repeat;
+ 		background-size: 300% 300%;
+ 		/*cursor: pointer;*/
+ 	}
+ 	.email a:hover{
+ 		background-position: -26px -37px;
+ 	}
+ 	.l-mail{
+ 		width: 100%;
+ 		margin-top: 20px;
+ 		transition: 0.5s;
+ 	}
+ 	.l-mail .bottom{
+ 		width: 140px;
+ 		padding-left: 10px;
+ 		
+ 		height: 25px;
+ 		margin:0 auto;
+ 		/*background: orange;*/
+ 		
+ 	}
+ 	.l-mail .bottom a{
+ 		float: left;
+ 		width:25px;
+ 		height:25px;
+ 		margin-right: 10px;
+ 	}
+ 	.l-mail .bottom .a1{
+ 		background: url(img/share.png) -2px -5px no-repeat;
+ 		background-size: 400% 380%;
+ 	}
+ 	.l-mail .bottom .a1:hover{
+ 		background-position: 0.5px -35px;
+ 	}
+ 	.l-mail .bottom .a2{
+ 		background: url(img/share.png) -27px 0px no-repeat;
+ 	}
+ 	.l-mail .bottom .a2:hover{
+ 		background-position: -25px -25px;
+ 	}
+ 	.l-mail .bottom .a3{
+ 		background: url(img/share.png) -50px 0px no-repeat;
+ 	}
+ 	.l-mail .bottom .a3:hover{
+ 		background-position: -50px -25px;
+ 	}
+ 	.l-mail .bottom .a4{
+ 		background: url(img/share.png) -75px 0px no-repeat;
+ 	}
+ 	.l-mail .bottom .a4:hover{
+ 		background-position: -75px -25px;
+ 	}
+ 	.right{
+ 		width:100%;
+ 		height: 12px;
+ 		font-size: 12px;
+ 		
+ 		text-align: center;
+ 		color: gray;
+ 		margin-top: 32px;
+ 		transition: 0.5s;
+ 	}
+ 	
+ 	@media only screen and (min-width: 640px) and (max-width:960px){
+ 		.header{
+ 			width:100%;
+ 			
+ 		}
+ 		.header .nav{
+ 			width: 100%;
+ 		}
+ 		.content{
+ 			
+ 			
+ 		} 
+ 	}
+
+  </style>
+</head>
+<body>
+  	<div class="wrap">
+  		<div class="header">
+  			<div class="nav">
+  				<div class="logo"><img src="img/logo.png"/></div>
+  				<div class="nav1">
+  					<a href="index.html" class="home">Home</a>
+  					<a href="index2.html" class="a">About</a>
+  					<a href="index3.html" class="a">Rendering</a>
+  					<a href="index4.html" class="a">3D Animation</a>
+  					<a href="index5.html" class="a">Bim</a>
+  					<a href="index6.html" class="a">Contact</a>
+  				</div>
+  			</div>
+  			<div class="hidden"><img src="img/nav.png" class="img1"/></div>
+  			<div class="margin1">
+  				<p><a href="index.html">Home</a></p>
+  				<p><a href="index2.html">About</a></p>
+  				<p><a href="index3.html">Rendering</a></p>
+  				<p><a href="index4.html">3D Animation</a></p>
+  				<p><a href="index5.html">Bim</a></p>
+  				<p><a href="index6.html">Contact</a></p>	
+  			</div>
+  		</div>
+  		<div class="content">
+  			<div class="page1">
+  				<ul class="con1">
+  					<li class="li1 li">
+  						<a href="###">
+  							<img src="img/home_ren_hover.png"/>
+  							<img src="img/home_ren.png" class="image"/>
+  						</a>
+  					</li>
+  					<li class="center1 center li"></li>
+  					<li class="word1 li">
+  						<h6 class="li h6">RENDERINGS</h6>
+  						<p class="li p">
+  							Masterplan、Public Building、commercial Building、Residential Building、Landscape Design
+  						</p>
+  					</li>
+  				</ul>
+  				<ul class="con2">
+  					<li class="li2 li">
+  						<a href="###">
+  							<img src="img/home_bim_hover.png" alt="" />
+  							<img src="img/home_bim.png" alt="" class="image" />
+  						</a>
+  					</li>
+  					<li class="center2 center li"></li>
+  					<li class="word2 li">
+  						<h6 class="li h6">BIM</h6>
+  						<p class="li p">
+  							Model Completion、Clash Detection、MEP Integration、Curtain Wall Remedying、BIM Consulting
+  						</p>
+  					</li>
+  				</ul>
+  				<ul class="con3">
+  					<li class="li3 li">
+  						<a href="###">
+  							<img src="img/home_3d_hover.png" alt="" />
+  							<img src="img/home_3d.png" alt="" class="image" />
+  						</a>
+  					</li>
+  					<li class="center3 center li"></li>
+  					<li class="word3 li">
+  						<h6 class="li h6">3D ANIMATION</h6>
+  						<p class="li p">
+  							Real estate advertising animation Design scheme Animation Corporate promotional Animation
+  						</p>
+  					</li>
+  				</ul>
+  			</div>
+  			
+  			
+  		</div>
+  		<div class="email"><a href="###"></a></div>
+  		<div class="l-mail">
+  			<div class="bottom">
+  				<a href="###" class="a1"></a>
+  				<a href="###" class="a2"></a>
+  				<a href="###" class="a3"></a>
+  				<a href="###" class="a4"></a>
+  			</div>
+  		</div>
+  		<div class="right">Copyright © 1998-2015 shining Group</div>
+  	</div>
+  	</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<!--</script>-->
+<!--<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>-->
+<script type="text/javascript">
+//实时监控窗口大小
+	var $hide = $(".header .hidden");
+	var $nav = $(".header .nav1");
+	var $img = $(".header .img1");
+	var $header = $(".header");
+	var $logo = $(".logo img");
+	var $con = $(".wrap .content ul");
+	var $image = $(".wrap .content ul .image");
+	var $center = $(".center");
+	var $navA = $(".header .nav .nav1 a");
+	var $margin = $(".wrap .margin1");
+		//图片单击事件
+	$hide.on("click",function(){
+		$margin.slideToggle(500)
+	})
+	
+	//中间动画
+	
+		$con.hover(function(){
+		var index = $(this).index();
+		$image.eq(index).fadeOut();
+		$center.eq(index).css("background","rgb(198,214,0)");
+		
+	},function(){
+		var index = $(this).index();
+		$image.eq(index).fadeIn();
+		$center.eq(index).css("background","rgb(160,160,160)")
+	})
+	
+	
+	
+	
+	
+	
+	
+	//头部动画
+	$navA.on("click",function(){
+		var index = 0;
+		index = $(this).index();
+		$navA.eq(index).addClass("home").siblings().removeClass("home");
+
+	})
+	
+//	var widthW =	 $(window).width();
+//	window.onresize=resizeBannerImage;//当窗口改变宽度时执行此函数
+//function resizeBannerImage()
+// {
+//  var winW = $(window).width();
+// if( $(window).width() < 820 ) {
+//     $hide.show();
+//		$nav.hide();
+//  }else{
+//  	$hide.hide();
+//  	$nav.show();
+//  }
+//  if($(window).width() < 640){
+//  	$img.css({
+//  		width:30
+//  	})
+//  	$hide.css("top","30%");
+//  	$header.css("height",55);
+//  	$nav.css("paddingTop",16)
+//  	$logo.css("paddingTop",10)
+//  }else{
+//  		
+//  		$header.css("height",68);
+//  }
+//  
+// }
+</script>
+</html>
+

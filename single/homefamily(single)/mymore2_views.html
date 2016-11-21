@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>一键反馈</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mymore2_views.css"/>
+	</head>
+	<body>
+	
+		<header id="head">
+			<a href="login_1.html" class="back-btn"></a>
+			<h1>意见反馈</h1>
+		</header>
+		<section id="content">
+			<div class="bg_header"></div>
+			
+			<form action="" class="form5">
+				<!--<input type="text" value="李晓晓"/>-->
+				<textarea name="" rows="" cols="" class="input_views">
+					
+				</textarea>
+				<a href="###">确认</a>
+			</form>
+			
+			
+			<div class="bg_bottom"></div>
+			
+			
+		</section>
+		
+		
+		
+		
+	</body>
+	
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js">
+		
+	</script>
+	<!--<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>-->
+		
+	
+	<script>
+		var oInput = document.querySelector(".input_product");
+		var mask = document.getElementById("mask");
+		var submit = document.querySelector(".submit");
+		var form1 = document.querySelector(".form1");
+		var form2 = document.querySelector(".form2");
+		var tipsblock = document.querySelector(".tips_block");
+		var notfind = document.querySelector(".not_find");
+		var clickleave = document.querySelector(".click_leave");
+		var searchlist = document.querySelector(".searchlist");
+		var textarea = document.querySelector("#mask textarea");
+//		tipsblock.style.display = "none"	;
+//		notfind.style.display = "none";
+//		searchlist.style.display = "none";
+//		form1.oninput = function(){
+//			tipsblock.style.display = "none"	;
+//			if(oInput.value == ""){
+//				notfind.style.display = "block";
+//				searchlist.style.display = "none";
+//			}else{
+//				notfind.style.display = "none";
+//				searchlist.style.display = "block";
+//			}
+//		}
+//		clickleave.onclick = function(){
+//			notfind.style.display = "none";
+//			mask.style.display = "block";
+//		}
+//		mask.onclick = function(){
+//			if(textarea.value==""){
+//				
+//				alert("请输入留言");
+//				return;
+//			}
+//			mask.style.display = "none";
+//		}
+//		form2.onclick = function(){
+//			if(submit.vlaue == ""){
+////				mask.style.display = "none";
+//				return;
+//			}
+//			
+//		}
+//		var linkAddress = document.querySelectorAll(".link_address");
+//		var thislink = document.querySelectorAll(".this_link");
+//		for(var i=0;i<linkAddress.length;i++){
+//			thislink[i].style.height = linkAddress[i].offsetHeight + "px";
+//		}
+		
+		$(function(){
+			$pic_move = $("#content .pic_move");
+			console.log($pic_move);
+			$img = $("#content .pic_move a");
+			console.log($img);
+			$oLi = $("#content .dot li");
+			console.log($oLi);
+			$prev = $(".prev");
+			$next = $(".next");
+			var timer = null;
+			var index = 0;
+			
+			$next.on("click",function(){
+				index++;
+				if(index==5){
+					index  = 0;
+				}
+				tab();
+			})
+			function tab(){
+				$img.eq(index).fadeIn().siblings("#content .pic_move a").fadeOut();
+				$oLi.eq(index).addClass("active").siblings("#content .dot li").removeClass("active");
+			}
+			$prev.on("click",function(){
+				index--;
+				if(index<0){
+					index  = 4;
+				}
+				tab();
+			})
+			function automove(){
+//				clearInterval(timer);
+				timer = setInterval(function(){
+					$next.click();
+				},3000);
+			}
+			$oLi.on("mouseover",function(){
+				clearInterval(timer);
+				index = $(this).index();
+				tab();
+			});
+			$pic_move.hover(function(){
+				clearInterval(timer);
+			},function(){
+				automove();
+			})
+			automove();
+		})
+		
+		
+	</script>
+</html>

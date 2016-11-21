@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>订单详情</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mysaleproduct_2.css"/>
+	</head>
+	<body>
+	
+		<header id="head" class="clearfix">
+			<div class="top_butting">
+			<a href="login_1.html" class="back-btn"></a>
+			<h1>订单详情</h1>
+			</div>
+		</header>
+		<section id="content">
+			<ul class="nav1">
+				<li class="clickment"><a href="mysaleproduct_11.html" >待付款</a></li>
+				<li class="clickment"><a href="mysaleproduct_2_order.html">待发货</a></li>
+				<li class="clickment"><a href="mysaleproduct3.html">待收货</a></li>
+				<li class="clickment"><a href="mysaleproduct4_complete.html" class="show">已完成</a></li>
+				<li class="clickment"><a href="once_emergency.html">退货/售后</a></li>
+			</ul>
+			<div class="list_click">
+				
+			</div>
+			<div class="purchase_things">
+				<div	 class="buy_things clearfix"><span>购买商品</span><span class="give_money">待付款</span></div>
+				<div class="purchase_details clearfix">
+					<img src="img/index_img14.png" alt="" />
+					<div class="purchase_right">
+						<h3>坚果特产山核桃奶油碧根...</h3>
+						<!--<p class="purchase_regular">规格：1盒6片</p>-->
+						<p class="purchase_price"><span>&yen;29.5</span><span>X2</span></p>
+					</div>
+				</div>
+				<div class="count_all clearfix">
+					<span class="order_number">共2件</span>
+					<span>合计：&yen;13</span>
+					
+					<a href="###" class="show_active">去评价</a>
+					<a href="###" class="reset_order">删除</a>
+				</div>
+				
+			</div>
+			<div class="purchase_things">
+				<div	 class="buy_things clearfix"><span>购买产品</span><span class="give_money classcolor">已完成</span></div>
+				<div class="purchase_details clearfix">
+					<img src="img/index_img14.png" alt="" />
+					<div class="purchase_right">
+						<h3>坚果特产山核桃奶油碧根...</h3>
+						<!--<p class="purchase_regular">规格：1盒6片</p>-->
+						<p class="purchase_price"><span>&yen;29.5</span><span>X2</span></p>
+					</div>
+				</div>
+				<div class="count_all clearfix">
+					<span class="order_number">共2件</span>
+					<span>合计：&yen;13</span>
+					
+					<a href="###" class="">已评价</a>
+					<a href="###" class="reset_order">删除</a>
+				</div>
+				
+			</div>
+			
+		</section>
+		
+	</body>
+	
+	<script type="text/javascript" src="js/zepto.js"></script>
+	<script>
+		$delete = $(".reset_order");
+		$delete.on("click",function(){	
+			var index = $($delete).index($(this));
+			$delete.eq(index).parent().parent().remove();
+		})
+		
+		
+	</script>
+</html>

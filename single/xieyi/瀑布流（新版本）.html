@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		body,html{
+			width:100%;
+			/*height: 100;*/
+		}
+			.wrap{
+				width:100%;
+				position: relative;
+			}
+			.wrap>div{
+				width: 23%;
+				/*float: left;*/
+				position: absolute;
+			}
+			.wrap>div img{
+				display: block;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div><img src="img/B1.jpg" class="b1"/></div>
+			<div><img src="img/B2.jpg" class="b1"/></div>
+			<div><img src="img/B3.jpg" class="b1"/></div>
+			<div><img src="img/B4.jpg" class="b1"/></div>
+			<div><img src="img/B5.jpg" class="b1"/></div>
+			<div><img src="img/B6.jpg" class="b1"/></div>
+			<div><img src="img/B7.jpg" class="b1"/></div>
+			<div><img src="img/B8.jpg" class="b1"/></div>
+			<div><img src="img/B5.jpg" class="b1"/></div>
+			<div><img src="img/B6.jpg" class="b1"/></div>
+			<div><img src="img/B7.jpg" class="b1"/></div>
+			<div><img src="img/B8.jpg" class="b1"/></div>		
+			<div><img src="img/B5.jpg" class="b1"/></div>
+			<div><img src="img/B6.jpg" class="b1"/></div>
+			<div><img src="img/B7.jpg" class="b1"/></div>
+			<div><img src="img/B8.jpg" class="b1"/></div>		
+		</div>
+	</body>
+	<script type="text/javascript">
+		//change函数
+//		var img = new Image;
+		window.onscroll = function(){
+			change();
+		}
+		
+		function change(){
+			window.onload=function(){
+				
+			
+			var img = document.querySelectorAll(".wrap>div img");
+			var wrap = document.querySelector(".wrap");
+			var winW = wrap.clientWidth;
+			alert(winW)
+			var div=document.querySelectorAll(".wrap>div");
+			
+			//计算每一行的行数
+			var marginR = 10;
+			var marginB = 10;
+			var num = parseInt(winW/(div[0].offsetWidth+10));
+			var center = (winW - num*(div[0].offsetWidth+10))/2;
+//			console.log(num)
+			arrH = []; 
+			for(var i=0;i<div.length;i++){
+				if(i<num){
+					div[i].style.height = img[i].offsetHeight+"px";
+					div[i].style.top = 0;
+					
+					div[i].style.left = center+(div[0].offsetWidth+10)*i+"px";
+					arrH[i] = div[i].offsetHeight;
+//					alert(img[0].offsetHeight);
+				}else{
+					div[i].style.height = img[i].offsetHeight+"px";
+					var min = findMin(arrH);
+					div[i].style.left = center+(div[0].offsetWidth+10)*min+"px";
+					div[i].style.top = arrH[min]+10+"px";
+					arrH[min] += div[i].offsetHeight+"px";
+				}
+				
+			}
+			}
+			
+		}
+		change();
+		function findMin(arr){
+			var min = arr[0];
+			var index = 0;
+			for(var i=0;i<arr.length;i++){
+				if(min>arr[i]){
+					min = arr[i];
+					index = i
+				}
+			}
+			return index;
+		}
+	</script>
+</html>

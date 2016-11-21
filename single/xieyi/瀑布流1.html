@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		body,html{
+			width:100%;
+			height: 100%;
+			/*margin:0 auto;*/
+			text-align: center;
+		}
+		
+		.wrap{
+			width:100%;
+			height: 100%;
+			margin:0 auto;
+		}
+		.wrap>div{
+			position: absolute;
+			width: 32%;
+			margin-right: 1%;
+			margin-bottom:1%;
+			background:salmon;
+		}
+		.wrap>div img{
+			width:100%;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div class="wrap"></div>
+	</body>
+	<script type="text/javascript">
+	var wrap = document.querySelector(".wrap");
+	var value = 0;
+		//函数调用
+		createDiv(5);
+		change();
+		function createDiv(n){
+			for(var i=0;i<n;i++){
+				value++;
+				var div = document.createElement('div');
+				var img = document.createElement("img");
+				img.src = "img/B"+value+".jpg";
+//				var imgH = document.querySelectorAll("img")
+//				div.style.height = img.offsetHeight+"px";
+				console.log(img.offsetHeight)
+				div.appendChild(img);
+				wrap.appendChild(div);
+			}
+			
+		}
+//		change();
+		function change(){
+			window.onload  = function(){
+				var winW = document.documentElement.clientWidth||window.innerWidth;
+			var aDiv = document.querySelectorAll(".wrap>div");
+			var oImg = document.querySelectorAll(".wrap>div img");
+			
+//			var winW = wrap.clientWidth;
+			var num = parseInt(winW/oImg[0].offsetWidth);
+			var center = (winW-aDiv[0].offsetWidth*num+10)/2
+			arrH = [];
+			for(var i=0;i<aDiv.length;i++){
+				if(i<num){
+					aDiv[i].style.height = oImg[i].offsetHeight+"px";
+					aDiv[i].style.left =center+i*oImg[0].offsetWidth+"px";
+					aDiv[i].style.top = 10;
+					arrH[i] = aDiv[i].offsetHeight;
+				}else{
+					var min = findMin(arrH);
+					aDiv[i].style.left = center + min*oImg[0].offsetWidth+"px";
+					aDiv[i].style.top = arrH[min]+"px";
+					arrH[min] += oImg[i].offsetHeight+10;	
+				}
+			}
+				
+				
+			}
+			
+//			console.log(div.offsetHeight);
+			
+		}
+		
+		function findMin(arr){
+			var min = arr[0];
+			var index = 0;
+			for(var i=0;i<arr.length;i++){
+				if(min>arr[i]){
+					min = arr[i];
+					index = i;
+				}
+			}
+			return index;
+		}
+//		function createDiv(n){
+//			for(var i=0;i<n;i++){
+//				value++;
+//				var div = document.createElement("div");
+//				div.style.height = rndH(400,100)+"px";
+//				div.S = value;
+//				document.body.appendChild(div);
+//			}
+//		}
+		
+		//随机高度函数
+		
+//		function rndH(max,min){
+//			return Math.round(Math.random()*(max-min)+min);
+//		}
+//		//函数定义
+//		
+//		//排列方式
+//		function change(){
+//			var winW = document.documentElement.clientWidth||window.innerWidth;
+//			var num = parseInt(winW/(310));
+//			var center = (winW-310*num+10)/2;
+//			var aDiv = document.querySelectorAll("div");
+//			arrH=[];
+//			for(var i=0;i<aDiv.length;i++){
+//				if(i<num){
+//					aDiv[i].style.left = center+i*310 + "px";
+//					aDiv[i].style.top = 0;
+//					arrH[i] = aDiv[i].offsetHeight;
+//				}else{
+//					var min = findMin(arrH);
+//					aDiv[i].style.left = center+min*310+"px";
+//					aDiv[i].style.top = arrH[min]+'px';
+//					arrH[min] += aDiv[i].offsetHeight+10;
+//				}
+//			}
+//		}
+//		function findMin(arr){
+//			var min = arr[0];
+//			var index = 0;
+//			for(var i=1;i<arr.length;i++){
+//				if(min>arr[i]){
+//					min  = arr[i];
+//					index = i;
+//				}
+//			}
+//			return index;
+//		}
+//		
+//		window.onscroll = function(){
+//			var winH = document.documentElement.clientHeight||window.innerWidth;
+//			var sTop = document.body.scrollTop||document.documentElement.scrollTop;
+//			if(winH+sTop+10 >= arrH[1]){
+//				createDiv(10);
+//				change();
+//			}
+//		}
+		
+//		window.onresize = function(){
+//			change(); 
+//		}
+	
+			
+	</script>
+</html>

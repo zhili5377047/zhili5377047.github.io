@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>分类</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sort3_class.css"/>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+   
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <header id="head">
+		<a href="login_1.html" class="back-btn"></a>
+		<h1>分类</h1>
+	</header>
+	<section id="content">
+		<div class="bg_header"></div>
+		<div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href=""><img src="img/index_img6.png"/></a></div>
+                <div class="swiper-slide"><a href=""><img src="img/index_img5.png"/></a></div>
+                <div class="swiper-slide"><a href=""><img src="img/index_img4.png"/></a></div>
+                <div class="swiper-slide"><a href=""><img src="img/index_img3.png"/></a></div>
+                <div class="swiper-slide"><a href=""><img src="img/index_img2.png"/></a></div>
+            
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination"></div>
+	        <!-- Add Arrows -->
+	        <!--<div class="swiper-button-next"></div>
+	        <div class="swiper-button-prev"></div>-->
+    	</div>
+    		<div class="content_detail clearfix">
+    			<a href="###" class="change_index">
+    				<img src="img/index_img14.png"/>
+    				<span class="initial_price">休闲零食五味园pk脆独立小包装500g</span>
+    				<span class="initial_price1">&yen;10.09<span class="truelyprice">原价：</span><span class="pay_money">&yen;12.8</span></span>
+    			</a>
+    			<a href="###" class="change_index">
+    				<img src="img/index_img14.png"/>
+    				<span class="initial_price">休闲零食五味园pk脆独立小包装500g</span>
+    				<span class="initial_price1">&yen;10.09<span class="truelyprice">原价：</span><span class="pay_money">&yen;12.8</span></span>
+    			</a>
+    			<a href="###" class="change_index">
+    				<img src="img/index_img14.png"/>
+    				<span class="initial_price">休闲零食五味园pk脆独立小包装500g</span>
+    				<span class="initial_price1">&yen;10.09<span class="truelyprice">原价：</span><span class="pay_money">&yen;12.8</span></span>
+    			</a>
+    			<a href="###" class="change_index">
+    				<img src="img/index_img14.png"/>
+    				<span class="initial_price">休闲零食五味园pk脆独立小包装500g</span>
+    				<span class="initial_price1">&yen;10.09<span class="truelyprice">原价：</span><span class="pay_money">&yen;12.8</span></span>
+    			</a>
+    			<!--<a href="###"><img src="img/index_img14.png"/></a>
+    			<a href="###"><img src="img/index_img14.png"/></a>
+    			<a href="###"><img src="img/index_img14.png"/></a>-->
+    			
+    		</div>
+    		<div class="bg_bottom"></div>
+	</section>
+    <footer id="foot">
+		<ul class="fixing">
+			<li><a class="direction" href="index.html"><span class="nav nav_icon1">首页</span></a></li>
+			<li><a class="direction" href="member2_mixed.html"><span class="nav nav_icon2">会员杂锦</span></a></li>
+			<li><a class="direction" href="sort3_class.html"><span class="nav nav_icon3">分类</span></a></li>
+			<li><a class="direction" href="purchase_car.html"><span class="nav nav_icon4">购物车</span></a></li>
+			<li><a class="direction" href="myindex.html"><span class="nav nav_icon5">我的</span></a></li>
+			
+		</ul>
+	</footer>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true,
+        autoplay:2000,
+        autoplayDisableOnInteraction : false,
+        // paginationHide :true
+    });
+    var navdetail = document.querySelectorAll(".nav_detail li a");
+    var before = 0;
+    for(var i=0;i<navdetail.length;i++){
+    		navdetail[i].index = i;
+    		navdetail[i].onclick = function(){
+    			for(var j=0;j<navdetail.length;j++){
+    				navdetail[j].className = "";
+    			}
+    			navdetail[this.index].className = "active_tips";
+    		}
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>购物车</title>
+	<link rel="stylesheet"link href="../css/base.css">
+	<link rel="stylesheet" href="../css/cart/cart.css">
+	<link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+	<section>
+		<p class="edit-bar">
+			<a href="javascript:void(0);">完成</a>
+		</p>
+		<ul class="c-list edit-status">
+			<li>
+				<label>
+					<div class="weui-bar">
+						<input type="checkbox" name="collection-list" class="weui-check">
+						<span class="weui-icon-checked"></span>
+					</div>
+					<div class="c-pic">
+						<img src="../img/active/f4.jpg">
+					</div>
+					<div class="c-info">
+						<h2>坚果特产山核桃奶油味碧根坚果特产山核桃奶油味碧根</h2>
+						<span>&yen;29.5</span>
+					</div>
+					<!-- <em class="product-count">&Chi;<span>2</span></em> -->
+				</label>
+				<div class="edit-count-bar">
+					<a href="javascript:void(0);" class="p-minus-btn disabled">&minus;</a>
+					<span class="product-number">1</span>
+					<a href="javascript:void(0);" class="p-add-btn">+</a>
+				</div>
+			</li>
+			<li>
+				<label>
+					<div class="weui-bar">
+						<input type="checkbox" name="collection-list" class="weui-check">
+						<span class="weui-icon-checked"></span>
+					</div>
+					<div class="c-pic">
+						<img src="../img/active/f4.jpg">
+					</div>
+					<div class="c-info">
+						<h2>坚果特产山核桃奶油味碧根坚果特产山核桃奶油味碧根</h2>
+						<span>&yen;29.5</span>
+					</div>
+					<!-- <em class="product-count">&Chi;<span>2</span></em> -->
+				</label>
+				<div class="edit-count-bar">
+					<a href="javascript:void(0);" class="p-minus-btn">&minus;</a>
+					<span class="product-number">2</span>
+					<a href="javascript:void(0);" class="p-add-btn">+</a>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<footer class="footer-bar cart">
+		<div class="cart-bar">
+			<label class="select-all">
+				<input type="checkbox" class="weui-check">
+				<span class="weui-icon-checked"></span>
+				<span>全选</span>
+			</label>
+			<!-- <div class="total-bar">
+				<p>合计：<span>&yen;14.60</span></p>
+				<span>（不含运费）</span>
+			</div> -->
+			<a href="javascript:void(0);" class="del-btn">删除</a>
+		</div>
+		<ul>
+			<li class="icon-4">
+				<a href="###">首页</a>	
+			</li>
+			<li class="icon-3">
+				<a href="###">会员杂锦</a>	
+			</li>
+			<li class="icon-2">
+				<a href="###">分类</a>	
+			</li>
+			<li class="icon-5 active">
+				<a href="###">购物车</a>	
+			</li>
+			<li class="icon-1">
+				<a href="###">我的</a>	
+			</li>
+		</ul>
+	</footer>
+	<script src="../js/zepto.js"></script>
+	<script src="../js/mine/edit_c.js"></script>
+	<script type="text/javascript">
+	//数量加减
+	$(".p-add-btn").on("click",function() {
+		var proNumber = $(this).prev().text();
+		proNumber++;
+		if(proNumber > 1) {
+			$(this).parent().find(".p-minus-btn").removeClass("disabled");
+		}
+		$(this).prev().text(proNumber);
+	})
+	$(".p-minus-btn").on("click",function() {
+		var proNumber = $(this).next().text();
+		proNumber--;
+		if(proNumber <= 1) {
+			proNumber = 1;
+			$(this).addClass("disabled");
+		}
+		$(this).next().text(proNumber);
+	})
+
+	</script>
+</body>
+</html>

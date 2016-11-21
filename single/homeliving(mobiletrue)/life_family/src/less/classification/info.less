@@ -1,0 +1,448 @@
+@import "../common";
+body {
+	background-color: @border_color;
+}
+.top-wrap {
+	position: relative;
+	.collection {
+		position: absolute;
+		left:0;
+		top:0;
+		width:100%;
+	}
+	a {
+		float: right;
+		margin-right: 18px;
+	}
+	.collection-icon {
+		display: inline-block;
+		position: relative;
+		z-index: 2;
+		top:12px;
+		right:12px;
+		width:23px;
+		height: 23px;
+		background: url(../../img/icon.png) no-repeat;
+		background-size: 216px 226px;
+		background-position: -32px -200px;
+	} 
+	.share-btn {
+		position: relative;
+		z-index: 2;
+		top:12px;
+		right:12px;
+		width:23px;
+		height: 23px;
+		background: url(../../img/icon.png) no-repeat;
+		background-size: 216px 226px;
+		background-position: -67px -200px;
+	}
+}
+.pic-wrap {
+	position: relative;
+	left:0;
+	top:0;
+	&:after {
+		content:"";
+		position: absolute;
+		left:0;
+		top:0;
+		z-index: 1;
+		width:100%;
+		height: 100%;
+	    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1) 18%,transparent 95%,rgba(0, 0, 0, 0.1));
+	}
+}
+.w-info {
+	color:@c6;
+	background-color: #fff;
+	padding: 10px 4% 4px;
+	border-bottom: 1px solid @border_color;
+	table {
+		width:100%;
+	}
+	h2 {
+		color:@c1a;
+		.fs14;
+	}
+	.d-price {
+		.fs14;
+		color:@cff3;
+		margin-right: 12px;
+	}
+	tr:first-child td {
+		border-bottom: 1px solid @border_color;
+	}
+	td {
+		.fs12;
+		height: 32px;
+		vertical-align: middle;
+		&:nth-child(2) {
+			text-align: right;
+		}
+	}
+}
+.p-info {
+	margin-top: 10px;
+	background-color: #fff;
+	.nav-bar {
+		overflow: hidden;
+		border-bottom: 1px solid @border_color;
+		li {
+			float: left;
+			width:50%;
+		}
+		a {
+			text-align: center;
+			display: block;
+			height: 35px;
+			line-height: 35px;
+			color:@c6;
+			background-color: #fff;
+			.fs14;
+			span {
+				position: relative;
+				display: inline-block;
+			}
+		}
+		li.active {
+			a span:after {
+				content:"";
+				position: absolute;
+				width:100%;
+				height: 2px;
+				bottom:0;
+				left:0;
+				background-color: @cff3;
+			}
+		}
+	}
+}
+
+
+/********** 用户评价 ************/
+.c-list {
+	li {
+		padding:10px;
+		border-bottom: 1px solid @border_color;
+		div {
+			position: relative;
+			margin:2px 0 8px;
+		}
+		.star-bar {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 6px;
+			span {
+				display: inline-block;
+				width:7px;
+				height: 7px;
+				background: url(../../img/star.png) no-repeat;
+				background-size: 18px 7px;
+				background-position: -10px 0;
+				&.y-star {
+					background-position: 0 0;
+				}
+			}
+		}
+		.c-time {
+			position: absolute;
+			right:10px;
+			top:0;
+			color:@c6;
+			.fs12;
+		}
+		.nick-name {
+			display: inline-block;
+			vertical-align: middle;
+			color:@c3;
+			.fs12;
+		}
+		p {
+			color:@c3;
+			.fs14;
+		}
+	}
+}
+/********** 用户评价 ************/
+
+/*********** 悬浮栏 *************/
+#buyCar {
+	content:"";
+	position: absolute;
+	left:6px;
+	top:0;
+	padding:6px;
+	width:28px;
+	height: 28px;
+	background: url(../../img/icon.png) no-repeat;
+	background-origin: content-box;
+	background-clip: content-box;
+	background-position: -2px -197px;
+	background-size: 216px 226px;
+	span {
+		position: absolute;
+		right:-1px;
+		top:4px;
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+		text-align: center;
+		border-radius: 8px;
+		background-color: #ee3749;
+		color:#fff;
+	}
+}
+.car-bar {
+	height: 40px;
+	padding-top: 10px;
+	background-color: #fff;
+	position: relative;
+	.car-wrap {
+		position: fixed;
+		width:100%;
+		max-width: 720px;
+		padding: 6px 0;
+		bottom:0;
+		border-top:1px solid @border_color;
+		background-color: @bg_color;
+		
+	}
+	.car-list {
+		float: right;
+		margin-right: 4%;
+		overflow: hidden;
+		li {
+			float: left;
+			margin-left: 20px;
+			a {
+				&.add-btn {
+					.common-btn(@width:92px);
+				}
+				&.buy-btn {
+					.common-btn(@width:92px;@bg:#ee3749);
+				}
+			}
+		}
+	}
+}
+/*********** 悬浮栏 *************/
+
+/*********** 充值弹窗 *************/
+.pop-box {
+	display: none;
+	position: fixed;
+	width:100%;
+	height: 100%;
+	left:0;
+	top:0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.3);
+	.pay-box {
+		width: 76%;
+		margin:150px auto 0;
+		background-color: #fef8ce;
+		text-align: center;
+		border-radius: 10px;
+		padding-bottom: 30px;
+		border:1px rgba(0, 0, 0, 0.3) solid;
+		.p-title {
+			width:80%;
+			margin:0 auto;
+			position: relative;
+			top: -20px;
+		}
+		color:#8e4e0e;
+		.fs20;
+		p span {
+			color:#ee3749;
+		}
+		.q-pay-btn {
+			.common-btn(@width:128px;@height:40px;@bg:#a5da35;);
+			margin-top: 20px;
+			border-radius: 20px;
+			box-shadow: 0 2px 1px darken(#a5da35, 10%);
+		}
+	}
+}
+/*********** 充值弹窗 *************/
+
+/*********** 分享弹窗 *************/
+#sharebox {
+	display: none;
+	position: fixed;
+	width:100%;
+	height: 100%;
+	left:0;
+	top:0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.3);
+	.share-list {
+
+		position: absolute;
+		width:100%;
+		left:0;
+		bottom:0;
+		text-align: center;
+		background-color: #fff;
+		p {
+			height: 56px;
+			line-height: 56px;
+			.fs16;
+		}
+		ul {
+			margin:0 30px 36px;
+			overflow: hidden;
+		}
+		li {
+			float: left;
+			width: 24%;
+			&:nth-child(2) {
+				margin: 0 14%;
+			}
+			a {
+				display: block;
+				color:@c3;
+				.fs12;
+				&:before {
+					content: "";
+					width:54px;
+					height: 54px;
+					display: block;
+					margin:0 auto;
+					background: url("../../img/icon.png") no-repeat;
+					background-size: 216px 226px;
+				}
+			}
+			&.s-weixin-friends a:before {
+				background-position: -162px -23px; 
+			}
+			&.s-weixin a:before {
+				background-position: -108px -24px;
+			}
+			&.s-xinlang a:before {
+				background-position: -54px -24px;
+			}
+
+		}
+		.s-cancle-btn {
+			.common-btn(@height:44px;@bg:#cccccc;@width:80%;);
+			.fs14;
+			color:#fff;
+			margin-bottom: 24px;
+		}
+	}
+}
+/*********** 分享弹窗 *************/
+
+/*********** 商品规格 *************/
+
+#sizebox {
+	display: none;
+	position: fixed;
+	width:100%;
+	height: 100%;
+	z-index: 10;
+	left:0;
+	top:0;
+	background-color: rgba(0, 0, 0, 0.3);
+	.product-box {
+		position: absolute;
+		width:100%;
+		padding:20px 12px 12px;
+		box-sizing: border-box;
+		left:0;
+		bottom:0;
+		background-color:#fff;
+		.s-ensure-btn {
+			.common-btn(@height:35px;@width:125px;);
+			.fs14;
+			margin: 20px auto;
+		}
+		.close-pop {
+			position: absolute;
+			top:10px;
+			right:10px;
+			height: 30px;
+			width:30px;
+			background: url(../../img/icon-close.png) center center no-repeat;
+			background-size: 12px 12px;
+		}
+		.product-link {
+			display: block;
+			overflow: hidden;
+			div {
+				float: left;
+				&:first-child {
+					width: 82px;
+					margin-right: 10px;
+				}
+				&:nth-child(2) {
+					width: 45%;
+				}
+				h2 {
+					.fs14;
+					color:@c1a;
+					height: 42px;
+					overflow : hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+				}
+				p {
+					margin-top: 10px;
+					.fs12;
+					span {
+						color:#df0101;
+					}
+					em {
+						color:@c6;
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+		dl {
+			dt {
+				.fs14;
+				color:@c6;
+				height: 30px;
+				line-height: 30px;
+				margin-top: 10px;
+			}
+			.size-bar {
+				a {
+					display: inline-block;
+					.fs12;
+					color:@c6;
+					border:1px solid @border_color;
+					padding:4px 8px;
+					margin-right: 8px;
+					&.active {
+						color:#fff;
+						background-color: #f29004;
+						border-color:transparent;
+					}
+
+				}
+			}
+			.count-bar {
+				a,input {
+					display: inline-block;
+					vertical-align: middle;
+					height: 25px;
+					line-height: 25px;
+					border:1px solid @border_color;
+					text-align: center;
+				}
+				a {
+					width:20px;
+					font-size: 20px;
+					color:@c6;
+				}
+			}
+		}
+	}
+}
+/*********** 商品规格 *************/
